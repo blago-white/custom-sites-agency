@@ -1,0 +1,40 @@
+.main-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 52vh;
+}
+
+.main-text {
+    font-size: min(33vh, 24vw);
+    line-height: min(11vh, 9vw);
+    font-weight: bold;
+}
+
+.second-text {
+    position: relative;
+    right: -1ch;
+    color: transparent;
+    -webkit-text-stroke: .0025em white;
+    font-size: min(16vh, 12vw);
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media(aspect-ratio < 12/9) {
+    .second-text {
+        font-size: 20vw;
+    }
+
+    .main-content {
+        align-items: center;
+    }
+}
