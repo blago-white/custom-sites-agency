@@ -10,8 +10,41 @@
     <body>
         <div class="main-content-wrapper">
             <div class="main-content">
-                <span class="second-text">WEBSITES</span>
-                <span class="main-text">LOGINOV</span>
+                <span class="main-text-secondary-part">
+                    <div class="main-text-elipses">
+                        {% for i in 1|range_:5 %}
+                            <img src="{% if i == 2 or i == 3 %}{% static 'img/ellipse.png' %}{% else %}{% static 'img/ellipse.png' %}{% endif %}"
+                                 class="el el-{{i}}">
+                        {% endfor %}
+                    </div>
+                    <span class="second-text"><span class="filled-second-text">WEB</span>SITES</span>
+                </span>
+                <div>
+                    <span class="main-text shifted-main-text">L</span><img
+                        src="{% static 'img/circle.png' %}"
+                        style="height: calc(min(32vh, 24vw) * .7)"><span class="main-text">GINOV</span>
+                    <div class="bottom-main-text">
+                        <img src="{% static 'img/line.png' %}" class="text-line">
+                        <div class="bottom-vertical-list">
+                            <span>LANDING</span>
+                            <span>BUSINESS CARD</span>
+                            <span>ONLINE MARKET</span>
+                            <span style="width: max-content;">AND OTHER WEBSITES</span>
+                        </div>
+                        <img src="{% static 'img/long-arrow.png' %}"
+                             class="long-arrow">
+                        <div class="min-price-label">
+                            FROM
+                            <div class="min-price-label-number">
+                                50
+                            </div>
+                            <div class="wallet-container">
+                                $
+                                <span style="font-size: .5ch;color: transparent;position: relative;left: -4.7ch;bottom: -2ch;font-style: initial;">USD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

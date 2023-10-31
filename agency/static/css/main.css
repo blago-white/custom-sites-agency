@@ -1,11 +1,29 @@
+@import "colorscheme.css";
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+::webkit-selection {
+    color: var(--bg-color);
+    background: var(--light-color);
+}
+
+::selection {
+    color: var(--bg-color);
+    background: var(--light-color);
+}
+
+img::webkit-selection {
+    background: transparent;
+}
+
+img::selection {
+    background: transparent;
+}
+
 body {
-    background: #242424;
-    color: white;
+    background: var(--bg-color);
+    color: var(--light-color);
     font-family: 'Familjen Grotesk', sans-serif;
     margin: 0px;
     text-align: center;
     height: 100vh;
-    overflow: hidden;
 }
