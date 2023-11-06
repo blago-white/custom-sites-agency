@@ -57,11 +57,12 @@
 }
 
 .main-content-wrapper {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .main-content {
@@ -81,7 +82,7 @@
     position: relative;
     right: -1ch;
     color: transparent;
-    -webkit-text-stroke: min(.004em, 1px) var(--light-color);
+    -webkit-text-stroke: min(.004em, 2px) var(--light-color);
     font-size: min(16vh, 12vw);
     font-style: italic;
     font-weight: bold;
@@ -182,8 +183,9 @@
 
 .min-price-label {
     position: relative;
-    right: 2ch;
+    right: 3ch;
     top: 2.6ch;
+    width: 8ch;
     font-style: italic;
     font-weight: bold;
     line-height: 3.5ch;
@@ -193,14 +195,16 @@
 }
 
 .long-arrow {
-    width: 20ch;
+    max-width: 12ch;
     position: relative;
     right: 3ch;
+    transition: all 1.5s cubic-bezier(0.71,-0.01, 0.28, 0.97);
 }
 
 .min-price-label-number {
     font-size: 10ch;
-    color: var(--light-color);
+    color: var(--toxic-green-color);
+    -webkit-text-stroke: 0px;
     font-weight: bold;
     font-style: initial;
     height: 0ch;
@@ -208,13 +212,84 @@
     right: 1.1ch;
 }
 
-.wallet-container {
+.currency-container {
     font-size: 6ch;
     font-style: initial;
-    color: var(--light-color);
+    color: var(--toxic-green-color);
+    -webkit-text-stroke-color: transparent;
     position: relative;
     left: -2.8ch;
     top: -.1ch;
+}
+
+.small-main-text {
+    display: none;
+    top: 0ch;
+    width: 100%;
+    font-size: 20vw;
+    left: 0px;
+    color: var(--light-color);
+    text-align: left;
+    overflow: hidden;
+}
+
+.mobile-menu-list {
+    position: relative;
+    top: -1.2ch;
+    display: none;
+    padding: 1.155ch;
+    gap: .1ch;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.mobile-header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-menu-list a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.2ch;
+}
+
+.secondary-mobile-menu-text {
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: min(.004em, 2px) white;
+    letter-spacing: .082ch;
+    transition: all .5s ease;
+}
+
+.mobile-main-text {
+    display: none;
+    line-height: 2ch;
+    flex-direction: column;
+}
+
+.big-mobile-main-text {
+    font-size: 25vw;
+    color: var(--light-color);
+    -webkit-text-stroke: 0px;
+}
+
+.small-mobile-main-text {
+    font-size: 12.5vw;
+    color: transparent;
+    -webkit-text-stroke-color: var(--light-color);
+}
+
+.currency-name {
+    font-size: .5ch;
+    color: transparent;
+    -webkit-text-stroke-color: var(--light-color);
+    position: relative;
+    left: -4.7ch;
+    bottom: -2ch;
+    font-style: initial;
 }
 
 @media(aspect-ratio < 12/9) {
@@ -246,13 +321,73 @@
       }
     }
 
-    .long-arrow {
-        width: 20vw;
+    .main-content-wrapper {
+        position: absolute;
+        top: 0px;
+    }
+
+    .main-text {
         display: none;
     }
 
-    .text-line {
+    .long-arrow {
         display: none;
+    }
+
+    #main-text-circle {
+        display: none;
+    }
+
+    .mobile-main-text {
+        display: flex;
+    }
+
+    .second-text, .text-line, .bottom-vertical-list, .currency-name {
+        display: none;
+    }
+
+    .min-price-label {
+        position: initial;
+    }
+
+    .currency-container {
+        left: .6ch;
+        top: -.17ch;
+        font-size: 5ch;
+        -webkit-text-stroke-color: transparent;
+    }
+
+    .min-price-label-number {
+        font-size: 9ch;
+        right: -.875ch;
+        top: -.33ch;
+    }
+
+    .min-price-label {
+        margin-inline: auto;
+        width: auto;
+        -webkit-text-stroke-color: var(--light-color);
+    }
+
+    .bottom-main-text {
+        width: 100vw;
+        padding-left: 0px;
+    }
+
+    .small-main-text {
+        display: flex;
+        flex-direction: column;
+        gap: .075ch;
+        position: sticky;
+        line-height: .9ch;
+        mix-blend-mode: exclusion;
+        height: 2.45ch;
+        z-index: 10;
+    }
+
+    .small-main-text img {
+        mix-blend-mode: normal;
+        z-index: 10;
     }
 
     .second-text {
@@ -274,5 +409,6 @@
     .main-content {
         align-items: center;
         height: auto;
+        margin-inline: auto;
     }
 }

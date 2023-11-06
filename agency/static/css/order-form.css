@@ -1,0 +1,17 @@
+#order-form-text span {
+    display: flex;
+    flex-direction: row;
+}
+
+#order-form-text span img {
+    height: 1ch;
+    opacity: 0;
+    transition: all 0.2s ease 0s;
+}
+
+#order-form-text ~ div {
+    display: flex;
+    width: fit-content;
+    max-width: 94vw;
+    align-items: center;
+}

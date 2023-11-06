@@ -1,0 +1,37 @@
+@import "colorscheme.css";
+
+.header-wrapper {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 0em;
+    mix-blend-mode: exclusion;
+    z-index: 1000;
+}
+
+.header {
+    display: flex;
+    font-size: 5vh;
+    color: var(--bg-color);
+    height: 7vh;
+    justify-content: space-between;
+    gap: 3ch;
+    font-weight: bold;
+    cursor: pointer;
+    padding-inline: 33.3%;
+}
+
+.header a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: var(--toxic-green-color);
+}
+
+@media(aspect-ratio < 12/9) {
+    .header-wrapper {
+        display: none;
+    }
+}

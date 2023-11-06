@@ -6,9 +6,46 @@
         <title>Become famous now!</title>
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/home/second-section.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/header.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/dialog.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
     </head>
     <body>
-        <div class="main-content-wrapper">
+        <div class="main-text small-main-text">
+            <div style="display: flex;height: 1.2ch;gap: 0.1ch;flex-direction: column;">
+                <div class="mobile-header-top">
+                    <span style="transition: all .5s ease;" id="mobile-header-top-text">LOGINOV</span>
+                    <img src="{% static 'img/menu.png' %}"
+                         style="width: 1.155ch;aspect-ratio: 1/1;transition: .5s ease;"
+                         onclick="expandMenu(event)">
+                </div>
+<!--                <div class="secondary-mobile-menu-text">-->
+<!--                    <span style="color: white;">WEB</span>SITES-->
+<!--                </div>-->
+            </div>
+            <div class="mobile-menu-list"
+                 id="mobile-menu-list">
+                <a href="#main" onclick="expandMenu(event)">MAIN</a>
+                <a href="#prices" onclick="expandMenu(event)">PRICES</a>
+                <a href="#prices">ABOUT</a>
+                <a href="#contacts">LANG</a>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <div class="header">
+                <a onclick="location.hash = '#main';">
+                    MAIN
+                </a>
+                <a onclick="location.hash = '#prices';">PRICES</a>
+                <a>ABOUT</a>
+            </div>
+        </div>
+        <div class="main-content-wrapper" id="main">
+            <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
+                <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
+            </div>
+
             <div class="main-content">
                 <span class="main-text-secondary-part">
                     <div class="main-text-elipses">
@@ -22,7 +59,8 @@
                 <div>
                     <span class="main-text shifted-main-text">L</span><img
                         src="{% static 'img/circle.png' %}"
-                        style="height: calc(min(32vh, 24vw) * .7)"><span class="main-text">GINOV</span>
+                        style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
+                        id="main-text-circle"><span class="main-text">GINOV</span>
                     <div class="bottom-main-text">
                         <img src="{% static 'img/line.png' %}" class="text-line">
                         <div class="bottom-vertical-list">
@@ -34,18 +72,96 @@
                         <img src="{% static 'img/long-arrow.png' %}"
                              class="long-arrow">
                         <div class="min-price-label">
+                            <div class="mobile-main-text">
+                                <span style="position: relative;text-align: right;right: -1ch;">
+                                    <span class="big-mobile-main-text">BE</span>
+                                    <span class="small-mobile-main-text">IN THE</span>
+                                </span><span class="big-mobile-main-text" style="position: relative;left: -.5ch;">CENTER</span>
+                            </div>
                             FROM
                             <div class="min-price-label-number">
                                 50
                             </div>
-                            <div class="wallet-container">
+                            <div class="currency-container">
                                 $
-                                <span style="font-size: .5ch;color: transparent;position: relative;left: -4.7ch;bottom: -2ch;font-style: initial;">USD</span>
+                                <span class="currency-name">USD</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="main-content-wrapper second-content-wrapper" id="prices">
+            <div class="list-item">
+                <img src="{% static 'img/portfolio.png' %}">
+                <div class="site-order-button">
+                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">learn more</div>
+                </div>
+                <div class="list-item-title">LANDING
+                    <div class="site-order-details">
+                        <div class="min-type-price-label">$50+</div>
+                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">learn more</div>
+                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                    </div>
+                </div>
+                <div class="list-item-description">I will create wonderful site special for you</div>
+                <div class="list-item-canvas-filter"></div>
+            </div>
+            <div class="list-items-border"></div>
+            <div class="list-item">
+                <img src="{% static 'img/commerce.png' %}">
+                <div class="site-order-button">
+                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
+                </div>
+                <div class="list-item-title">COMMERCE
+                    <div class="site-order-details">
+                        <div class="min-type-price-label">$150+</div>
+                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
+                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                    </div>
+                </div>
+                <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
+                <div class="list-item-canvas-filter"></div>
+            </div>
+            <div class="list-items-border"></div>
+            <div class="list-item">
+                <img src="{% static 'img/custom.png' %}">
+                <div class="site-order-button">
+                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
+                </div>
+                <div class="list-item-title">CUSTOM
+                    <div class="site-order-details">
+                        <div class="min-type-price-label">$100+</div>
+                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
+                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                    </div>
+                </div>
+                <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
+                <div class="list-item-canvas-filter"></div>
+            </div>
+        </div>
+        <div class="dialog-window-bg hidden" id="dialog">
+            <h1 id="dialog-window-header"></h1>
+            <span id="dialog-window-text">
+            </span>
+            <img src="{% static 'img/cross.png' %}"
+                 style="height: 7ch;width: 7ch;position: absolute;top: 0px;right: 0px;"
+                 id="close-dialog"
+                 onclick="changeDialogDisplay()">
+        </div>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/mobileMenu.js' %}"></script>
+    <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
+    <script type="module" src="{% static 'js/order.js' %}"></script>
+    <script type="module" src="{% static 'js/dialog.js' %}"></script>
+
+    <script>
+        const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
+
+        setTimeout(() => {longMainSectionArrow.style.maxWidth = '20ch'}, 250);
+    </script>
     </body>
 </html>

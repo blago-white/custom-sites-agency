@@ -1,0 +1,192 @@
+@import "colorscheme.css";
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: 500;
+    src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+
+
+.dialog-window-bg {
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    font-family: "SF Pro Display";
+    font-weight: 500;
+    font-size: 2vw;
+    align-items: center;
+    flex-direction: column;
+    gap: .5ch;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(.6ch) contrast(.25) brightness(1.2);
+    z-index: 1000;
+    text-align: left;
+}
+
+.dialog-window-bg.hidden {
+    display: none;
+}
+
+.dialog-window-bg.dark {
+    backdrop-filter: blur(.6ch) contrast(.25) brightness(.7);
+}
+
+.dialog-window-bg * {
+    width: 45%;
+}
+
+.dialog-window-bg span {
+    padding-left: .8ch;
+    color: black;
+}
+
+.dialog-window-bg h1 {
+    font-size: 9vw;
+    font-weight: 900;
+    margin: 0px;
+    line-height: 1ch;
+    text-wrap: nowrap;
+    color: var(--bg-color);
+}
+
+.dialog-window-bg h2 {
+    font-size: 4.5vw;
+    font-weight: 900;
+    margin: 0px;
+    margin-top: calc(1.5ch * 0.444);
+    line-height: 1ch;
+    text-wrap: nowrap;
+    color: var(--bg-color);
+}
+
+form {
+    height: 100%;
+    top: 0px;
+    left: 3vw;
+    position: absolute;
+    width: fit-content!important;
+    border-radius: 2ch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--bg-color);
+
+    transition: all .2s ease;
+}
+
+form img {
+    height: 2ch;
+    aspect-ratio: 1/1;
+    width: auto!important;
+    filter: contrast(.8);
+    cursor: pointer;
+}
+
+form span {
+    font-size: 4ch;
+    padding-left: 0px!important;
+    width: auto!important;
+    font-weight: bold;
+    color: var(--toxic-green-color)!important;
+    font-size: 7vw;
+    overflow-wrap: anywhere;
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+form span span {
+    font-size: 17.5vw;
+    overflow-wrap: anywhere;
+    text-wrap: wrap;
+    line-height: 1ch;
+}
+
+#close-dialog {
+    cursor: pointer;
+    filter: contrast(.8);
+}
+
+form div {
+    font-size: 4vw;
+}
+
+form *:focus-visible {
+    outline: 0px;
+}
+
+form input {
+    background: rgb(36, 36, 36, .33);
+    color: #DBDBDB;
+    text-align: center;
+    border: 0px;
+    border-radius: .5ch;
+    font-size: inherit;
+}
+
+@media(aspect-ratio < 12/9) {
+    form div div {
+        overflow-wrap: anywhere!important;
+        max-width: 79vw;
+        text-wrap: nowrap!important;
+        overflow-x: scroll;
+    }
+
+    .dialog-window-bg {
+        top: 0px;
+        bottom: auto;
+        backdrop-filter: blur(2ch) contrast(.25) brightness(.8);
+        font-size: 7vw;
+    }
+
+    .dialog-window-bg h1 {
+        font-size: 15vw;
+        padding-left: 5vw;
+        width: 95vw;
+    }
+
+    .dialog-window-bg h2 {
+        font-size: 10vw;
+        margin-block: calc(1ch * 0.444);
+    }
+
+    .dialog-window-bg * {
+        width: 100%;
+        text-wrap: balance;
+        overflow-wrap: anywhere;
+    }
+
+    .dialog-window-bg span {
+        width: 95vw;
+        padding-left: 5vw;
+    }
+
+    .dialog-window-bg #close-dialog {
+        width: 20vw!important;
+        height: 20vw!important;
+    }
+
+    form div {
+        font-size: 2.5ch;
+        width: 100%;
+    }
+
+    form {
+        width: 94vw!important;
+    }
+
+    form span span {
+        font-size: 25vw;
+        overflow-wrap: anywhere;
+        text-wrap: wrap;
+    }
+}
