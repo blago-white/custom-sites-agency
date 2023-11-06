@@ -10,14 +10,25 @@ function orderSite() {
     document.getElementById('submit-order').addEventListener('click', (event) => {onOrderSiteSubmit(event)})
 }
 
-function onInputEmail(element, event) {
-    element.style.width = "auto";
-
-    if (element.innerHTML.length > 29) {
-        element.innerHTML = element.innerHTML.slice(1, 41);
+function mailaddresIsValid(addres) {
+    if ((!addres.includes("@")) || (!addres.split(".")[addres.split(".").length-1])) {
+        return false;
     }
 
-    if (element.innerHTML.includes("@") && element.innerHTML.length > 4) {
+    var re = /^\S+@\S+\.\S+$/;
+
+    return re.test(addres);
+}
+
+function onInputEmail(element, event) {
+    element.style.width = "auto";
+    document.getElementById('mailform').style.color = "";
+
+    if (element.innerHTML.length > 29) {
+        element.innerHTML = element.innerHTML.slice(1, 30);
+    }
+
+    if (mailaddresIsValid(element.innerHTML)) {
         document.getElementById('submit-order').style.opacity = 1;
         document.getElementById('order-form-text').style = 'color: #242424!important';
     } else {
@@ -31,25 +42,32 @@ function onInputEmail(element, event) {
 }
 
 function onOrderSiteSubmit(event) {
-    changeDialogDisplay();
-
     var formdata = new FormData();
     formdata.append("email", document.getElementById('mailform').innerHTML);
 
     var requestOptions = {
       method: 'POST',
+      headers: {'X-CSRFToken': Cookies.get('csrftoken')},
       body: formdata,
-      redirect: 'follow'
+      mode: 'same-origin'
     };
 
-    try {
-        fetch("#", requestOptions);
-    } catch {
-        changeDialogDisplay();
-        document.getElementById('mailform').style.color = "red";
-        document.getElementById('mailform').innerHTML = 'error';
-    }
+    fetch("/order/", requestOptions).then(
+        (result) => {return result.json()}
+    ).then((response) => {
+        const result = response;
+        const status = response.customer.email == document.getElementById('mailform').innerHTML;
 
+        console.log(response);
+
+        if (!status) {
+            document.getElementById('mailform').style.color = "crimson";
+            document.getElementById('mailform').innerHTML = result.customer.email;
+        } else {
+            document.getElementById('mailform').style.color = "#D2FF02";
+            document.getElementById('mailform').innerHTML = result.customer.email;
+        }
+    })
 }
 
 window.orderSite = orderSite;

@@ -29,6 +29,7 @@
     backdrop-filter: blur(.6ch) contrast(.25) brightness(1.2);
     z-index: 1000;
     text-align: left;
+    overflow: hidden;
 }
 
 .dialog-window-bg.hidden {
