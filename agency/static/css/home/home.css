@@ -292,6 +292,21 @@
     font-style: initial;
 }
 
+.contact-button-top {
+    position: relative;
+    right: calc(.74*min(16vh, 12vw));
+    cursor: pointer;
+    top: 0.2ch;
+    width: 24.6vw;
+    background: var(--toxic-green-color);
+    border: 0px;
+    font-size: 8ch;
+    font-family: 'Familjen Grotesk', sans-serif;
+    color: var(--bg-color);
+    font-weight: 900;
+    border-radius: 0.1ch;
+}
+
 @media(aspect-ratio < 12/9) {
     @keyframes upellipse {
       0% {
@@ -410,5 +425,15 @@
         align-items: center;
         height: auto;
         margin-inline: auto;
+    }
+
+    .contact-button-top {
+        position: absolute;
+        right: 30%;
+        bottom: 10%;
+        width: 40%;
+        top: auto;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
     }
 }

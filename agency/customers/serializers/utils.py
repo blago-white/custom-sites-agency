@@ -1,4 +1,4 @@
-from .serializers import CustomerOrderSerializer
+from customers.serializers import CustomerOrderSerializer
 
 __all__ = ("customer_data_to_customer_order",
            "is_customer_order_serializer_data")
@@ -10,8 +10,8 @@ _CUSTOMER_SERIALIZER_FIELD_NAME = CustomerOrderSerializer.Meta.fields[0]
 def customer_data_to_customer_order(data: dict) -> dict:
     try:
         return {_CUSTOMER_SERIALIZER_FIELD_NAME: {
-            "email": dict(data).get("email")[0]
-        }}
+                    "email": dict(data).get("email")[0]
+                }, "tariff": dict(data).get("tariff")[0]}
     except:
         return {_CUSTOMER_SERIALIZER_FIELD_NAME: {"email": None}}
 

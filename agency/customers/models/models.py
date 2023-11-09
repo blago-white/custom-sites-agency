@@ -18,9 +18,18 @@ class Customer(models.Model):
 
 
 class CustomerOrder(models.Model):
+    class OrderTariffs(models.TextChoices):
+        LANDING = "1", "Landing"
+        COMMERCE = "2", "E-Commerce site"
+        CUSTOM = "3", "Custom"
+
     customer = models.OneToOneField(to=Customer,
                                     on_delete=models.CASCADE,
                                     primary_key=True)
+    tariff = models.CharField(max_length=1,
+                              choices=OrderTariffs.choices,
+                              blank=False,
+                              default=OrderTariffs.CUSTOM)
     date = models.DateTimeField(verbose_name="Order date", auto_now=True)
 
     def __str__(self):

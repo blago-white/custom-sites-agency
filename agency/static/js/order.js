@@ -1,12 +1,21 @@
-import { setDialogTextHTML, changeDialogDisplay, truncateDialogHTML, toggleDarkDialogTheme } from "./dialog.js";
+import { setDialogTextHTML,
+         setDialogHTML,
+         changeDialogDisplay,
+         truncateDialogHTML,
+         toggleDarkDialogTheme,
+         toggleToxicDialogTheme } from "./dialog.js";
 
 const HTMLOrderForm = "<form><span id='order-form-text'><span>GET<img src='/static/img/filled-arrow.png' id='submit-order'></span>CONSULTATION</span><div><img src='/static/img/arrow.png'><div contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>your email</div><img src='/static/img/arrow.png' style='transform: rotate(180deg)'></div></form>";
+let tariffId;
 
-function orderSite() {
+function orderSite(id) {
     toggleDarkDialogTheme();
     truncateDialogHTML();
     setDialogTextHTML(HTMLOrderForm);
     changeDialogDisplay();
+
+    tariffId = id;
+
     document.getElementById('submit-order').addEventListener('click', (event) => {onOrderSiteSubmit(event)})
 }
 
@@ -41,9 +50,15 @@ function onInputEmail(element, event) {
     }
 }
 
-function onOrderSiteSubmit(event) {
+function onSendOrderRequestSuccess(emailAddres) {
+    toggleToxicDialogTheme();
+    setDialogHTML("THANK<span style='color: var(--bg-color);padding-left: 0px;'>YOU</span>", "<h3>" + emailAddres + "</h3>We will contact you in the next fewminutes, check your mailbox");
+}
+
+function onOrderSiteSubmit(event, tariffIdFromElement) {
     var formdata = new FormData();
     formdata.append("email", document.getElementById('mailform').innerHTML);
+    formdata.append("tariff", tariffId || tariffIdFromElement);
 
     var requestOptions = {
       method: 'POST',
@@ -56,16 +71,14 @@ function onOrderSiteSubmit(event) {
         (result) => {return result.json()}
     ).then((response) => {
         const result = response;
-        const status = response.customer.email == document.getElementById('mailform').innerHTML;
-
-        console.log(response);
+        const status = (response.customer.email == document.getElementById('mailform').innerHTML) && mailaddresIsValid(response.customer.email);
 
         if (!status) {
             document.getElementById('mailform').style.color = "crimson";
             document.getElementById('mailform').innerHTML = result.customer.email;
         } else {
-            document.getElementById('mailform').style.color = "#D2FF02";
-            document.getElementById('mailform').innerHTML = result.customer.email;
+            onSendOrderRequestSuccess(response.customer.email);
+            tariffId = undefined;
         }
     })
 }

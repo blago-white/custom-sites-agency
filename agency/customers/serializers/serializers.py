@@ -1,9 +1,13 @@
 from django.db import transaction, utils
 
 from rest_framework.exceptions import ValidationError
-from rest_framework.serializers import ModelSerializer, EmailField
+from rest_framework.serializers import ModelSerializer, EmailField, ChoiceField
 
-from .models.models import CustomerOrder, Customer
+from ..models.models import CustomerOrder, Customer
+from . import exceptions
+
+
+__all__ = ["CustomerOrderSerializer", "CustomerSerializer"]
 
 
 class CustomerSerializer(ModelSerializer):
@@ -16,9 +20,10 @@ class CustomerSerializer(ModelSerializer):
 
 class CustomerOrderSerializer(ModelSerializer):
     customer = CustomerSerializer()
+    tariff = ChoiceField(choices=CustomerOrder.OrderTariffs.choices)
 
     class Meta:
-        fields = ["customer"]
+        fields = ["customer", "tariff"]
         model = CustomerOrder
 
     @transaction.atomic
@@ -28,11 +33,12 @@ class CustomerOrderSerializer(ModelSerializer):
             try:
                 customer = customer.save()
             except utils.IntegrityError:
-                raise ValidationError(
-                    {"customer": {"email": ["This email already used!"]}}
+                raise exceptions.raise_customer_email_exception(
+                    "This email already used!"
                 )
 
-        customer_order = CustomerOrder(customer=customer)
+        customer_order = CustomerOrder(customer=customer,
+                                       tariff=validated_data.pop('tariff'))
         customer_order.full_clean()
         customer_order.save()
 
