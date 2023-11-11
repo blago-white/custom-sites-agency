@@ -47,15 +47,16 @@
             </div>
 
             <div class="main-content">
-                <span class="main-text-secondary-part">
-                    <div class="main-text-elipses">
-                        {% for i in 1|range_:5 %}
-                            <img src="{% if i == 2 or i == 3 %}{% static 'img/ellipse.png' %}{% else %}{% static 'img/ellipse.png' %}{% endif %}"
-                                 class="el el-{{i}}">
-                        {% endfor %}
-                    </div>
+                <div class="main-text-secondary-part">
+                    <button class="contact-button-top" onclick="orderSite(3)">CONTACT US</button>
+<!--                    <div class="main-text-elipses">-->
+<!--                        {% for i in 1|range_:5 %}-->
+<!--                            <img src="{% if i == 2 or i == 3 %}{% static 'img/ellipse.png' %}{% else %}{% static 'img/ellipse.png' %}{% endif %}"-->
+<!--                                 class="el el-{{i}}">-->
+<!--                        {% endfor %}-->
+<!--                    </div>-->
                     <span class="second-text"><span class="filled-second-text">WEB</span>SITES</span>
-                </span>
+                </div>
                 <div>
                     <span class="main-text shifted-main-text">L</span><img
                         src="{% static 'img/circle.png' %}"
@@ -112,14 +113,14 @@
             <div class="list-item">
                 <img src="{% static 'img/commerce.png' %}">
                 <div class="site-order-button">
-                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                    <div class="order-button-part-top" onclick="orderSite(2)">order</div>
                     <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
                 </div>
                 <div class="list-item-title">COMMERCE
                     <div class="site-order-details">
                         <div class="min-type-price-label">$150+</div>
                         <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
-                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                        <div class="mobile-order-button" onclick="orderSite(2)">order</div>
                     </div>
                 </div>
                 <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
@@ -129,19 +130,21 @@
             <div class="list-item">
                 <img src="{% static 'img/custom.png' %}">
                 <div class="site-order-button">
-                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                    <div class="order-button-part-top" onclick="orderSite(3)">order</div>
                     <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
                 </div>
                 <div class="list-item-title">CUSTOM
                     <div class="site-order-details">
                         <div class="min-type-price-label">$100+</div>
                         <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
-                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                        <div class="mobile-order-button" onclick="orderSite(3)">order</div>
                     </div>
                 </div>
                 <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
                 <div class="list-item-canvas-filter"></div>
             </div>
+        </div>
+        <div class="main-content-wrapper" style="position: sticky;top: 0px;background: #242424;">
         </div>
         <div class="dialog-window-bg hidden" id="dialog">
             <h1 id="dialog-window-header"></h1>
@@ -152,12 +155,13 @@
                  id="close-dialog"
                  onclick="changeDialogDisplay()">
         </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/mobileMenu.js' %}"></script>
     <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
-
     <script>
         const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
 

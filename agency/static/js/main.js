@@ -6,6 +6,7 @@ function onScroll (event) {
     const elementHeight = fullElementHeight * .4;
 
     if (scrollTopHeight >= elementHeight) {
+        console.log(scrollTopHeight);
         const colorValue = 36 + 183 * Math.min((scrollTopHeight - elementHeight) / 500, 1);
         document.body.style.background = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
     } else {

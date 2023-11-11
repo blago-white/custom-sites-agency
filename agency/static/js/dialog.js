@@ -5,7 +5,7 @@ const dialogText = document.getElementById('dialog-window-text');
 let renderedNow = false;
 
 export function renderDialog(header, text) {
-    disableDarkDialogTheme();
+    disableDialogTheme();
 
     if (renderedNow) {
         changeDialogDisplay();
@@ -18,15 +18,21 @@ export function renderDialog(header, text) {
     console.log(renderedNow);
 }
 
+export function toggleToxicDialogTheme() {
+    dialog.classList.toggle('toxic');
+}
+
 export function toggleDarkDialogTheme() {
     dialog.classList.toggle('dark');
 }
 
-function disableDarkDialogTheme() {
+function disableDialogTheme() {
     dialog.classList.remove('dark');
+    dialog.classList.remove('toxic');
 }
 
 export function setDialogHTML(header, text) {
+    truncateDialogHTML();
     setDialogHeaderHTML(header);
     setDialogTextHTML(text);
 }
@@ -45,6 +51,10 @@ export function setDialogTextHTML(text) {
 }
 
 export function changeDialogDisplay() {
+    console.log(document.documentElement.scrollTop, window.outerHeight);
+    if (document.documentElement.scrollTop <= window.outerHeight) {
+        dialog.style = "bottom: 0px;";
+    }
     document.body.classList.toggle('nonscroll');
     dialog.classList.toggle('hidden');
 

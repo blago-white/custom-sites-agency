@@ -1,23 +1,44 @@
-import { setDialogTextHTML, changeDialogDisplay, truncateDialogHTML, toggleDarkDialogTheme } from "./dialog.js";
+import { setDialogTextHTML,
+         setDialogHTML,
+         changeDialogDisplay,
+         truncateDialogHTML,
+         toggleDarkDialogTheme,
+         toggleToxicDialogTheme } from "./dialog.js";
 
-const HTMLOrderForm = "<form><span id='order-form-text'><span>GET<img src='/static/img/filled-arrow.png' id='submit-order'></span>CONSULTATION</span><div><img src='/static/img/arrow.png'><div contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>your email</div><img src='/static/img/arrow.png' style='transform: rotate(180deg)'></div></form>";
+const HTMLOrderForm = "<form><span id='order-form-text'><span>GET<img src='/static/img/filled-arrow.png' id='submit-order'></span>CONSULTATION</span><div><img src='/static/img/arrow.png'><div style='width: auto' contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>your email</div><img src='/static/img/arrow.png' style='transform: rotate(180deg)'></div></form>";
+let tariffId;
 
-function orderSite() {
+function orderSite(id) {
+    console.log("order");
     toggleDarkDialogTheme();
     truncateDialogHTML();
     setDialogTextHTML(HTMLOrderForm);
     changeDialogDisplay();
+
+    tariffId = id;
+
     document.getElementById('submit-order').addEventListener('click', (event) => {onOrderSiteSubmit(event)})
+}
+
+function mailaddresIsValid(addres) {
+    if ((!addres.includes("@")) || (!addres.split(".")[addres.split(".").length-1])) {
+        return false;
+    }
+
+    var re = /^\S+@\S+\.\S+$/;
+
+    return re.test(addres);
 }
 
 function onInputEmail(element, event) {
     element.style.width = "auto";
+    document.getElementById('mailform').style.color = "";
 
     if (element.innerHTML.length > 29) {
-        element.innerHTML = element.innerHTML.slice(1, 41);
+        element.innerHTML = element.innerHTML.slice(1, 30);
     }
 
-    if (element.innerHTML.includes("@") && element.innerHTML.length > 4) {
+    if (mailaddresIsValid(element.innerHTML)) {
         document.getElementById('submit-order').style.opacity = 1;
         document.getElementById('order-form-text').style = 'color: #242424!important';
     } else {
@@ -30,26 +51,37 @@ function onInputEmail(element, event) {
     }
 }
 
-function onOrderSiteSubmit(event) {
-    changeDialogDisplay();
+function onSendOrderRequestSuccess(emailAddres) {
+    toggleToxicDialogTheme();
+    setDialogHTML("THANK<span style='color: var(--bg-color);padding-left: 0px;'>YOU</span>", "<h3>" + emailAddres + "</h3>We will contact you in the next fewminutes, check your mailbox");
+}
 
+function onOrderSiteSubmit(event, tariffIdFromElement) {
     var formdata = new FormData();
     formdata.append("email", document.getElementById('mailform').innerHTML);
+    formdata.append("tariff", tariffId || tariffIdFromElement);
 
     var requestOptions = {
       method: 'POST',
+      headers: {'X-CSRFToken': Cookies.get('csrftoken')},
       body: formdata,
-      redirect: 'follow'
+      mode: 'same-origin'
     };
 
-    try {
-        fetch("#", requestOptions);
-    } catch {
-        changeDialogDisplay();
-        document.getElementById('mailform').style.color = "red";
-        document.getElementById('mailform').innerHTML = 'error';
-    }
+    fetch("/order/", requestOptions).then(
+        (result) => {return result.json()}
+    ).then((response) => {
+        const result = response;
+        const status = (response.customer.email == document.getElementById('mailform').innerHTML) && mailaddresIsValid(response.customer.email);
 
+        if (!status) {
+            document.getElementById('mailform').style.color = "crimson";
+            document.getElementById('mailform').innerHTML = result.customer.email;
+        } else {
+            onSendOrderRequestSuccess(response.customer.email);
+            tariffId = undefined;
+        }
+    })
 }
 
 window.orderSite = orderSite;
