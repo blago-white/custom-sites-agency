@@ -51,6 +51,10 @@ export function setDialogTextHTML(text) {
 }
 
 export function changeDialogDisplay() {
+    console.log(document.documentElement.scrollTop, window.outerHeight);
+    if (document.documentElement.scrollTop <= window.outerHeight) {
+        dialog.style = "bottom: 0px;";
+    }
     document.body.classList.toggle('nonscroll');
     dialog.classList.toggle('hidden');
 
