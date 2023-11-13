@@ -11,7 +11,11 @@
     justify-content: space-evenly;
     font-weight: bold;
 
-    transition: opacity 1s ease;
+    transition: opacity .5s ease;
+}
+
+.second-content-wrapper-background {
+    height: 150vh;
 }
 
 .list-item {
@@ -164,6 +168,10 @@
 }
 
 @media(aspect-ratio < 12/9) {
+    .second-content-wrapper-background {
+        height: 225vh;
+    }
+
     .second-content-wrapper {
         flex-direction: column;
         height: calc(100vh - 2.4ch);

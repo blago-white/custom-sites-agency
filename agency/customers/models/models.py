@@ -10,7 +10,7 @@ class Customer(models.Model):
                                    default=False)
 
     def __str__(self):
-        return f"Customer {self.email})"
+        return f"Customer {self.email}"
 
     class Meta:
         verbose_name = "Customer"
@@ -33,7 +33,7 @@ class CustomerOrder(models.Model):
     date = models.DateTimeField(verbose_name="Order date", auto_now=True)
 
     def __str__(self):
-        return f"Order for {self.customer} ({self.date})"
+        return f"{self.customer} ({self.get_tariff_display()})"
 
     class Meta:
         db_table = "customers_customers_orders"

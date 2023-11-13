@@ -1,0 +1,96 @@
+@import "../colorscheme.css";
+
+.third-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 31vh;
+    font-size: min(10vh, 10vw);
+    font-weight: bold;
+    color: var(--light-color);
+    transition: all .5s ease;
+}
+
+.third-content-wrapper .about-sections {
+    color: var(--light-color-darkened);
+    font-size: calc(min(10vh, 10vw) * .7);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: calc(1% * 50*2/3);
+    padding-right: calc(1% * 50/3);
+}
+
+.section-details {
+    text-align: left;
+    font-size: calc(min(10vh, 10vw) * .5);
+    font-weight: 100;
+    color: var(--light-color-darkened);
+    width: calc(50% - 17%);
+    padding-right: 17%;
+    transition: all .2s ease;
+}
+
+.section-details-hidden {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.section-details span {
+    color: var(--toxic-green-color);
+}
+
+.section-details a {
+    color: var(--toxic-green-color);
+    text-decoration: auto;
+}
+
+.about-sections span {
+    width: fit-content;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+.active-about-section {
+    color: var(--toxic-green-color);
+    transform: scale(calc(10/7));
+    padding-right: .9ch;
+}
+
+.about-sections span:hover {
+    color: var(--toxic-green-color);
+    transform: scale(calc(10/7));
+    padding-right: .9ch;
+}
+
+@media (aspect-ratio < 12/9) {
+    .third-content-wrapper {
+        flex-direction: column;
+    }
+
+    .third-content-wrapper .about-sections {
+        font-size: calc(min(10vh, 10vw));
+        align-items: center;
+        flex-direction: column;
+        padding-right: 0px;
+        height: 50%;
+        justify-content: center;
+    }
+
+    .section-details {
+        padding-right: 0px;
+        padding-inline: 10%;
+        width: 90%;
+        text-align: center;
+        height: 50%;
+        font-size: calc(min(10vh, 10vw) * .75);
+    }
+
+    .active-about-section, .about-sections span:hover {
+        padding: 0px;
+    }
+
+    .section-details-hidden {
+        transform: translateY(50%);
+    }
+}

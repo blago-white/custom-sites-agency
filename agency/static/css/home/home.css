@@ -293,18 +293,20 @@
 }
 
 .contact-button-top {
-    position: relative;
-    right: calc(.74*min(16vh, 12vw));
+position: relative;
+    left: calc(.25*min(16vh, 12vw));
+    height: 9.8vh;
     cursor: pointer;
     top: 0.2ch;
-    width: 24.6vw;
+    width: 32.5vw;
     background: var(--toxic-green-color);
     border: 0px;
-    font-size: 8ch;
+    font-size: 3.3vw;
     font-family: 'Familjen Grotesk', sans-serif;
     color: var(--bg-color);
     font-weight: 900;
     border-radius: 0.1ch;
+    z-index: 100;
 }
 
 @media(aspect-ratio < 12/9) {
@@ -423,16 +425,19 @@
 
     .main-content {
         align-items: center;
-        height: auto;
+        height: 100vh;
         margin-inline: auto;
+        justify-content: center;
     }
 
     .contact-button-top {
         position: absolute;
         right: 30%;
+        left: auto;
         bottom: 10%;
         width: 40%;
         top: auto;
+        height: auto;
         border-radius: 50%;
         aspect-ratio: 1/1;
     }

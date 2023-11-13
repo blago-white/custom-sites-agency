@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/second-section.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/home/third-section.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/header.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/dialog.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
@@ -20,9 +21,6 @@
                          style="width: 1.155ch;aspect-ratio: 1/1;transition: .5s ease;"
                          onclick="expandMenu(event)">
                 </div>
-<!--                <div class="secondary-mobile-menu-text">-->
-<!--                    <span style="color: white;">WEB</span>SITES-->
-<!--                </div>-->
             </div>
             <div class="mobile-menu-list"
                  id="mobile-menu-list">
@@ -38,7 +36,7 @@
                     MAIN
                 </a>
                 <a onclick="location.hash = '#prices';">PRICES</a>
-                <a>ABOUT</a>
+                <a onclick="location.hash = '#about'">ABOUT</a>
             </div>
         </div>
         <div class="main-content-wrapper" id="main">
@@ -48,13 +46,7 @@
 
             <div class="main-content">
                 <div class="main-text-secondary-part">
-                    <button class="contact-button-top" onclick="orderSite(3)">CONTACT US</button>
-<!--                    <div class="main-text-elipses">-->
-<!--                        {% for i in 1|range_:5 %}-->
-<!--                            <img src="{% if i == 2 or i == 3 %}{% static 'img/ellipse.png' %}{% else %}{% static 'img/ellipse.png' %}{% endif %}"-->
-<!--                                 class="el el-{{i}}">-->
-<!--                        {% endfor %}-->
-<!--                    </div>-->
+                    <button class="contact-button-top" onclick="orderSite(3)">GET CONSULTATION</button>
                     <span class="second-text"><span class="filled-second-text">WEB</span>SITES</span>
                 </div>
                 <div>
@@ -83,68 +75,66 @@
                             <div class="min-price-label-number">
                                 50
                             </div>
-                            <div class="currency-container">
-                                $
-                                <span class="currency-name">USD</span>
+                            <div class="currency-container">$<span class="currency-name">USD</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main-content-wrapper second-content-wrapper" id="prices">
-            <div class="list-item">
-                <img src="{% static 'img/portfolio.png' %}">
-                <div class="site-order-button">
-                    <div class="order-button-part-top" onclick="orderSite(1)">order</div>
-                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">learn more</div>
-                </div>
-                <div class="list-item-title">LANDING
-                    <div class="site-order-details">
-                        <div class="min-type-price-label">$50+</div>
-                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">learn more</div>
-                        <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+        <div class="second-content-wrapper-background">
+            <div class="main-content-wrapper second-content-wrapper" id="prices">
+                <div class="list-item">
+                    <img src="{% static 'img/portfolio.png' %}">
+                    <div class="site-order-button">
+                        <div class="order-button-part-top" onclick="orderSite(1)">order</div>
+                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">learn more</div>
                     </div>
-                </div>
-                <div class="list-item-description">I will create wonderful site special for you</div>
-                <div class="list-item-canvas-filter"></div>
-            </div>
-            <div class="list-items-border"></div>
-            <div class="list-item">
-                <img src="{% static 'img/commerce.png' %}">
-                <div class="site-order-button">
-                    <div class="order-button-part-top" onclick="orderSite(2)">order</div>
-                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
-                </div>
-                <div class="list-item-title">COMMERCE
-                    <div class="site-order-details">
-                        <div class="min-type-price-label">$150+</div>
-                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
-                        <div class="mobile-order-button" onclick="orderSite(2)">order</div>
+                    <div class="list-item-title">LANDING
+                        <div class="site-order-details">
+                            <div class="min-type-price-label">$50+</div>
+                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">learn more</div>
+                            <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                        </div>
                     </div>
+                    <div class="list-item-description">I will create wonderful site special for you</div>
+                    <div class="list-item-canvas-filter"></div>
                 </div>
-                <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
-                <div class="list-item-canvas-filter"></div>
-            </div>
-            <div class="list-items-border"></div>
-            <div class="list-item">
-                <img src="{% static 'img/custom.png' %}">
-                <div class="site-order-button">
-                    <div class="order-button-part-top" onclick="orderSite(3)">order</div>
-                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
-                </div>
-                <div class="list-item-title">CUSTOM
-                    <div class="site-order-details">
-                        <div class="min-type-price-label">$100+</div>
-                        <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
-                        <div class="mobile-order-button" onclick="orderSite(3)">order</div>
+                <div class="list-items-border"></div>
+                <div class="list-item">
+                    <img src="{% static 'img/commerce.png' %}">
+                    <div class="site-order-button">
+                        <div class="order-button-part-top" onclick="orderSite(2)">order</div>
+                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
                     </div>
+                    <div class="list-item-title">COMMERCE
+                        <div class="site-order-details">
+                            <div class="min-type-price-label">$150+</div>
+                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
+                            <div class="mobile-order-button" onclick="orderSite(2)">order</div>
+                        </div>
+                    </div>
+                    <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
+                    <div class="list-item-canvas-filter"></div>
                 </div>
-                <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
-                <div class="list-item-canvas-filter"></div>
+                <div class="list-items-border"></div>
+                <div class="list-item">
+                    <img src="{% static 'img/custom.png' %}">
+                    <div class="site-order-button">
+                        <div class="order-button-part-top" onclick="orderSite(3)">order</div>
+                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
+                    </div>
+                    <div class="list-item-title">CUSTOM
+                        <div class="site-order-details">
+                            <div class="min-type-price-label">$100+</div>
+                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
+                            <div class="mobile-order-button" onclick="orderSite(3)">order</div>
+                        </div>
+                    </div>
+                    <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
+                    <div class="list-item-canvas-filter"></div>
+                </div>
             </div>
-        </div>
-        <div class="main-content-wrapper" style="position: sticky;top: 0px;background: #242424;">
         </div>
         <div class="dialog-window-bg hidden" id="dialog">
             <h1 id="dialog-window-header"></h1>
@@ -155,10 +145,25 @@
                  id="close-dialog"
                  onclick="changeDialogDisplay()">
         </div>
-
+        <div style="height: 100vh;" id="about">
+            <div class="main-content-wrapper third-content-wrapper"
+                 style="height: 100vh;position: sticky;top: 0px;opacity: 0;">
+                <div class="about-sections" id="about-selectors">
+                    <span class="active-about-section" onclick="setSectionDetails(1, this)">PAYMENT</span>
+                    <span onclick="setSectionDetails(2, this)">ABOUT</span>
+                    <span onclick="setSectionDetails(3, this)">CONTACTS</span>
+                </div>
+                <div class="section-details" id="secdetails">
+                    In our digital agency, payment is made in the safest way - <span>after each stage of the work is
+                    completed</span>, an invoice is sent
+                    to you for payment, that is, at any stage you can refuse payment
+                </div>
+            </div>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/mobileMenu.js' %}"></script>
+    <script src="{% static 'js/aboutSectionsSelector.js' %}"></script>
     <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
