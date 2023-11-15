@@ -64,7 +64,7 @@ function onSendOrderRequestSuccess(emailAddres) {
     setDialogHTML("THANK<span style='color: var(--bg-color);padding-left: 0px;'>YOU</span>", "<h3>" + emailAddres + "</h3>We will contact you in the next fewminutes, check your mailbox");
 }
 
-function onOrderSiteSubmit(event, tariffIdFromElement) {
+async function onOrderSiteSubmit(event, tariffIdFromElement) {
     var formdata = new FormData();
     formdata.append("email", document.getElementById('mailform').innerHTML);
     formdata.append("tariff", tariffId || tariffIdFromElement);
@@ -76,20 +76,26 @@ function onOrderSiteSubmit(event, tariffIdFromElement) {
       mode: 'same-origin'
     };
 
-    fetch("/order/", requestOptions).then(
-        (result) => {return result.json()}
-    ).then((response) => {
-        const result = response;
-        const status = (response.customer.email == document.getElementById('mailform').innerHTML) && mailaddresIsValid(response.customer.email);
+    const response = await fetch("/order/", requestOptions);
 
-        if (!status) {
-            document.getElementById('mailform').style.color = "crimson";
-            document.getElementById('mailform').innerHTML = result.customer.email;
-        } else {
-            onSendOrderRequestSuccess(response.customer.email);
-            tariffId = undefined;
-        }
-    })
+    const result = await response;
+    const jsonResponse = await result.json();
+
+    if (result.status == 429) {
+        setErrorMessage("Too many request, try later (~ 1 day)")
+    } else if (result.status == 400) {
+        setErrorMessage(jsonResponse.customer ? (
+            jsonResponse.customer.email ? jsonResponse.customer.email : result
+        ) : jsonResponse.detail)
+    } else if (result.status == 201) {
+        onSendOrderRequestSuccess(jsonResponse.customer.email);
+        tariffId = undefined;
+    }
+}
+
+function setErrorMessage(message) {
+    document.getElementById('mailform').style.color = "crimson";
+    document.getElementById('mailform').innerHTML = message;
 }
 
 window.orderSite = orderSite;

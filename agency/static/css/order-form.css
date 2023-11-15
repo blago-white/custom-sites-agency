@@ -14,4 +14,6 @@
     width: fit-content;
     max-width: 94vw;
     align-items: center;
+    background: rgb(255, 255, 255, .75);
+    border-radius: 3vh;
 }

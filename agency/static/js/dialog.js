@@ -10,19 +10,18 @@ export function renderDialog(header, text) {
     if (renderedNow) {
         changeDialogDisplay();
     } else {
-        console.log(header, text);
         setDialogHTML(header, text);
         changeDialogDisplay();
     }
-
-    console.log(renderedNow);
 }
 
 export function toggleToxicDialogTheme() {
+    disableDialogTheme();
     dialog.classList.toggle('toxic');
 }
 
 export function toggleDarkDialogTheme() {
+    disableDialogTheme();
     dialog.classList.toggle('dark');
 }
 

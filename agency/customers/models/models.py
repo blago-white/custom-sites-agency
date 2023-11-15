@@ -4,7 +4,13 @@ from . import utils
 
 class Customer(models.Model):
     customer_id = models.BigAutoField(primary_key=True)
-    email = models.EmailField(verbose_name="Contact mail", unique=True)
+    ip = models.GenericIPAddressField(verbose_name="Customer IP addres",
+                                      protocol="IPv4",
+                                      blank=False,
+                                      unique=True,
+                                      default=None)
+    email = models.EmailField(verbose_name="Contact mail",
+                              unique=True)
     verified = models.BooleanField(verbose_name="Customer email verified?",
                                    blank=True,
                                    default=False)

@@ -5,7 +5,7 @@ const selectors = document.getElementById('about-selectors').children;
 const sectionsDetails = {
     1: `In our digital agency, payment is made in the safest way -
         <span>after each stage of the work is completed</span>,
-        an invoice is sentto you for payment, that is, at any stage you can refuse payment,
+        an invoice is sentto you for payment, that is, at any stage <span>you can refuse payment</span>,
         you will receive more detailed information by ordering a consultation`,
     2: `<span>We are</span> a digital agency <span>focused on helping businesses</span>,
         appeared recently, in 2022, we really know how to make websites
@@ -29,4 +29,8 @@ function dropActiveSections() {
     for (let i = 0; i < selectors.length; i++) {
         selectors[i].classList.remove('active-about-section')
     }
+}
+
+function setInitialAboutSection() {
+    setSectionDetails(1, selectors[0])
 }

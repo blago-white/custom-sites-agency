@@ -23,7 +23,7 @@
 
 .section-details {
     text-align: left;
-    font-size: calc(min(10vh, 10vw) * .5);
+    font-size: calc(min(10vh, 10vw) * .4);
     font-weight: 100;
     color: var(--light-color-darkened);
     width: calc(50% - 17%);

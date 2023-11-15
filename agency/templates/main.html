@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Become famous now!</title>
+        <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/second-section.css' %}" type="text/css">
@@ -153,11 +154,7 @@
                     <span onclick="setSectionDetails(2, this)">ABOUT</span>
                     <span onclick="setSectionDetails(3, this)">CONTACTS</span>
                 </div>
-                <div class="section-details" id="secdetails">
-                    In our digital agency, payment is made in the safest way - <span>after each stage of the work is
-                    completed</span>, an invoice is sent
-                    to you for payment, that is, at any stage you can refuse payment
-                </div>
+                <div class="section-details" id="secdetails"></div>
             </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
@@ -168,6 +165,8 @@
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
     <script>
+        setInitialAboutSection()
+
         const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
 
         setTimeout(() => {longMainSectionArrow.style.maxWidth = '20ch'}, 250);
