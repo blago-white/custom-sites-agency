@@ -17,7 +17,9 @@ function onScroll (event) {
 
     if (scrollTopHeight >= processedHeight) {
         if (scrollTopHeight > absoluteSecondSectionHeight) {
+            console.log((Math.min((scrollTopHeight - secondSectionHeight * .9) / 100, 5.08)))
             colorValue = 219 - 36 * (Math.min((scrollTopHeight - secondSectionHeight * .9) / 100, 5.08));
+            console.log(colorValue)
         } else {
             colorValue = 36 + 183 * Math.min((scrollTopHeight - processedHeight) / 500, 1);
         }

@@ -40,6 +40,10 @@
     color: var(--toxic-green-color);
 }
 
+.section-details span {
+    color: var(--toxic-green-color);
+}
+
 .section-details a {
     color: var(--toxic-green-color);
     text-decoration: auto;

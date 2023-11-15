@@ -3,11 +3,11 @@ from django.conf import settings
 
 from rest_framework.exceptions import ValidationError
 
+from . import _messages, _subjects
 from ..serializers.exceptions import raise_customer_email_exception
 
 
 __all__ = ["on_submit_order"]
-_ADMIN_MAIL = "example@example.com"
 
 
 def on_submit_order(target_email: str) -> None:
@@ -16,20 +16,21 @@ def on_submit_order(target_email: str) -> None:
         _send_admin_notification(customer_email=target_email)
     except:
         raise raise_customer_email_exception(
-            "Some error with mail sending error occured"
+            _messages.ERROR_MAIL_SEND
         )
 
 
 def _send_customer_notification(customer_email: str) -> None:
-    mail.send_mail(subject="Site consultation",
-                   message="Thank's for order!",
+    mail.send_mail(subject=_subjects.CustomerSiteOrderSubject,
+                   message=_messages.ORDER_THANKS,
                    from_email=settings.DEFAULT_FROM_EMAIL,
                    recipient_list=(customer_email, ))
 
 
 def _send_admin_notification(customer_email: str) -> None:
-    mail.send_mail(subject="Customer order",
-                   message=f"Customer {customer_email} "
-                           f"order the consultation about site",
+    mail.send_mail(subject=_subjects.AdminSiteOrderSubject,
+                   message=_messages.ADMIN_ORDER_NOTIFICATION.format(
+                       customer_email
+                   ),
                    from_email=settings.DEFAULT_FROM_EMAIL,
-                   recipient_list=(_ADMIN_MAIL, ))
+                   recipient_list=(settings.ADMIN_MAIL, ))

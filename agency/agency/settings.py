@@ -29,7 +29,14 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+MAIN_DOMAIN = "127.0.0.1"
+
+if not DEBUG:
+    MAIN_DOMAIN = "loginov.tech"
+
+    ALLOWED_HOSTS = [MAIN_DOMAIN]
+
+    CSRF_TRUSTED_ORIGINS = [MAIN_DOMAIN]
 
 # Application definition
 
@@ -81,11 +88,19 @@ WSGI_APPLICATION = 'agency.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get("POSTGRES_DB"),
+        'USER': os.environ.get("POSTGRES_USER"),
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
+        # 'HOST': '',
+        # 'PORT': '',
     }
 }
 
+if not DEBUG:
+    DATABASES["default"].update(
+        HOST=os.environ.get("POSTGRES_HOST"),
+    )
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -125,9 +140,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = (
-    BASE_DIR / 'static',
-)
+if DEBUG:
+    STATICFILES_DIRS = (
+        BASE_DIR / 'static',
+    )
+else:
+    STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -147,6 +166,11 @@ REST_FRAMEWORK = {
     }
 }
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 DEFAULT_FROM_EMAIL = "example@example.com"
+
+ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)
