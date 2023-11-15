@@ -22,15 +22,17 @@ def on_submit_order(target_email: str) -> None:
 
 def _send_customer_notification(customer_email: str) -> None:
     mail.send_mail(subject=_subjects.CustomerSiteOrderSubject,
-                   message=_messages.ORDER_THANKS,
+                   html_message=_messages.ORDER_THANKS,
+                   message="",
                    from_email=settings.DEFAULT_FROM_EMAIL,
                    recipient_list=(customer_email, ))
 
 
 def _send_admin_notification(customer_email: str) -> None:
     mail.send_mail(subject=_subjects.AdminSiteOrderSubject,
-                   message=_messages.ADMIN_ORDER_NOTIFICATION.format(
-                       customer_email
+                   html_message=_messages.ADMIN_ORDER_NOTIFICATION.format(
+                       email=customer_email
                    ),
+                   message="",
                    from_email=settings.DEFAULT_FROM_EMAIL,
                    recipient_list=(settings.ADMIN_MAIL, ))

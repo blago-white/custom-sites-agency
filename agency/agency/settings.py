@@ -171,6 +171,6 @@ if DEBUG:
 else:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-DEFAULT_FROM_EMAIL = "example@example.com"
+DEFAULT_FROM_EMAIL = "@".join(("sites" + MAIN_DOMAIN))
 
 ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)
