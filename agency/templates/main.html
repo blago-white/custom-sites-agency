@@ -2,8 +2,14 @@
 {% load static %}
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title>Become famous now!</title>
+        <title>Get a custom website from $50!</title>
+        <meta name="description"
+              content="Get a turnkey website, we take responsibility for all stages of development,
+                       from the idea to SEO promotion and advertising,
+                       prices start from only $ 50">
+        <meta name="keywords" content="website, turnkey website, custom website, website promotion, site, commerce"/>
         <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
@@ -14,149 +20,12 @@
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
     </head>
     <body>
-        <div class="main-text small-main-text">
-            <div style="display: flex;height: 1.2ch;gap: 0.1ch;flex-direction: column;">
-                <div class="mobile-header-top">
-                    <span style="transition: all .5s ease;" id="mobile-header-top-text">LOGINOV</span>
-                    <img src="{% static 'img/menu.png' %}"
-                         style="width: 1.155ch;aspect-ratio: 1/1;transition: .5s ease;"
-                         onclick="expandMenu(event)">
-                </div>
-            </div>
-            <div class="mobile-menu-list"
-                 id="mobile-menu-list">
-                <a href="#main" onclick="expandMenu(event)">MAIN</a>
-                <a href="#prices" onclick="expandMenu(event)">PRICES</a>
-                <a href="#prices">ABOUT</a>
-                <a href="#contacts">LANG</a>
-            </div>
-        </div>
-        <div class="header-wrapper">
-            <div class="header">
-                <a onclick="location.hash = '#main';">
-                    MAIN
-                </a>
-                <a onclick="location.hash = '#prices';">PRICES</a>
-                <a onclick="location.hash = '#about'">ABOUT</a>
-            </div>
-        </div>
-        <div class="main-content-wrapper" id="main">
-            <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
-                <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
-            </div>
-
-            <div class="main-content">
-                <div class="main-text-secondary-part">
-                    <button class="contact-button-top" onclick="orderSite(3)">GET CONSULTATION</button>
-                    <span class="second-text"><span class="filled-second-text">WEB</span>SITES</span>
-                </div>
-                <div>
-                    <span class="main-text shifted-main-text">L</span><img
-                        src="{% static 'img/circle.png' %}"
-                        style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
-                        id="main-text-circle"><span class="main-text">GINOV</span>
-                    <div class="bottom-main-text">
-                        <img src="{% static 'img/line.png' %}" class="text-line">
-                        <div class="bottom-vertical-list">
-                            <span>LANDING</span>
-                            <span>BUSINESS CARD</span>
-                            <span>ONLINE MARKET</span>
-                            <span style="width: max-content;">AND OTHER WEBSITES</span>
-                        </div>
-                        <img src="{% static 'img/long-arrow.png' %}"
-                             class="long-arrow">
-                        <div class="min-price-label">
-                            <div class="mobile-main-text">
-                                <span style="position: relative;text-align: right;right: -1ch;">
-                                    <span class="big-mobile-main-text">BE</span>
-                                    <span class="small-mobile-main-text">IN THE</span>
-                                </span><span class="big-mobile-main-text" style="position: relative;left: -.5ch;">CENTER</span>
-                            </div>
-                            FROM
-                            <div class="min-price-label-number">
-                                50
-                            </div>
-                            <div class="currency-container">$<span class="currency-name">USD</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="second-content-wrapper-background">
-            <div class="main-content-wrapper second-content-wrapper" id="prices">
-                <div class="list-item">
-                    <img src="{% static 'img/portfolio.png' %}">
-                    <div class="site-order-button">
-                        <div class="order-button-part-top" onclick="orderSite(1)">order</div>
-                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">learn more</div>
-                    </div>
-                    <div class="list-item-title">LANDING
-                        <div class="site-order-details">
-                            <div class="min-type-price-label">$50+</div>
-                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">learn more</div>
-                            <div class="mobile-order-button" onclick="orderSite(1)">order</div>
-                        </div>
-                    </div>
-                    <div class="list-item-description">I will create wonderful site special for you</div>
-                    <div class="list-item-canvas-filter"></div>
-                </div>
-                <div class="list-items-border"></div>
-                <div class="list-item">
-                    <img src="{% static 'img/commerce.png' %}">
-                    <div class="site-order-button">
-                        <div class="order-button-part-top" onclick="orderSite(2)">order</div>
-                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
-                    </div>
-                    <div class="list-item-title">COMMERCE
-                        <div class="site-order-details">
-                            <div class="min-type-price-label">$150+</div>
-                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
-                            <div class="mobile-order-button" onclick="orderSite(2)">order</div>
-                        </div>
-                    </div>
-                    <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
-                    <div class="list-item-canvas-filter"></div>
-                </div>
-                <div class="list-items-border"></div>
-                <div class="list-item">
-                    <img src="{% static 'img/custom.png' %}">
-                    <div class="site-order-button">
-                        <div class="order-button-part-top" onclick="orderSite(3)">order</div>
-                        <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
-                    </div>
-                    <div class="list-item-title">CUSTOM
-                        <div class="site-order-details">
-                            <div class="min-type-price-label">$100+</div>
-                            <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
-                            <div class="mobile-order-button" onclick="orderSite(3)">order</div>
-                        </div>
-                    </div>
-                    <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
-                    <div class="list-item-canvas-filter"></div>
-                </div>
-            </div>
-        </div>
-        <div class="dialog-window-bg hidden" id="dialog">
-            <h1 id="dialog-window-header"></h1>
-            <span id="dialog-window-text">
-            </span>
-            <img src="{% static 'img/cross.png' %}"
-                 style="height: 7ch;width: 7ch;position: absolute;top: 0px;right: 0px;"
-                 id="close-dialog"
-                 onclick="changeDialogDisplay()">
-        </div>
-        <div style="height: 100vh;" id="about">
-            <div class="main-content-wrapper third-content-wrapper"
-                 style="height: 100vh;position: sticky;top: 0px;opacity: 0;">
-                <div class="about-sections" id="about-selectors">
-                    <span class="active-about-section" onclick="setSectionDetails(1, this)">PAYMENT</span>
-                    <span onclick="setSectionDetails(2, this)">ABOUT</span>
-                    <span onclick="setSectionDetails(3, this)">CONTACTS</span>
-                </div>
-                <div class="section-details" id="secdetails"></div>
-            </div>
-        </div>
+        {% include 'mobile-menu.html' %}
+        {% include 'header.html' %}
+        {% include 'sections/main.html' %}
+        {% include 'sections/prices.html' %}
+        {% include 'dialog.html' %}
+        {% include 'sections/about.html' %}
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/mobileMenu.js' %}"></script>

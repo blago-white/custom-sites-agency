@@ -1,0 +1,10 @@
+{% load static %}
+
+<div style="display: flex;height: 1.2ch;gap: 0.1ch;flex-direction: column;">
+    <div class="mobile-header-top">
+        <span style="transition: all .5s ease;" id="mobile-header-top-text">LOGINOV</span>
+        <img src="{% static 'img/menu.png' %}"
+             style="width: 1.155ch;aspect-ratio: 1/1;transition: .5s ease;"
+             onclick="expandMenu(event)">
+    </div>
+</div>

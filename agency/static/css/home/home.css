@@ -87,6 +87,7 @@
     font-style: italic;
     font-weight: bold;
     line-height: 1.4ch;
+    margin: 0px;
 }
 
 .filled-second-text {
@@ -164,16 +165,16 @@
     font-style: italic;
 }
 
-.bottom-vertical-list span {
+.bottom-vertical-list article {
     width: fit-content;
     cursor: pointer;
 }
 
-.bottom-vertical-list span:hover {
+.bottom-vertical-list article:hover {
     color: var(--light-color);
 }
 
-.bottom-vertical-list span:hover ~ * {
+.bottom-vertical-list article:hover ~ * {
     filter: brightness(.25);
 }
 

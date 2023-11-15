@@ -3,6 +3,11 @@ const thirdContentWrapper = document.getElementsByClassName('third-content-wrapp
 
 let colorValue = 36;
 
+const aspectRatio = window.outerWidth / window.outerHeight;
+
+const absoluteSecondSectionHeight = window.innerHeight* (aspectRatio > 12/9 ? 1.5 : 2.25)
+console.log(aspectRatio);
+
 function onScroll (event) {
     const scrollTopHeight = document.documentElement.scrollTop;
     const mainSectionHeight = document.getElementsByClassName('main-content-wrapper')[0].offsetHeight;
@@ -11,7 +16,7 @@ function onScroll (event) {
     const processedHeight = mainSectionHeight * .4;
 
     if (scrollTopHeight >= processedHeight) {
-        if (scrollTopHeight > secondSectionHeight*1.1) {
+        if (scrollTopHeight > absoluteSecondSectionHeight) {
             colorValue = 219 - 36 * (Math.min((scrollTopHeight - secondSectionHeight * .9) / 100, 5.08));
         } else {
             colorValue = 36 + 183 * Math.min((scrollTopHeight - processedHeight) / 500, 1);

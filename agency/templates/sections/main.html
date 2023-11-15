@@ -1,0 +1,43 @@
+{% load static %}
+
+<main class="main-content-wrapper" id="main">
+    <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
+        <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
+    </div>
+
+    <section class="main-content">
+        <div class="main-text-secondary-part">
+            <button class="contact-button-top" onclick="orderSite(3)">GET CONSULTATION</button>
+            <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
+        </div>
+        <div>
+            <span class="main-text shifted-main-text">L</span><img
+                src="{% static 'img/circle.png' %}"
+                style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
+                id="main-text-circle"><span class="main-text">GINOV</span>
+            <div class="bottom-main-text">
+                <img src="{% static 'img/line.png' %}" class="text-line">
+                <div class="bottom-vertical-list">
+                    <article>LANDING</article>
+                    <article>BUSINESS CARD</article>
+                    <article>ONLINE MARKET</article>
+                    <article style="width: max-content;">AND OTHER WEBSITES</article>
+                </div>
+                <img src="{% static 'img/long-arrow.png' %}"
+                     class="long-arrow">
+                <div class="min-price-label">
+                    <div class="mobile-main-text">
+                        <span style="position: relative;text-align: right;right: -1ch;">
+                            <span class="big-mobile-main-text">BE</span>
+                            <span class="small-mobile-main-text">IN THE</span>
+                        </span><span class="big-mobile-main-text" style="position: relative;left: -.5ch;">CENTER</span>
+                    </div>
+                    FROM
+                    <div class="min-price-label-number">50</div>
+                    <div class="currency-container">$<span class="currency-name">USD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
