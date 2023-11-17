@@ -27,16 +27,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 MAIN_DOMAIN = "127.0.0.1"
+HTTPS_USE = False
 
 if not DEBUG:
     MAIN_DOMAIN = "loginov.tech"
 
     ALLOWED_HOSTS = [MAIN_DOMAIN]
 
-    CSRF_TRUSTED_ORIGINS = [MAIN_DOMAIN]
+    CSRF_TRUSTED_ORIGINS = [
+        ("https://" if HTTPS_USE else "http://") + MAIN_DOMAIN
+    ]
 
 # Application definition
 
