@@ -257,14 +257,6 @@
     line-height: 1.2ch;
 }
 
-.secondary-mobile-menu-text {
-    width: 100%;
-    color: transparent;
-    -webkit-text-stroke: min(.004em, 2px) white;
-    letter-spacing: .082ch;
-    transition: all .5s ease;
-}
-
 .mobile-main-text {
     display: none;
     line-height: 2ch;

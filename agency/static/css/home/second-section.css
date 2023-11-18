@@ -174,8 +174,7 @@
 
     .second-content-wrapper {
         flex-direction: column;
-        height: calc(100vh - 2.4ch);
-        top: 2.4ch;
+        top: 3ch;
     }
 
     .list-item img {

@@ -6,6 +6,8 @@ function rotateArrow(arrow) {
 }
 
 function expandMenu(event) {
+    console.log(expanded, '-------1');
+
     rotateArrow(event.target)
 
     if (!expanded) {
@@ -16,7 +18,6 @@ function expandMenu(event) {
             () => {
                 document.getElementById('mobile-header-top-text').style.opacity = '.0';
                 document.getElementById('mobile-menu-list').style.opacity = '1';
-                document.getElementsByClassName('secondary-mobile-menu-text')[0].style.opacity = '0';
             },
             '500'
         )
@@ -32,7 +33,6 @@ function expandMenu(event) {
             () => {
                 document.getElementById('mobile-header-top-text').style.opacity = '1';
                 document.getElementById('mobile-menu-list').style.opacity = '0';
-                document.getElementsByClassName('secondary-mobile-menu-text')[0].style.opacity = '1';
             },
             '50'
         )
@@ -42,7 +42,8 @@ function expandMenu(event) {
         () => {
             mobileMenu.style.height = expanded ? '1.2ch' : 'calc(100vh + 1px)';
             expanded = !expanded;
-        }, '500'
+            console.log(expanded, '-------3');
+        }, '450'
     )
 
     if (!expanded) {
@@ -51,10 +52,11 @@ function expandMenu(event) {
             {'duration': 500, 'easing': 'ease'}
         )
     } else {
-        console.log(123);
         mobileMenu.animate(
             [{'height': '1.2ch'}],
             {'duration': 500, 'easing': 'ease'}
         )
     }
+
+    console.log(expanded, '-------2');
 }

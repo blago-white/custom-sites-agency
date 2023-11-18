@@ -20,11 +20,11 @@
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
     </head>
     <body>
+        {% include 'dialog.html' %}
         {% include 'mobile-menu.html' %}
         {% include 'header.html' %}
         {% include 'sections/main.html' %}
         {% include 'sections/prices.html' %}
-        {% include 'dialog.html' %}
         {% include 'sections/about.html' %}
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
