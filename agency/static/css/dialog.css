@@ -165,7 +165,7 @@ form input {
 
     .dialog-window-bg {
         top: 0px;
-        bottom: auto;
+        bottom: top;
         backdrop-filter: blur(2ch) contrast(.25) brightness(.8);
         font-size: 7vw;
     }
