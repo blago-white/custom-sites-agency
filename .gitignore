@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 
 /migrations/
+agency/static/admin/
+agency/static/rest_framework/
