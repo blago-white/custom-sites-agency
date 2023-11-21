@@ -173,7 +173,7 @@
     }
 
     .second-content-wrapper {
-        height: 93vh;
+        height: auto;
         flex-direction: column;
         top: 3ch;
     }

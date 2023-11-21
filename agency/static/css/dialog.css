@@ -13,8 +13,8 @@
 }
 
 .dialog-window-bg {
-    position: sticky;
-    bottom: 0px;
+    position: fixed;
+    top: 0px;
     display: flex;
     font-family: "SF Pro Display", Helvetica, system-ui;
     font-weight: 500;
