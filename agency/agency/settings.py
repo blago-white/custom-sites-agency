@@ -29,10 +29,11 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-MAIN_DOMAIN = "127.0.0.1"
-HTTPS_USE = DEBUG
+HTTPS_USE = True
 
-if not DEBUG:
+if DEBUG:
+    MAIN_DOMAIN = "127.0.0.1"
+else:
     MAIN_DOMAIN = "loginov.tech"
 
     ALLOWED_HOSTS = [MAIN_DOMAIN]
@@ -169,11 +170,17 @@ REST_FRAMEWORK = {
     }
 }
 
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
+
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 else:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
-DEFAULT_FROM_EMAIL = "@".join(("sites" + MAIN_DOMAIN))
+    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+    EMAIL_HOST = "smtp.timeweb.ru"
+    EMAIL_PORT = 465
+    EMAIL_USE_SSL = True
 
 ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)

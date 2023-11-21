@@ -5,7 +5,7 @@ from django.http import QueryDict
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework import generics
 
-from .services import emails
+from .services import emails, ip
 from . import serializers
 from .serializers import utils
 
@@ -31,7 +31,7 @@ class CustomerContactsSaveApiView(generics.CreateAPIView):
     def _process_client_data(self, serializer_kwargs) -> None:
         request_data = utils.add_ip_to_customer_data(
             raw_data=serializer_kwargs.get("data"),
-            ip=self.request.META.get('REMOTE_ADDR')
+            ip=ip.get_ip_from_request(request=self.request)
         )
 
         serializer_kwargs.update(data=utils.customer_data_to_customer_order(
