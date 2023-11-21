@@ -8,6 +8,7 @@
     font-size: min(10vh, 10vw);
     font-weight: bold;
     color: var(--light-color);
+    background: var(--bg-color);
     transition: all .5s ease;
 }
 

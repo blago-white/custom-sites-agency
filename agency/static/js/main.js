@@ -13,33 +13,17 @@ function onScroll (event) {
     const mainSectionHeight = document.getElementsByClassName('main-content-wrapper')[0].offsetHeight;
     const secondSectionHeight = document.getElementById('prices').parentElement.offsetHeight;
     const thirdSectionHeight = document.getElementById('about').offsetHeight;
-    const processedHeight = mainSectionHeight * .4;
+    const processedHeight = mainSectionHeight * .6;
 
-    if (scrollTopHeight >= processedHeight) {
-        if (scrollTopHeight > absoluteSecondSectionHeight) {
-            colorValue = 219 - 36 * (Math.min((scrollTopHeight - secondSectionHeight * .8) / 100, 5.08));
-        } else {
-            colorValue = 36 + 183 * Math.min((scrollTopHeight - processedHeight) / 500, 1);
-        }
-        document.body.style.background = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
-    } else {
-        document.body.style.background = "#242424";
-    }
+    if (scrollTopHeight > processedHeight) {
+        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(" + (
+                (scrollTopHeight - processedHeight) / 25
+            ) + "px)";
 
-    if (scrollTopHeight >= mainSectionHeight) {
-        if (scrollTopHeight <= window.innerHeight*1.5) {
-            secondContentWrapper.style.opacity = "1";
-        } else {secondContentWrapper.style.opacity = "0"}
+        secondContentWrapper.style.boxShadow = "0px 0px " + (scrollTopHeight - processedHeight) + "px #dbdbdb";
     } else {
-        if (secondContentWrapper.style.opacity == "1") {
-            secondContentWrapper.style.opacity = "0";
-        }
-    }
-
-    if (scrollTopHeight >= secondSectionHeight) {
-        thirdContentWrapper.style.opacity = "1";
-    } else {
-        thirdContentWrapper.style.opacity = "0";
+        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(0px)";
+        secondContentWrapper.style.boxShadow = "0px 0px 0px #dbdbdb";
     }
 }
 
