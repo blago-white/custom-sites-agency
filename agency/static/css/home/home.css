@@ -289,7 +289,7 @@
 }
 
 .contact-button-top {
-position: relative;
+    position: relative;
     left: calc(.25*min(16vh, 12vw));
     height: 9.8vh;
     cursor: pointer;
@@ -303,6 +303,10 @@ position: relative;
     font-weight: 900;
     border-radius: 0.1ch;
     z-index: 100;
+}
+
+.contact-button-top:hover {
+    background: var(--light-color);
 }
 
 @media(aspect-ratio < 12/9) {

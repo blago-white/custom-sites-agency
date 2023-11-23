@@ -34,7 +34,23 @@
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
     <script>
-        setInitialAboutSection()
+        const sectionsYCords = {
+            "main": 0,
+            "prices": document.getElementById('prices').offsetHeight*.5 + document.getElementById('main').offsetHeight,
+            "about": document.body.scrollHeight,
+        };
+
+        function scrollToSection(secId) {
+            window.scrollTo({
+                top: sectionsYCords[secId],
+                left: 0,
+                behavior: 'smooth'
+            });
+
+            location.hash = "#" + secId;
+        }
+
+        setInitialAboutSection();
 
         const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
 
@@ -42,25 +58,9 @@
             longMainSectionArrow.style.maxWidth = '20ch';
         }, 250);
 
-        function scrollToTop(scrollDuration, stopHeight) {
-            var scrollStep = -window.scrollY / (scrollDuration / 15);
-            const toTop = window.scrollY > stopHeight;
-            scrollInterval = setInterval(
-                function(){
-                    if ((window.scrollY > stopHeight && toTop) || (window.scrollY < stopHeight && !toTop)) {
-                        window.scrollBy( 0, (toTop ? scrollStep : (-scrollStep)) );
-                    } else clearInterval(scrollInterval);
-                }, 15);
-        }
-        console.log(document.getElementById("prices").parentElement.innerHeight);
-
-        let targetHeight = 0;
-
-        if (location.hash == "prices") {
-            targetHeight = 1500;
-        }
-
-        scrollToTop(1000, targetHeight);
+        setTimeout(() => {
+            scrollToSection(location.hash.slice(1, location.hash.length));
+        }, 50);
     </script>
     </body>
 </html>

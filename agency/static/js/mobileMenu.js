@@ -6,8 +6,6 @@ function rotateArrow(arrow) {
 }
 
 function expandMenu(event) {
-    console.log(expanded, '-------1');
-
     rotateArrow(event.target)
 
     if (!expanded) {
@@ -42,7 +40,6 @@ function expandMenu(event) {
         () => {
             mobileMenu.style.height = expanded ? '1.2ch' : 'calc(100vh + 1px)';
             expanded = !expanded;
-            console.log(expanded, '-------3');
         }, '450'
     )
 
@@ -57,6 +54,4 @@ function expandMenu(event) {
             {'duration': 500, 'easing': 'ease'}
         )
     }
-
-    console.log(expanded, '-------2');
 }
