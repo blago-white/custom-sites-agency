@@ -1,5 +1,11 @@
 let expanded = false;
+let expandingNow = false;
 const mobileMenu = document.getElementsByClassName('small-main-text')[0];
+
+
+export function expanding() {
+    return expandingNow
+}
 
 function rotateArrow(arrow) {
     arrow.style.transform = expanded ? "rotate(0deg)" : "rotate(180deg)";
@@ -7,6 +13,8 @@ function rotateArrow(arrow) {
 
 function expandMenu(event) {
     rotateArrow(event.target)
+
+    expandingNow = true;
 
     if (!expanded) {
         mobileMenu.style.background = '#242424';
@@ -40,6 +48,7 @@ function expandMenu(event) {
         () => {
             mobileMenu.style.height = expanded ? '1.2ch' : 'calc(100vh + 1px)';
             expanded = !expanded;
+            expandingNow = false;
         }, '450'
     )
 
@@ -55,3 +64,5 @@ function expandMenu(event) {
         )
     }
 }
+
+window.expandMenu = expandMenu;

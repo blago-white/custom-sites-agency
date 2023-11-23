@@ -10,8 +10,8 @@ const sectionsDetails = {
     2: `<span>We are</span> a digital agency <span>focused on helping businesses</span>,
         appeared recently, in 2022, we really know how to make websites
         <br><span>IP Loginov</span><br>INN 312348585325<br>OGRN 323310000063180`,
-    3: `<address style="font-style: inherit;"><a href="mailto:example@example.com">example@example.com</a><br>
-        <span style="cursor: pointer;" onclick="location.href = '#main'">order consultation, its
+    3: `<address style="font-style: inherit;"><a href="mailto:sites@loginov.tech">sites@loginov.tech</a><br>
+        <span style="cursor: pointer;" onclick="scrollToSection('main')">order consultation, its
         free</span></address>`
 }
 

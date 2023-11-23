@@ -1,3 +1,5 @@
+import { expanding } from "./mobileMenu.js";
+
 const secondContentWrapper = document.getElementsByClassName('second-content-wrapper')[0];
 const thirdContentWrapper = document.getElementsByClassName('third-content-wrapper')[0];
 
@@ -7,7 +9,11 @@ const aspectRatio = window.outerWidth / window.outerHeight;
 
 const absoluteSecondSectionHeight = window.innerHeight* (aspectRatio > 12/9 ? 1.5 : 2.25)
 
-function onScroll (event) {
+function onScroll(event) {
+    if (expanding()) {
+        return;
+    }
+
     const scrollTopHeight = document.documentElement.scrollTop;
     const mainSectionHeight = document.getElementsByClassName('main-content-wrapper')[0].offsetHeight;
     const secondSectionHeight = document.getElementById('prices').parentElement.offsetHeight;
