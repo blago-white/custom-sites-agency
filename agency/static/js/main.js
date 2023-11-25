@@ -1,3 +1,5 @@
+import { expanding } from "./mobileMenu.js";
+
 const secondContentWrapper = document.getElementsByClassName('second-content-wrapper')[0];
 const thirdContentWrapper = document.getElementsByClassName('third-content-wrapper')[0];
 
@@ -6,40 +8,39 @@ let colorValue = 36;
 const aspectRatio = window.outerWidth / window.outerHeight;
 
 const absoluteSecondSectionHeight = window.innerHeight* (aspectRatio > 12/9 ? 1.5 : 2.25)
-console.log(aspectRatio);
 
-function onScroll (event) {
+function onScroll(event) {
+    if (expanding()) {
+        return;
+    }
+
     const scrollTopHeight = document.documentElement.scrollTop;
     const mainSectionHeight = document.getElementsByClassName('main-content-wrapper')[0].offsetHeight;
     const secondSectionHeight = document.getElementById('prices').parentElement.offsetHeight;
     const thirdSectionHeight = document.getElementById('about').offsetHeight;
-    const processedHeight = mainSectionHeight * .4;
+    const processedHeight = aspectRatio > 12/9 ? mainSectionHeight * .6 : 0;
 
-    if (scrollTopHeight >= processedHeight) {
-        if (scrollTopHeight > absoluteSecondSectionHeight) {
-            colorValue = 219 - 36 * (Math.min((scrollTopHeight - secondSectionHeight * .8) / 100, 5.08));
+    if (scrollTopHeight > processedHeight) {
+        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(" + (
+                (scrollTopHeight - processedHeight) / 25
+            ) + "px)";
+
+        secondContentWrapper.style.boxShadow = "0px 0px " + (scrollTopHeight - processedHeight) + "px #dbdbdb";
+
+        if (scrollTopHeight > thirdSectionHeight) {
+            secondContentWrapper.parentElement.style.filter = "blur(" + ((
+                (scrollTopHeight - thirdSectionHeight) / 50
+            ) - 1) + "px)";
+
+            thirdContentWrapper.style.boxShadow = "0px 0px " + (
+                scrollTopHeight - thirdSectionHeight
+            ) + "px #202020" + ", 0px 0px " + (scrollTopHeight - thirdSectionHeight) + "px #202020";
         } else {
-            colorValue = 36 + 183 * Math.min((scrollTopHeight - processedHeight) / 500, 1);
+            secondContentWrapper.parentElement.style.filter = "";
         }
-        document.body.style.background = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
     } else {
-        document.body.style.background = "#242424";
-    }
-
-    if (scrollTopHeight >= mainSectionHeight) {
-        if (scrollTopHeight <= window.innerHeight*1.5) {
-            secondContentWrapper.style.opacity = "1";
-        } else {secondContentWrapper.style.opacity = "0"}
-    } else {
-        if (secondContentWrapper.style.opacity == "1") {
-            secondContentWrapper.style.opacity = "0";
-        }
-    }
-
-    if (scrollTopHeight >= secondSectionHeight) {
-        thirdContentWrapper.style.opacity = "1";
-    } else {
-        thirdContentWrapper.style.opacity = "0";
+        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(0px)";
+        secondContentWrapper.style.boxShadow = "0px 0px 0px #dbdbdb";
     }
 }
 

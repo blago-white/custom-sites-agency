@@ -2,8 +2,8 @@
     {% include 'mobile-header.html' %}
     <nav class="mobile-menu-list"
          id="mobile-menu-list">
-        <a href="#main" onclick="expandMenu(event)">MAIN</a>
-        <a href="#prices" onclick="expandMenu(event)">PRICES</a>
-        <a href="#about" onclick="expandMenu(event)">ABOUT</a>
+        <a onclick="expandMenu(event);scrollToSection('main')">MAIN</a>
+        <a onclick="expandMenu(event);scrollToSection('prices')">PRICES</a>
+        <a onclick="expandMenu(event);scrollToSection('about')">ABOUT</a>
     </nav>
 </div>

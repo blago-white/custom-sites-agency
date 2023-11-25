@@ -1,10 +1,8 @@
 @import "../colorscheme.css";
 
 .second-content-wrapper {
-    background: transparent;
     position: sticky;
     top: 0px;
-    opacity: 0;
     color: var(--bg-color);
     font-size: min(10vh, 10vw);
     flex-direction: row;
@@ -15,7 +13,10 @@
 }
 
 .second-content-wrapper-background {
-    height: 150vh;
+    height: 260vh;
+    position: sticky;
+    top: 100vh;
+    background: rgb(219, 219, 219);
 }
 
 .list-item {
@@ -170,12 +171,16 @@
 @media(aspect-ratio < 12/9) {
     .second-content-wrapper-background {
         height: 225vh;
+        position: relative;
+        top: 87vh;
     }
 
     .second-content-wrapper {
         height: auto;
         flex-direction: column;
-        top: 3ch;
+        padding-top: 1.2ch;
+        position: sticky;
+        top: -15vh;
     }
 
     .list-item img {

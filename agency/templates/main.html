@@ -4,12 +4,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title>Get a custom website from $50!</title>
+        <title>Get website for you from $50 | Loginov Digital Agency</title>
         <meta name="description"
-              content="Get a turnkey website, we take responsibility for all stages of development,
-                       from the idea to SEO promotion and advertising,
-                       prices start from only $ 50">
+              content="Get a turnkey website, we take responsibility for all stages of development, from the idea to SEO promotion and advertising, prices start from only $ 50">
         <meta name="keywords" content="website, turnkey website, custom website, website promotion, site, commerce"/>
+        <meta property="og:site_name" content="A custom-made website just for you from $50!">
+        <meta property="og:url" content="https://loginov.tech"/>
+        <meta property="og:image" content="{% static 'img/qr.png' %}"/>
+        <meta property="og:description"
+              content="Get a turnkey website, we take responsibility for all stages of development, from the idea to SEO promotion and advertising, prices start from only $50"/>
+        <link rel="canonical" href="https://loginov.tech">
         <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
@@ -27,18 +31,40 @@
         {% include 'sections/prices.html' %}
         {% include 'sections/about.html' %}
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/mobileMenu.js' %}"></script>
     <script src="{% static 'js/aboutSectionsSelector.js' %}"></script>
+    <script type="module" src="{% static 'js/main.js' %}"></script>
+    <script type="module" src="{% static 'js/mobileMenu.js' %}"></script>
     <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
     <script>
-        setInitialAboutSection()
+        const sectionsYCords = {
+            "main": 0,
+            "prices": document.getElementById('prices').offsetHeight*.5 + document.getElementById('main').offsetHeight,
+            "about": document.body.scrollHeight,
+        };
+
+        function scrollToSection(secId) {
+            window.scrollTo({
+                top: sectionsYCords[secId],
+                left: 0,
+                behavior: 'smooth'
+            });
+
+            location.hash = "#" + secId;
+        }
+
+        setInitialAboutSection();
 
         const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
 
-        setTimeout(() => {longMainSectionArrow.style.maxWidth = '20ch'}, 250);
+        setTimeout(() => {
+            longMainSectionArrow.style.maxWidth = '20ch';
+        }, 250);
+
+        setTimeout(() => {
+            scrollToSection(location.hash.slice(1, location.hash.length));
+        }, 50);
     </script>
     </body>
 </html>

@@ -8,11 +8,11 @@ import { setDialogTextHTML,
 const HTMLOrderForm = `<form>
     <span id='order-form-text'>
         <span>GET<img src='/static/img/filled-arrow.png' id='submit-order'></span>CONSULTATION</span>
-        <div><img src='/static/img/arrow.png'>
+        <div><img src='/uploads/img/arrow.png'>
             <div style='width: auto' contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>
                 your email
             </div>
-            <img src='/static/img/arrow.png' style='transform: rotate(180deg)'>
+            <img src='/uploads/img/arrow.png' style='transform: rotate(180deg)'>
         </div>
     </form>`;
 
