@@ -1,10 +1,12 @@
+{% load i18n %}
+
 <section style="height: 150vh;position: sticky;top: 150vh;" id="about">
     <div class="main-content-wrapper third-content-wrapper"
          style="height: 100vh;position: sticky;top: 0px;">
         <div class="about-sections" id="about-selectors">
-            <article class="active-about-section" onclick="setSectionDetails(1, this)">PAYMENT</article>
-            <article onclick="setSectionDetails(2, this)">ABOUT</article>
-            <article onclick="setSectionDetails(3, this)">CONTACTS</article>
+            <article class="active-about-section" onclick="setSectionDetails(1, this)">{% trans 'Payment' %}</article>
+            <article onclick="setSectionDetails(2, this)">{% trans 'About' %}</article>
+            <article onclick="setSectionDetails(3, this)">{% trans 'Contacts' %}</article>
         </div>
         <aside class="section-details" id="secdetails"></aside>
     </div>

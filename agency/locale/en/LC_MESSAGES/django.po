@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-30 23:50+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\header.html:5
+msgid "MainSecLink"
+msgstr "MAIN"
+
+#: .\templates\header.html:6
+msgid "PricesSecLink"
+msgstr "PRICES"
+
+#: .\templates\header.html:7
+msgid "AboutSecLink"
+msgstr "ABOUT"
+
+#: .\templates\main.html:10
+msgid "Title"
+msgstr "Get website for you from $50 | Loginov Digital Agency"
+
+#: .\templates\mobile-menu.html:7
+msgid "MainPageMobileSelector"
+msgstr "MAIN"
+
+#: .\templates\mobile-menu.html:8
+msgid "PricesMobileSelector"
+msgstr "PRICES"
+
+#: .\templates\mobile-menu.html:9
+msgid "AboutMobileSelector"
+msgstr "ABOUT"
+
+#: .\templates\sections\about.html:7
+msgid "Payment"
+msgstr "PAYMENT"
+
+#: .\templates\sections\about.html:8
+msgid "About"
+msgstr "ABOUT"
+
+#: .\templates\sections\about.html:9
+msgid "Contacts"
+msgstr "CONTACTS"
+
+#: .\templates\sections\main.html:10
+msgid "GetConsultation"
+msgstr "GET CONSULTATION"
+
+#: .\templates\sections\main.html:20
+msgid "LandingTitle"
+msgstr "LANDING"
+
+#: .\templates\sections\main.html:21
+msgid "BusinessCardTitle"
+msgstr "BUSINESS CARD"
+
+#: .\templates\sections\main.html:22
+msgid "CommerceTitle"
+msgstr "ONLINE MARKET"
+
+#: .\templates\sections\main.html:23
+msgid "OtherTitle"
+msgstr "AND OTHER WEBSITES"
+
+#: .\templates\sections\prices.html:9 .\templates\sections\prices.html:26
+#: .\templates\sections\prices.html:43
+msgid "Order"
+msgstr "order"
+
+#: .\templates\sections\prices.html:10 .\templates\sections\prices.html:27
+#: .\templates\sections\prices.html:44
+msgid "LearnMore"
+msgstr "learn more"
+
+#: .\templates\sections\prices.html:12
+msgid "Landing"
+msgstr "LANDING"
+
+#: .\templates\sections\prices.html:15 .\templates\sections\prices.html:32
+#: .\templates\sections\prices.html:49
+msgid "LearnMoreMobile"
+msgstr "детали"
+
+#: .\templates\sections\prices.html:16 .\templates\sections\prices.html:33
+#: .\templates\sections\prices.html:50
+msgid "OrderMobile"
+msgstr "order"
+
+#: .\templates\sections\prices.html:19
+msgid "LandingDesc"
+msgstr "I will create wonderful site special for you"
+
+#: .\templates\sections\prices.html:29
+msgid "Commerce"
+msgstr "COMMERCE"
+
+#: .\templates\sections\prices.html:36
+msgid "CommerceDesc"
+msgstr "You will be able to earn on your ideas, I will help"
+
+#: .\templates\sections\prices.html:46
+msgid "Custom"
+msgstr "CUSTOM"
+
+#: .\templates\sections\prices.html:53
+msgid "CustomDesc"
+msgstr "Any types of websites, I can implement your wildest ideas"

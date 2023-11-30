@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-01 00:25+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\static\js\aboutSectionsSelector.js:5
+#: .\static\js\aboutSectionsSelector.js:8
+msgid "PAYMENT"
+msgstr ""
+"In our digital agency, payment is made in the safest way -<span>after each "
+"stage of the work is completed</span>,an invoice is sentto you for payment, "
+"that is, at any stage <span>you can refuse payment</span>,you will receive "
+"more detailed information by ordering a consultation"
+
+#: .\static\js\aboutSectionsSelector.js:9
+msgid "ABOUT"
+msgstr ""
+"<span>We are</span> a digital agency <span>focused on helping businesses</"
+"span>,appeared recently, in 2022, we really know how to make "
+"websites<br><span>IP Loginov</span><br>INN 312348585325<br>OGRN "
+"323310000063180"
+
+#: .\static\js\aboutSectionsSelector.js:10
+msgid "CONTACTS"
+msgstr ""
+"<address style=\"font-style: inherit;\"><a href=\"mailto:sites@loginov.tech"
+"\">sites@loginov.tech</a><br><span style='cursor: pointer;' onclick="
+"\"scrollToSection('main')\">order consultation, itsfree</span></address>"
+
+#: .\static\js\order.js:10
+msgid "GetEvent"
+msgstr "GET"
+
+#: .\static\js\order.js:11
+msgid "GetEventObject"
+msgstr "CONSULTATION"
+
+#: .\static\js\order.js:14
+msgid "EmailPlaceholder"
+msgstr "enter email"
+
+#: .\static\js\tariffDetails.js:4
+msgid "LandingDetails"
+msgstr ""
+"A landing page is a simple one-page website that represents something, a "
+"product or service, or in general specifically you <h2>DEADLINES</h2> From 3 "
+"to 14 days"
+
+#: .\static\js\tariffDetails.js:5
+msgid "CustomDetails"
+msgstr ""
+"If your desires do not fit into the framework, you have come to the right "
+"place, just tell us your desires and we will immediately proceed to the "
+"realization of your dream, the price may vary greatly, we will tell you the "
+"final cost when we agree on the site <h2>DEADLINES</h2> From 3 to 31 days"
+
+#: .\static\js\tariffDetails.js:6
+msgid "CommerceDetails"
+msgstr ""
+"Nowadays, all the money is on the Internet, I will help you set up a revenue "
+"stream in your hands <h2>DEADLINES</h2> From 7 to 25 days"

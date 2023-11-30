@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+	font-family: 'GolosUIWebBold';
+	src:
+		url('../fonts/golos-ui_bold.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebBold';
+	src:
+		url('../fonts/golos-ui_medium.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebBold';
+	src:
+		url('../fonts/golos-ui_regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebBold';
+	src:
+		url('../fonts/golos-ui_vf.woff') format('woff');
+	font-weight: lighter;
+	font-style: normal;
+}

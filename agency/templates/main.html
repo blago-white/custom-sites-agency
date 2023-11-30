@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en" prefix="og: https://ogp.me/ns#">
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<html lang="{{ LANGUAGE_CODE }}" prefix="og: https://ogp.me/ns#">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title>Get website for you from $50 | Loginov Digital Agency</title>
+        <title>{% trans 'Title' %}</title>
         <meta name="description"
               content="Get a turnkey website, we take responsibility for all stages of development, from the idea to SEO promotion and advertising, prices start from only $ 50">
         <meta name="keywords" content="website, turnkey website, custom website, website promotion, site, commerce"/>
@@ -15,6 +18,8 @@
               content="Get a turnkey website, we take responsibility for all stages of development, from the idea to SEO promotion and advertising, prices start from only $50"/>
         <link rel="canonical" href="https://loginov.tech">
         <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+        <link rel="apple-touch-icon" href="{% static 'img/favicon.png' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/home/second-section.css' %}" type="text/css">
@@ -39,6 +44,29 @@
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/95683576" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+        <script src="{% url 'javascript-catalog' %}"></script>
+        <style>
+            {% if LANGUAGE_CODE == "ru" %}
+
+            .header {
+                gap: 0ch;
+                font-size: 4.75vh;
+            }
+
+            .contact-button-top {
+                font-family: 'GolosUIWebBold';
+                font-weight: 900;
+                font-size: 3.8vw;
+            }
+
+            .long-arrow {
+                max-width: 17ch;
+                padding-left: 3ch;
+            }
+
+            {% endif %}
+        </style>
     </head>
     <body>
         {% include 'dialog.html' %}
@@ -47,7 +75,6 @@
         {% include 'sections/main.html' %}
         {% include 'sections/prices.html' %}
         {% include 'sections/about.html' %}
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="{% static 'js/aboutSectionsSelector.js' %}"></script>
     <script type="module" src="{% static 'js/main.js' %}"></script>
     <script type="module" src="{% static 'js/mobileMenu.js' %}"></script>
@@ -76,7 +103,7 @@
         const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
 
         setTimeout(() => {
-            longMainSectionArrow.style.maxWidth = '20ch';
+            longMainSectionArrow.style.maxWidth = {% if LANGUAGE_CODE == 'ru' %}'17ch'{% else %}'20ch'{% endif %};
         }, 250);
 
         setTimeout(() => {

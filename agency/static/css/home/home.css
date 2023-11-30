@@ -1,4 +1,5 @@
 @import "../colorscheme.css";
+@import "../fonts.css";
 
 @keyframes upellipse {
   0% {
@@ -145,31 +146,25 @@
     flex-direction: row;
 }
 
-.shifted-main-text {
-    position: relative;
-    top: 0.275ch;
-}
-
 .bottom-main-text {
     display: flex;
     align-items: center;
-    padding-left: 15%;
+    padding-left: 12.25%;
     gap: .5ch;
     font-size: min(5vh, 12vw);
-    color: transparent;
+    font-weight: 900;
     height: 6ch;
-    -webkit-text-stroke: min(.01em, 2px) var(--light-color);
 }
 
 .bottom-vertical-list {
     display: flex;
     flex-direction: column;
-    line-height: 1.4ch;
-    font-style: italic;
+    line-height: 1.6ch;
+    font-family: 'GolosUIWebBold';
 }
 
 .bottom-vertical-list article {
-    width: fit-content;
+    width: max-content;
     cursor: pointer;
 }
 
@@ -178,11 +173,11 @@
 }
 
 .bottom-vertical-list article:hover ~ * {
-    filter: brightness(.25);
+    filter: brightness(.75);
 }
 
 .text-line {
-    height: 3ch;
+    height: 100%;
 }
 
 .min-price-label {
@@ -292,15 +287,15 @@
     position: relative;
     left: calc(.25*min(16vh, 12vw));
     height: 9.8vh;
+    font-weight: 900;
+    font-family: 'Familjen Grotesk', sans-serif;
     cursor: pointer;
     top: 0.2ch;
     width: 32.5vw;
     background: var(--toxic-green-color);
     border: 0px;
     font-size: 3.3vw;
-    font-family: 'Familjen Grotesk', sans-serif;
     color: var(--bg-color);
-    font-weight: 900;
     border-radius: 0.1ch;
     z-index: 100;
 }

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-01 00:25+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\static\js\aboutSectionsSelector.js:5
+#: .\static\js\aboutSectionsSelector.js:8
+msgid "PAYMENT"
+msgstr ""
+"В нашем цифровом агентстве оплата производится самым безопасным способом - "
+"<span>после завершения каждой части разработки</span>, вам высылается счет "
+"на оплату, то есть на любом этапе <span>вы можете прекратить сотрудничество</"
+"span>, более подробную информацию вы получите, оставив свои контакты для "
+"связи"
+
+#: .\static\js\aboutSectionsSelector.js:9
+msgid "ABOUT"
+msgstr ""
+"<span>Мы -</span> цифровое агенство <span>помогающее бизнесу</span>, "
+"появились недавно, в 2022 году, тем не менее, мы действительно знаем, как "
+"создавать веб-сайты <br><span>ИП Логинов</span><br>ИНН 312348585325<br>ОГРН "
+"323310000063180"
+
+#: .\static\js\aboutSectionsSelector.js:10
+msgid "CONTACTS"
+msgstr ""
+"<address style='font-style: inherit;'><a href='mailto:sites@loginov."
+"tech'>sites@loginov.tech</a><br><span style='cursor: pointer;' onclick="
+"\"scrollToSection('main')\">заказать консультацию, это бесплатно</span></"
+"address>"
+
+#: .\static\js\order.js:10
+msgid "GetEvent"
+msgstr "ПОЛУЧИ"
+
+#: .\static\js\order.js:11
+msgid "GetEventObject"
+msgstr "КОНСУЛЬТАЦИЮ"
+
+#: .\static\js\order.js:14
+msgid "EmailPlaceholder"
+msgstr "введите почту"
+
+#: .\static\js\tariffDetails.js:4
+msgid "LandingDetails"
+msgstr ""
+"Лендинг отлично подходит для презентации какой либо идеи, продукта, услуг и "
+"так далее<h2>СРОКИ</h2> От 3 до 14 дней и сайт у вас"
+
+#: .\static\js\tariffDetails.js:5
+msgid "CustomDetails"
+msgstr ""
+"Если ваши идеи не умещаются в рамки, вы попали в правильное место, просто "
+"сообщите нам свои желания, и мы немедленно приступим к воплощению вашей "
+"мечты, цена может сильно варьироваться, окончательную стоимость мы сообщим "
+"вам, когда договоримся на сайте <h2>СРОКИ</h2> От 3 до 31 дня"
+
+#: .\static\js\tariffDetails.js:6
+msgid "CommerceDetails"
+msgstr ""
+"Сегодня весь поток денег идет через интернет, и мы поможем настроить этот "
+"поток прямо к вам в бизнес<h2>СРОКИ</h2> От 7 до 25 дней"

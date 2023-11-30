@@ -1,55 +1,56 @@
 {% load static %}
+{% load i18n %}
 
 <section class="second-content-wrapper-background">
     <div class="main-content-wrapper second-content-wrapper" id="prices">
         <article class="list-item">
             <img src="{% static 'img/portfolio.png' %}">
             <div class="site-order-button">
-                <div class="order-button-part-top" onclick="orderSite(1)">order</div>
-                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">learn more</div>
+                <div class="order-button-part-top" onclick="orderSite(1)">{% trans 'Order' %}</div>
+                    <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">LANDING
+            <div class="list-item-title">{% trans 'Landing' %}
                 <div class="site-order-details">
                     <div class="min-type-price-label">$50+</div>
-                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">learn more</div>
-                    <div class="mobile-order-button" onclick="orderSite(1)">order</div>
+                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">{% trans 'LearnMoreMobile' %}</div>
+                    <div class="mobile-order-button" onclick="orderSite(1)">{% trans 'OrderMobile' %}</div>
                 </div>
             </div>
-            <div class="list-item-description">I will create wonderful site special for you</div>
+            <div class="list-item-description">{% trans 'LandingDesc' %}</div>
             <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
         <article class="list-item">
             <img src="{% static 'img/commerce.png' %}">
             <div class="site-order-button">
-                <div class="order-button-part-top" onclick="orderSite(2)">order</div>
-                <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">learn more</div>
+                <div class="order-button-part-top" onclick="orderSite(2)">{% trans 'Order' %}</div>
+                <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">COMMERCE
+            <div class="list-item-title">{% trans 'Commerce' %}
                 <div class="site-order-details">
                     <div class="min-type-price-label">$150+</div>
-                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">learn more</div>
-                    <div class="mobile-order-button" onclick="orderSite(2)">order</div>
+                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">{% trans 'LearnMoreMobile' %}</div>
+                    <div class="mobile-order-button" onclick="orderSite(2)">{% trans 'OrderMobile' %}</div>
                 </div>
             </div>
-            <div class="list-item-description">You will be able to earn on your ideas, I will help</div>
+            <div class="list-item-description">{% trans 'CommerceDesc' %}</div>
             <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
         <article class="list-item">
             <img src="{% static 'img/custom.png' %}">
             <div class="site-order-button">
-                <div class="order-button-part-top" onclick="orderSite(3)">order</div>
-                <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">learn more</div>
+                <div class="order-button-part-top" onclick="orderSite(3)">{% trans 'Order' %}</div>
+                <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">CUSTOM
+            <div class="list-item-title">{% trans 'Custom' %}
                 <div class="site-order-details">
                     <div class="min-type-price-label">$100+</div>
-                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">learn more</div>
-                    <div class="mobile-order-button" onclick="orderSite(3)">order</div>
+                    <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">{% trans 'LearnMoreMobile' %}</div>
+                    <div class="mobile-order-button" onclick="orderSite(3)">{% trans 'OrderMobile' %}</div>
                 </div>
             </div>
-            <div class="list-item-description">Any types of websites, I can implement your wildest ideas</div>
+            <div class="list-item-description">{% trans 'CustomDesc' %}</div>
             <div class="list-item-canvas-filter"></div>
         </article>
     </div>

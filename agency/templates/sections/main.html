@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <main class="main-content-wrapper" id="main">
     <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
@@ -6,21 +7,20 @@
     </div>
     <section class="main-content">
         <div class="main-text-secondary-part">
-            <button class="contact-button-top" onclick="orderSite(3)">GET CONSULTATION</button>
+            <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
             <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
         </div>
         <div>
-            <span class="main-text shifted-main-text">L</span><img
+            <span class="main-text">L</span><img
                 src="{% static 'img/circle.png' %}"
                 style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
                 id="main-text-circle"><span class="main-text">GINOV</span>
             <div class="bottom-main-text">
-                <img src="{% static 'img/line.png' %}" class="text-line">
                 <div class="bottom-vertical-list">
-                    <article>LANDING</article>
-                    <article>BUSINESS CARD</article>
-                    <article>ONLINE MARKET</article>
-                    <article style="width: max-content;">AND OTHER WEBSITES</article>
+                    <article>{% trans 'LandingTitle' %}</article>
+                    <article>{% trans 'BusinessCardTitle' %}</article>
+                    <article>{% trans 'CommerceTitle' %}</article>
+                    <article style="width: max-content;">{% trans 'OtherTitle' %}</article>
                 </div>
                 <img src="{% static 'img/long-arrow.png' %}"
                      class="long-arrow">

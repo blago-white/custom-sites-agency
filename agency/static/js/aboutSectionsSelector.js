@@ -2,17 +2,12 @@ const sectionDetails = document.getElementById('secdetails');
 
 const selectors = document.getElementById('about-selectors').children;
 
+console.log(gettext('PAYMENT'));
+
 const sectionsDetails = {
-    1: `In our digital agency, payment is made in the safest way -
-        <span>after each stage of the work is completed</span>,
-        an invoice is sentto you for payment, that is, at any stage <span>you can refuse payment</span>,
-        you will receive more detailed information by ordering a consultation`,
-    2: `<span>We are</span> a digital agency <span>focused on helping businesses</span>,
-        appeared recently, in 2022, we really know how to make websites
-        <br><span>IP Loginov</span><br>INN 312348585325<br>OGRN 323310000063180`,
-    3: `<address style="font-style: inherit;"><a href="mailto:sites@loginov.tech">sites@loginov.tech</a><br>
-        <span style="cursor: pointer;" onclick="scrollToSection('main')">order consultation, its
-        free</span></address>`
+    1: gettext('PAYMENT'),
+    2: gettext('ABOUT'),
+    3: gettext('CONTACTS')
 }
 
 function setSectionDetails(sectionid, selector) {
