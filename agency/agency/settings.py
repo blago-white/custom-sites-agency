@@ -64,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'agency.urls'
@@ -96,8 +97,6 @@ DATABASES = {
         'NAME': os.environ.get("POSTGRES_DB"),
         'USER': os.environ.get("POSTGRES_USER"),
         'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
-        # 'HOST': '',
-        # 'PORT': '',
     }
 }
 
@@ -128,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -142,7 +141,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'uploads/'
 
 if DEBUG:
     STATICFILES_DIRS = (
@@ -184,3 +183,5 @@ else:
     EMAIL_USE_SSL = True
 
 ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)
+
+LOCALE_PATHS = [str(BASE_DIR / "locale")]
