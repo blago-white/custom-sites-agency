@@ -269,8 +269,6 @@
 
 .small-mobile-main-text {
     font-size: 12.5vw;
-    color: transparent;
-    -webkit-text-stroke-color: var(--light-color);
 }
 
 .currency-name {

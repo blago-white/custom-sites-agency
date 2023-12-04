@@ -1,6 +1,5 @@
 from django.urls import reverse_lazy
 from django.db import transaction
-from django.http import QueryDict
 
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework import generics
@@ -28,7 +27,7 @@ class CustomerContactsSaveApiView(generics.CreateAPIView):
             target_email=serializer.validated_data["customer"]["email"]
         )
 
-    def _process_client_data(self, serializer_kwargs) -> None:
+    def _process_client_data(self, serializer_kwargs: dict) -> None:
         request_data = utils.add_ip_to_customer_data(
             raw_data=serializer_kwargs.get("data"),
             ip=ip.get_ip_from_request(request=self.request)
