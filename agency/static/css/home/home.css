@@ -84,7 +84,7 @@
 
 .second-text {
     position: relative;
-    right: -1ch;
+    right: -.75ch;
     color: transparent;
     -webkit-text-stroke: min(.004em, 2px) var(--light-color);
     font-size: min(16vh, 12vw);
