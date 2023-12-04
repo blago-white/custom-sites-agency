@@ -65,6 +65,16 @@
                 padding-left: 3ch;
             }
 
+            @media (aspect-ratio < 12 / 9) {
+                #order-form-text span {
+                    font-size: 9vh;
+                    overflow-wrap: normal;
+                }
+
+                form span {
+                    font-size: 10vw;
+                }
+            }
             {% endif %}
         </style>
     </head>

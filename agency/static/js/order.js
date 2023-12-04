@@ -7,7 +7,7 @@ import { setDialogTextHTML,
 
 const HTMLOrderForm = `<form>
     <span id='order-form-text'>
-        <span>${gettext('GetEvent')}<img src='/static/img/filled-arrow.png' id='submit-order'>
+        <span>${gettext('GetEvent')}<img src='/uploads/img/filled-arrow.png' id='submit-order'>
         </span>${gettext('GetEventObject')}</span>
         <div><img src='/uploads/img/arrow.png'>
             <div style='width: auto' contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>

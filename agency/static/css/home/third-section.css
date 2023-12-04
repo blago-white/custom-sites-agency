@@ -89,7 +89,7 @@
         text-align: center;
         height: 60%;
         font-weight: 600;
-        font-size: calc(min(10vh, 10vw) * .75);
+        font-size: calc(min(10vh, 10vw) * .7);
     }
 
     .active-about-section, .about-sections article:hover {
