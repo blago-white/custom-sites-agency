@@ -49,32 +49,38 @@
         <style>
             {% if LANGUAGE_CODE == "ru" %}
 
-            .header {
-                gap: 0ch;
-                font-size: 4.75vh;
-            }
-
-            .contact-button-top {
-                font-family: 'GolosUIWebBold';
-                font-weight: 900;
-                font-size: 3.8vw;
-            }
-
-            .long-arrow {
-                max-width: 17ch;
-                padding-left: 3ch;
-            }
-
-            @media (aspect-ratio < 12 / 9) {
-                #order-form-text span {
-                    font-size: 9vh;
-                    overflow-wrap: normal;
+                .header {
+                    gap: 0ch;
+                    font-size: 4.75vh;
                 }
 
-                form span {
-                    font-size: 10vw;
+                .contact-button-top {
+                    font-family: 'GolosUIWebBold';
+                    font-weight: 900;
+                    font-size: 3.8vw;
                 }
-            }
+
+                .long-arrow {
+                    max-width: 17ch;
+                    padding-left: 3ch;
+                }
+
+                @media (aspect-ratio < 12 / 9) {
+                    #order-form-text span {
+                        font-size: 9vh;
+                        overflow-wrap: normal;
+                    }
+
+                    form span {
+                        font-size: 10vw;
+                    }
+
+
+                    .mobile-menu-list a {
+                        line-height: 1.4ch;
+                         font-size: 15.4vw;
+                    }
+                }
             {% endif %}
         </style>
     </head>
