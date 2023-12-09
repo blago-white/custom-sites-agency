@@ -2,6 +2,15 @@
 {% load i18n %}
 
 <section class="second-content-wrapper-background">
+    <style>
+        {% if LANGUAGE_CODE == "ru" %}
+        @media (aspect-ratio < 12 / 9) {
+            .list-item-description, .mobile-learn-button, .mobile-order-button {
+                font-weight: 600;
+            }
+        }
+        {% endif %}
+    </style>
     <div class="main-content-wrapper second-content-wrapper" id="prices">
         <article class="list-item">
             <img src="{% static 'img/portfolio.png' %}">

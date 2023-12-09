@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 23:50+0300\n"
+"POT-Creation-Date: 2023-12-09 19:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,6 +78,18 @@ msgstr "ONLINE MARKET"
 msgid "OtherTitle"
 msgstr "AND OTHER WEBSITES"
 
+#: .\templates\sections\main.html:34
+msgid "PriceFromWord"
+msgstr "FROM"
+
+#: .\templates\sections\main.html:35
+msgid "MinPriceNumber"
+msgstr "50"
+
+#: .\templates\sections\main.html:36
+msgid "MinPriceCurrency"
+msgstr "$"
+
 #: .\templates\sections\prices.html:9 .\templates\sections\prices.html:26
 #: .\templates\sections\prices.html:43
 msgid "Order"
@@ -95,7 +107,7 @@ msgstr "LANDING"
 #: .\templates\sections\prices.html:15 .\templates\sections\prices.html:32
 #: .\templates\sections\prices.html:49
 msgid "LearnMoreMobile"
-msgstr "детали"
+msgstr "learn more"
 
 #: .\templates\sections\prices.html:16 .\templates\sections\prices.html:33
 #: .\templates\sections\prices.html:50

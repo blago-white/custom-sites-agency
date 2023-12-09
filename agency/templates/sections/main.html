@@ -2,6 +2,40 @@
 {% load i18n %}
 
 <main class="main-content-wrapper" id="main">
+    <style>
+        .min-price-from-word {
+            position: relative;
+            top: -0.7ch;
+        }
+
+        @media (aspect-ratio < 12 / 9) {
+            .min-price-from-word {
+                position: initial;
+                top: 0px;
+            }
+        }
+
+        {% if LANGUAGE_CODE == "ru" %}
+            .min-price-label-number {
+                font-family: sans-serif;
+                font-size: 8ch;
+            }
+
+            .currency-container {
+                left: -2.5ch;
+            }
+
+            @media (aspect-ratio < 12 / 9) {
+                .min-price-label-number {
+                    right: -.7ch;
+                }
+
+                .currency-container {
+                    left: 0ch;
+                }
+            }
+        {% endif %}
+    </style>
     <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
         <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
     </div>
@@ -31,10 +65,11 @@
                             <span class="small-mobile-main-text">IN THE</span>
                         </span><span class="big-mobile-main-text" style="position: relative;left: -.5ch;">CENTER</span>
                     </div>
-                    FROM
-                    <div class="min-price-label-number">50</div>
-                    <div class="currency-container">$<span class="currency-name">USD</span>
-                    </div>
+                    <span class="min-price-from-word">
+                        {% trans 'PriceFromWord' %}
+                    </span>
+                    <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
+                    <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
                 </div>
             </div>
         </div>

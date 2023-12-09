@@ -1,6 +1,13 @@
 {% load i18n %}
 
 <section style="height: 150vh;position: sticky;top: 150vh;" id="about">
+    <style>
+        {% if LANGUAGE_CODE == "ru" %}
+            .section-details {
+                font-weight: 600;
+            }
+        {% endif %}
+    </style>
     <div class="main-content-wrapper third-content-wrapper"
          style="height: 100vh;position: sticky;top: 0px;">
         <div class="about-sections" id="about-selectors">

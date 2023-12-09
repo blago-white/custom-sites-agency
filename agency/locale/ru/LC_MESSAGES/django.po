@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 23:50+0300\n"
+"POT-Creation-Date: 2023-12-09 19:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,6 +79,18 @@ msgstr "ИНТЕРНЕТ МАГАЗИН"
 #: .\templates\sections\main.html:23
 msgid "OtherTitle"
 msgstr "И МНОГОЕ ДРУГОЕ"
+
+#: .\templates\sections\main.html:34
+msgid "PriceFromWord"
+msgstr "ОТ"
+
+#: .\templates\sections\main.html:35
+msgid "MinPriceNumber"
+msgstr "5К"
+
+#: .\templates\sections\main.html:36
+msgid "MinPriceCurrency"
+msgstr "₽"
 
 #: .\templates\sections\prices.html:9 .\templates\sections\prices.html:26
 #: .\templates\sections\prices.html:43
