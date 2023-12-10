@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-09 19:13+0300\n"
+"POT-Creation-Date: 2023-12-10 11:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,17 @@ msgstr "О НАС"
 msgid "Title"
 msgstr "Создание сайтов от 5000 рублей | Loginov Digital Agency"
 
+#: .\templates\main.html:11 .\templates\main.html:17
+msgid "MetaDescription"
+msgstr ""
+"Создание сайтов под ключ любой сложности, продвижение, цены всего от 5000 "
+"рублей, берем на себя ответственность за все этапы разработки, а если не "
+"понравится - вернем деньги"
+
+#: .\templates\main.html:13
+msgid "SiteName"
+msgstr "Создадим и раскрутим сайт твоей мечты за 5000₽!"
+
 #: .\templates\mobile-menu.html:7
 msgid "MainPageMobileSelector"
 msgstr "ГЛАВНАЯ"
@@ -48,90 +59,90 @@ msgstr "ТАРИФЫ"
 msgid "AboutMobileSelector"
 msgstr "О НАС"
 
-#: .\templates\sections\about.html:7
+#: .\templates\sections\about.html:14
 msgid "Payment"
 msgstr "ОПЛАТА"
 
-#: .\templates\sections\about.html:8
+#: .\templates\sections\about.html:15
 msgid "About"
 msgstr "О НАС"
 
-#: .\templates\sections\about.html:9
+#: .\templates\sections\about.html:16
 msgid "Contacts"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\sections\main.html:10
+#: .\templates\sections\main.html:44
 msgid "GetConsultation"
 msgstr "КОНСУЛЬТАЦИЯ"
 
-#: .\templates\sections\main.html:20
+#: .\templates\sections\main.html:54
 msgid "LandingTitle"
 msgstr "ЛЕНДИНГ"
 
-#: .\templates\sections\main.html:21
+#: .\templates\sections\main.html:55
 msgid "BusinessCardTitle"
 msgstr "САЙТ ДЛЯ БИЗНЕСА"
 
-#: .\templates\sections\main.html:22
+#: .\templates\sections\main.html:56
 msgid "CommerceTitle"
 msgstr "ИНТЕРНЕТ МАГАЗИН"
 
-#: .\templates\sections\main.html:23
+#: .\templates\sections\main.html:57
 msgid "OtherTitle"
 msgstr "И МНОГОЕ ДРУГОЕ"
 
-#: .\templates\sections\main.html:34
+#: .\templates\sections\main.html:69
 msgid "PriceFromWord"
 msgstr "ОТ"
 
-#: .\templates\sections\main.html:35
+#: .\templates\sections\main.html:71
 msgid "MinPriceNumber"
 msgstr "5К"
 
-#: .\templates\sections\main.html:36
+#: .\templates\sections\main.html:72
 msgid "MinPriceCurrency"
 msgstr "₽"
 
-#: .\templates\sections\prices.html:9 .\templates\sections\prices.html:26
-#: .\templates\sections\prices.html:43
+#: .\templates\sections\prices.html:18 .\templates\sections\prices.html:35
+#: .\templates\sections\prices.html:52
 msgid "Order"
 msgstr "заказать консультацию"
 
-#: .\templates\sections\prices.html:10 .\templates\sections\prices.html:27
-#: .\templates\sections\prices.html:44
+#: .\templates\sections\prices.html:19 .\templates\sections\prices.html:36
+#: .\templates\sections\prices.html:53
 msgid "LearnMore"
 msgstr "узнать больше"
 
-#: .\templates\sections\prices.html:12
+#: .\templates\sections\prices.html:21
 msgid "Landing"
 msgstr "ЛЕНДИНГ"
 
-#: .\templates\sections\prices.html:15 .\templates\sections\prices.html:32
-#: .\templates\sections\prices.html:49
+#: .\templates\sections\prices.html:24 .\templates\sections\prices.html:41
+#: .\templates\sections\prices.html:58
 msgid "LearnMoreMobile"
 msgstr "детали"
 
-#: .\templates\sections\prices.html:16 .\templates\sections\prices.html:33
-#: .\templates\sections\prices.html:50
+#: .\templates\sections\prices.html:25 .\templates\sections\prices.html:42
+#: .\templates\sections\prices.html:59
 msgid "OrderMobile"
 msgstr "заказать"
 
-#: .\templates\sections\prices.html:19
+#: .\templates\sections\prices.html:28
 msgid "LandingDesc"
 msgstr "Одностраничный сайт, отлично подойдет для тестирования идеи"
 
-#: .\templates\sections\prices.html:29
+#: .\templates\sections\prices.html:38
 msgid "Commerce"
 msgstr "МАГАЗИН"
 
-#: .\templates\sections\prices.html:36
+#: .\templates\sections\prices.html:45
 msgid "CommerceDesc"
 msgstr "Быстрый старт в продажах в интернете"
 
-#: .\templates\sections\prices.html:46
+#: .\templates\sections\prices.html:55
 msgid "Custom"
 msgstr "ОСОБЫЙ"
 
-#: .\templates\sections\prices.html:53
+#: .\templates\sections\prices.html:62
 msgid "CustomDesc"
 msgstr "Сайты любого типа и любой сложности, подойдет для всех"
