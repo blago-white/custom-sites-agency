@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-10 11:29+0300\n"
+"POT-Creation-Date: 2023-12-12 19:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,18 +32,18 @@ msgstr "ТАРИФЫ"
 msgid "AboutSecLink"
 msgstr "О НАС"
 
-#: .\templates\main.html:10
+#: .\templates\main.html:9
 msgid "Title"
 msgstr "Создание сайтов от 5000 рублей | Loginov Digital Agency"
 
-#: .\templates\main.html:11 .\templates\main.html:17
+#: .\templates\main.html:10 .\templates\main.html:16
 msgid "MetaDescription"
 msgstr ""
 "Создание сайтов под ключ любой сложности, продвижение, цены всего от 5000 "
 "рублей, берем на себя ответственность за все этапы разработки, а если не "
 "понравится - вернем деньги"
 
-#: .\templates\main.html:13
+#: .\templates\main.html:12
 msgid "SiteName"
 msgstr "Создадим и раскрутим сайт твоей мечты за 5000₽!"
 
@@ -117,6 +117,10 @@ msgstr "узнать больше"
 msgid "Landing"
 msgstr "ЛЕНДИНГ"
 
+#: .\templates\sections\prices.html:23
+msgid "LadingMinPrice"
+msgstr "5000₽"
+
 #: .\templates\sections\prices.html:24 .\templates\sections\prices.html:41
 #: .\templates\sections\prices.html:58
 msgid "LearnMoreMobile"
@@ -135,6 +139,10 @@ msgstr "Одностраничный сайт, отлично подойдет �
 msgid "Commerce"
 msgstr "МАГАЗИН"
 
+#: .\templates\sections\prices.html:40
+msgid "CommerceMinPrice"
+msgstr "7500₽"
+
 #: .\templates\sections\prices.html:45
 msgid "CommerceDesc"
 msgstr "Быстрый старт в продажах в интернете"
@@ -142,6 +150,10 @@ msgstr "Быстрый старт в продажах в интернете"
 #: .\templates\sections\prices.html:55
 msgid "Custom"
 msgstr "ОСОБЫЙ"
+
+#: .\templates\sections\prices.html:57
+msgid "CustomMinPrice"
+msgstr "+5000₽"
 
 #: .\templates\sections\prices.html:62
 msgid "CustomDesc"

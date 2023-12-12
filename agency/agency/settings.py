@@ -185,3 +185,5 @@ else:
 ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)
 
 LOCALE_PATHS = [str(BASE_DIR / "locale")]
+
+DEFAULT_LANGUAGE = "ru"
