@@ -9,7 +9,7 @@
 }
 
 @font-face {
-	font-family: 'GolosUIWebBold';
+	font-family: 'GolosUIWebMedium';
 	src:
 		url('../fonts/golos-ui_medium.woff') format('woff');
 	font-weight: 700;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-	font-family: 'GolosUIWebBold';
+	font-family: 'GolosUIWebRegular';
 	src:
 		url('../fonts/golos-ui_regular.woff') format('woff');
 	font-weight: 500;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-	font-family: 'GolosUIWebBold';
+	font-family: 'GolosUIWebVF';
 	src:
 		url('../fonts/golos-ui_vf.woff') format('woff');
 	font-weight: lighter;

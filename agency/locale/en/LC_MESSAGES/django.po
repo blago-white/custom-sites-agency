@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-12 19:13+0300\n"
+"POT-Creation-Date: 2023-12-14 18:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr "ABOUT"
 msgid "Title"
 msgstr "Get website for you from $50 | Loginov Digital Agency"
 
-#: .\templates\main.html:10 .\templates\main.html:16
+#: .\templates\main.html:10 .\templates\main.html:15
 msgid "MetaDescription"
 msgstr ""
 "Get a turnkey website, we take responsibility for all stages of development, "
@@ -56,47 +56,59 @@ msgstr "PRICES"
 msgid "AboutMobileSelector"
 msgstr "ABOUT"
 
-#: .\templates\sections\about.html:14
+#: .\templates\sections\about.html:16
 msgid "Payment"
 msgstr "PAYMENT"
 
-#: .\templates\sections\about.html:15
+#: .\templates\sections\about.html:17
 msgid "About"
 msgstr "ABOUT"
 
-#: .\templates\sections\about.html:16
+#: .\templates\sections\about.html:18
 msgid "Contacts"
 msgstr "CONTACTS"
 
-#: .\templates\sections\main.html:44
+#: .\templates\sections\main.html:50
 msgid "GetConsultation"
 msgstr "GET CONSULTATION"
 
-#: .\templates\sections\main.html:54
+#: .\templates\sections\main.html:60
 msgid "LandingTitle"
 msgstr "LANDING"
 
-#: .\templates\sections\main.html:55
+#: .\templates\sections\main.html:61
 msgid "BusinessCardTitle"
 msgstr "BUSINESS CARD"
 
-#: .\templates\sections\main.html:56
+#: .\templates\sections\main.html:62
 msgid "CommerceTitle"
 msgstr "ONLINE MARKET"
 
-#: .\templates\sections\main.html:57
+#: .\templates\sections\main.html:63
 msgid "OtherTitle"
 msgstr "AND OTHER WEBSITES"
 
-#: .\templates\sections\main.html:69
+#: .\templates\sections\main.html:70
+msgid "Be"
+msgstr "BE"
+
+#: .\templates\sections\main.html:71
+msgid "InThe"
+msgstr "IN THE"
+
+#: .\templates\sections\main.html:72
+msgid "Center"
+msgstr "CENTER"
+
+#: .\templates\sections\main.html:75
 msgid "PriceFromWord"
 msgstr "FROM"
 
-#: .\templates\sections\main.html:71
+#: .\templates\sections\main.html:77
 msgid "MinPriceNumber"
 msgstr "50"
 
-#: .\templates\sections\main.html:72
+#: .\templates\sections\main.html:78
 msgid "MinPriceCurrency"
 msgstr "$"
 

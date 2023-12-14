@@ -65,13 +65,13 @@
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     height: 30%!important;
-    border-top: 1px solid var(--light-color);
+    border-top: 1px solid var(--light-color-darkened);
 }
 
 .order-button-part-top {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    border-bottom: 1px solid var(--light-color);
+    border-bottom: 1px solid var(--light-color-darkened);
     color: var(--toxic-green-color);
 }
 
@@ -157,7 +157,7 @@
 
     .list-item:hover .site-order-button {
         display: flex;
-        border: .05ch solid var(--light-color);
+        border: .05ch solid var(--light-color-darkened);
         height: 11.4ch;
     }
 }
@@ -228,7 +228,7 @@
 
     .min-type-price-label, .mobile-learn-button {
         background: var(--bg-color);
-        color: var(--light-color);
+        color: var(--light-color-darkened);
     }
 
     .list-item-description {

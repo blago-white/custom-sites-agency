@@ -5,8 +5,24 @@
     <style>
         {% if LANGUAGE_CODE == "ru" %}
         @media (aspect-ratio < 12 / 9) {
-            .list-item-description, .mobile-learn-button, .mobile-order-button {
+            .list-item-description, .min-type-price-label, .mobile-learn-button, .mobile-order-button {
                 font-weight: 600;
+                font-size: .8ch;
+                padding-top: 0.3ch;
+                padding-bottom: 0.4ch;
+            }
+
+            .list-item {
+                font-family: 'GolosUIWebRegular', sans-serif;
+            }
+
+            .site-order-details div {
+                line-height: 1.6ch;
+            }
+
+            .list-item-title span {
+                font-family: 'GolosUIWebBold', sans-serif;
+                font-weight: 900;
             }
         }
         {% endif %}
@@ -18,7 +34,8 @@
                 <div class="order-button-part-top" onclick="orderSite(1)">{% trans 'Order' %}</div>
                     <div class="order-button-part-bottom" onclick="renderDialogByDialogId(1)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">{% trans 'Landing' %}
+            <div class="list-item-title">
+                <span>{% trans 'Landing' %}</span>
                 <div class="site-order-details">
                     <div class="min-type-price-label">{% trans 'LadingMinPrice' %}</div>
                     <div class="mobile-learn-button" onclick="renderDialogByDialogId(1)">{% trans 'LearnMoreMobile' %}</div>
@@ -35,7 +52,8 @@
                 <div class="order-button-part-top" onclick="orderSite(2)">{% trans 'Order' %}</div>
                 <div class="order-button-part-bottom" onclick="renderDialogByDialogId(3)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">{% trans 'Commerce' %}
+            <div class="list-item-title">
+                <span>{% trans 'Commerce' %}</span>
                 <div class="site-order-details">
                     <div class="min-type-price-label">{% trans 'CommerceMinPrice' %}</div>
                     <div class="mobile-learn-button" onclick="renderDialogByDialogId(3)">{% trans 'LearnMoreMobile' %}</div>
@@ -52,7 +70,8 @@
                 <div class="order-button-part-top" onclick="orderSite(3)">{% trans 'Order' %}</div>
                 <div class="order-button-part-bottom" onclick="renderDialogByDialogId(2)">{% trans 'LearnMore' %}</div>
             </div>
-            <div class="list-item-title">{% trans 'Custom' %}
+            <div class="list-item-title">
+                <span>{% trans 'Custom' %}</span>
                 <div class="site-order-details">
                     <div class="min-type-price-label">{% trans 'CustomMinPrice' %}</div>
                     <div class="mobile-learn-button" onclick="renderDialogByDialogId(2)">{% trans 'LearnMoreMobile' %}</div>

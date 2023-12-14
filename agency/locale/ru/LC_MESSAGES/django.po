@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-12 19:13+0300\n"
+"POT-Creation-Date: 2023-12-14 18:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr "О НАС"
 msgid "Title"
 msgstr "Создание сайтов от 5000 рублей | Loginov Digital Agency"
 
-#: .\templates\main.html:10 .\templates\main.html:16
+#: .\templates\main.html:10 .\templates\main.html:15
 msgid "MetaDescription"
 msgstr ""
 "Создание сайтов под ключ любой сложности, продвижение, цены всего от 5000 "
@@ -59,47 +59,59 @@ msgstr "ТАРИФЫ"
 msgid "AboutMobileSelector"
 msgstr "О НАС"
 
-#: .\templates\sections\about.html:14
+#: .\templates\sections\about.html:16
 msgid "Payment"
 msgstr "ОПЛАТА"
 
-#: .\templates\sections\about.html:15
+#: .\templates\sections\about.html:17
 msgid "About"
 msgstr "О НАС"
 
-#: .\templates\sections\about.html:16
+#: .\templates\sections\about.html:18
 msgid "Contacts"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\sections\main.html:44
+#: .\templates\sections\main.html:50
 msgid "GetConsultation"
 msgstr "КОНСУЛЬТАЦИЯ"
 
-#: .\templates\sections\main.html:54
+#: .\templates\sections\main.html:60
 msgid "LandingTitle"
 msgstr "ЛЕНДИНГ"
 
-#: .\templates\sections\main.html:55
+#: .\templates\sections\main.html:61
 msgid "BusinessCardTitle"
 msgstr "САЙТ ДЛЯ БИЗНЕСА"
 
-#: .\templates\sections\main.html:56
+#: .\templates\sections\main.html:62
 msgid "CommerceTitle"
 msgstr "ИНТЕРНЕТ МАГАЗИН"
 
-#: .\templates\sections\main.html:57
+#: .\templates\sections\main.html:63
 msgid "OtherTitle"
 msgstr "И МНОГОЕ ДРУГОЕ"
 
-#: .\templates\sections\main.html:69
+#: .\templates\sections\main.html:70
+msgid "Be"
+msgstr "БУДЬ"
+
+#: .\templates\sections\main.html:71
+msgid "InThe"
+msgstr "В"
+
+#: .\templates\sections\main.html:72
+msgid "Center"
+msgstr "ЦЕНТРЕ"
+
+#: .\templates\sections\main.html:75
 msgid "PriceFromWord"
 msgstr "ОТ"
 
-#: .\templates\sections\main.html:71
+#: .\templates\sections\main.html:77
 msgid "MinPriceNumber"
 msgstr "5К"
 
-#: .\templates\sections\main.html:72
+#: .\templates\sections\main.html:78
 msgid "MinPriceCurrency"
 msgstr "₽"
 
