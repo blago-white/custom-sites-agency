@@ -52,6 +52,12 @@
                     -webkit-text-stroke: 1vw;
                     top: -5.7vh;
                 }
+
+                .price-from-word-mobile {
+                    font-family: 'GolosUIWebBold';
+                    font-weight: 900;
+                    -webkit-text-stroke: .5vw;
+                }
             }
         {% endif %}
     </style>
@@ -88,8 +94,7 @@
                             {% trans 'Center' %}
                         </span>
                     </div>
-                    <span class="small-mobile-main-text"
-                          style="{% if LANGUAGE_CODE == 'ru' %}font-family: 'GolosUIWebBold';font-weight: 900;-webkit-text-stroke: .5vw;{% endif %}">
+                    <span class="min-price-from-word price-from-word-mobile">
                         {% trans 'PriceFromWord' %}
                     </span>
                     <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
