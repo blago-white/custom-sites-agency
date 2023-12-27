@@ -36,7 +36,7 @@ if DEBUG:
 else:
     MAIN_DOMAIN = "loginov.tech"
 
-    ALLOWED_HOSTS = [MAIN_DOMAIN]
+    ALLOWED_HOSTS = [MAIN_DOMAIN, "94.241.141.163", "2a03:6f01:1:2::9cf"]
 
     CSRF_TRUSTED_ORIGINS = [
         ("https://" if HTTPS_USE else "http://") + MAIN_DOMAIN
