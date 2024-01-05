@@ -1,8 +1,7 @@
 {% load static %}
 {% load i18n %}
 
-<main class="main-content-wrapper" id="main">
-    <style>
+<style>
         .min-price-from-word {
             position: relative;
             top: -0.7ch;
@@ -79,10 +78,14 @@
                 }
             }
         {% endif %}
-    </style>
+</style>
+
+<main class="main-content-wrapper" id="main">
     <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
         <img src="{% static 'img/sphere.png' %}" class="globe">
     </div>
+    <div class="mobile-bg"
+         style="background: url({% static 'img/proger.png' %});background-size: cover;"></div>
     <div class="color-circle upper-color-circle" style="background: url({% static 'img/top-circle.png' %});background-size: cover;"></div>
     <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
     <section class="main-content">

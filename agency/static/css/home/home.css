@@ -325,7 +325,8 @@
 }
 
 .contact-button-top:hover {
-    background: var(--light-color);
+    background: var(--toxic-green-color);
+    color: var(--bg-color);
 }
 
 @media(aspect-ratio < 12/9) {
