@@ -1,8 +1,7 @@
 {% load static %}
 {% load i18n %}
 
-<main class="main-content-wrapper" id="main">
-    <style>
+<style>
         .min-price-from-word {
             position: relative;
             top: -0.7ch;
@@ -13,6 +12,42 @@
                 position: initial;
                 top: 0px;
             }
+
+            .main-text-primary-part {
+                display: none;
+            }
+        }
+
+        .mobile-main-text {
+            margin-left: 0.5ch;;
+            width: 100%;
+            font-family: 'RFDewi';
+            font-size: 40px;
+            -webkit-text-stroke: 1px;
+            gap: 30px;
+        }
+
+        .mobile-main-text .upper-part {
+            align-items: start;
+            display: inherit;
+            flex-direction: column;
+            gap: 15px;
+            line-height: 1ch;
+        }
+
+        .mobile-main-text .bottom-part {
+            font-size: 25px;
+            line-height: 1ch;
+            text-align: left;
+            -webkit-text-stroke: 0px;
+            width: 95%;
+            letter-spacing: .3px;
+            font-family: 'RFDewi Bold';
+        }
+
+        .mobile-main-text .mobile-text-contrasted {
+            color: var(--toxic-green-color);
+            -webkit-text-stroke: 0px;
         }
 
         {% if LANGUAGE_CODE == "ru" %}
@@ -24,17 +59,6 @@
 
             .currency-container {
                 left: -2.5ch;
-            }
-
-            .big-mobile-main-text {
-                font-size: 20vw;
-                -webkit-text-stroke: 1vw;
-            }
-
-            .mobile-main-text {
-                font-family: 'GolosUIWebBold';
-                -webkit-text-stroke: 1vw;
-                gap: 0.6ch;
             }
 
             @media (aspect-ratio < 12 / 9) {
@@ -52,24 +76,28 @@
                     -webkit-text-stroke: 1vw;
                     top: -5.7vh;
                 }
-
-                .price-from-word-mobile {
-                    font-family: 'GolosUIWebBold';
-                    font-weight: 900;
-                    -webkit-text-stroke: .5vw;
-                }
+            }
+        {% else %}
+            .contact-button-top {
+                font-family: 'RFDewi';
             }
         {% endif %}
-    </style>
+</style>
+
+<main class="main-content-wrapper" id="main">
     <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
-        <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
+        <img src="{% static 'img/sphere.png' %}" class="globe">
     </div>
+    <div class="mobile-bg"
+         style="background: url({% static 'img/proger.png' %});background-size: cover;"></div>
+    <div class="color-circle upper-color-circle" style="background: url({% static 'img/top-circle.png' %});background-size: cover;"></div>
+    <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
     <section class="main-content">
         <div class="main-text-secondary-part">
             <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
             <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
         </div>
-        <div>
+        <div class="main-text-primary-part">
             <span class="main-text">L</span><img
                 src="{% static 'img/circle.png' %}"
                 style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
@@ -84,22 +112,24 @@
                 <img src="{% static 'img/long-arrow.png' %}"
                      class="long-arrow">
                 <div class="min-price-label">
-                    <div class="mobile-main-text">
-                        <span style="position: relative;text-align: right;right: -1ch;">
-                            <span class="big-mobile-main-text">{% trans 'Be' %}</span>
-                            <span class="small-mobile-main-text">{% trans 'InThe' %}</span>
-                        </span>
-                        <span class="big-mobile-main-text"
-                              style="position: relative;left: -{% if LANGUAGE_CODE != 'ru' %}.5ch;{% else %}1ch{% endif %}">
-                            {% trans 'Center' %}
-                        </span>
-                    </div>
-                    <span class="min-price-from-word price-from-word-mobile">
+                    <span class="min-price-from-word">
                         {% trans 'PriceFromWord' %}
                     </span>
                     <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
                     <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
                 </div>
+            </div>
+        </div>
+        <div class="mobile-main-text">
+            <div class="upper-part">
+                <span style="{% if LANGUAGE_CODE == 'en' %}font-size: 35px;{% endif %}">{% trans 'Development' %}</span>
+                <span style="font-size: 60px;">{% trans 'Sites' %}</span>
+                <span class="mobile-text-contrasted">{% trans 'MainMinPrice' %}</span>
+            </div>
+            <div class="bottom-part">
+                <span style="line-height: 25px;">
+                    {% trans 'MainAbout' %}
+                </span>
             </div>
         </div>
     </section>
