@@ -27,7 +27,7 @@
             }
 
             .mobile-main-text {
-                margin-left: 5%;
+                margin-left: 0.5ch;;
                 width: 100%;
                 font-family: 'RFDewi';
                 font-size: 40px;
@@ -74,12 +74,6 @@
                     top: -5.7vh;
                 }
 
-                .price-from-word-mobile {
-                    font-family: 'GolosUIWebBold';
-                    font-weight: 900;
-                    -webkit-text-stroke: .5vw;
-                }
-
                 .main-text-primary-part {
                     display: none;
                 }
@@ -87,8 +81,10 @@
         {% endif %}
     </style>
     <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
-        <img src="{% static 'img/sphere.png' %}" style="filter: invert(1);opacity: .05;height: 100vh;">
+        <img src="{% static 'img/sphere.png' %}" class="globe">
     </div>
+    <div class="color-circle upper-color-circle" style="background: url({% static 'img/top-circle.png' %});background-size: cover;"></div>
+    <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
     <section class="main-content">
         <div class="main-text-secondary-part">
             <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
@@ -109,23 +105,12 @@
                 <img src="{% static 'img/long-arrow.png' %}"
                      class="long-arrow">
                 <div class="min-price-label">
-                    <div class="mobile-main-text">
-                        <span style="position: relative;text-align: right;right: -1ch;">
-                            <span class="big-mobile-main-text">{% trans 'Be' %}</span>
-                            <span class="small-mobile-main-text">{% trans 'InThe' %}</span>
-                        </span>
-                        <span class="big-mobile-main-text"
-                              style="position: relative;left: -{% if LANGUAGE_CODE != 'ru' %}.5ch;{% else %}1ch{% endif %}">
-                            {% trans 'Center' %}
-                        </span>
-                    </div>
-                    <span class="min-price-from-word price-from-word-mobile">
+                    <span class="min-price-from-word">
                         {% trans 'PriceFromWord' %}
                     </span>
                     <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
                     <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
                 </div>
-
             </div>
         </div>
         <div class="mobile-main-text">
@@ -135,9 +120,10 @@
                 <span class="mobile-text-contrasted">ОТ 4990₽</span>
             </div>
             <div class="bottom-part">
-                <span style="line-height: 25px;">Мы <span style="color: var(--toxic-green-color)">помогаем бизнесу</span>
-                    развиваться в интернете с помощью <span style="color: var(--toxic-green-color)">передовых
-                        инструментов</span>
+                <span style="line-height: 25px;">Мы
+                    <span style="color: var(--toxic-green-color)">помогаем бизнесу</span>
+                    развиваться в интернете с помощью
+                    <span style="color: var(--toxic-green-color)">передовых инструментов</span>
                 </span>
             </div>
         </div>
