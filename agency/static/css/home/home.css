@@ -424,14 +424,19 @@
 
     .contact-button-top {
         position: absolute;
-        right: 30%;
-        left: auto;
+        left: 2.5%;
         bottom: 10%;
-        width: 40%;
+        width: 95%;
         top: auto;
         height: auto;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
+        border-radius: 35px;
+        aspect-ratio: 4/1;
         z-index: 1;
+        backdrop-filter: blur(.1em);
+        -webkit-backdrop-filter: blur(1em);
+        background: transparent;
+        font-size: 45px;
+        color: var(--toxic-green-color);
+        border: 1px solid var(--toxic-green-color);
     }
 }

@@ -31,3 +31,13 @@
 	font-weight: lighter;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: 'RFDewi';
+    src: url('../fonts/RFDewiExpanded-Ultrabold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Bold';
+    src: url('../fonts/RFDewiExpanded-Bold.woff') format('woff');
+}

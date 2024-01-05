@@ -26,15 +26,36 @@
                 left: -2.5ch;
             }
 
-            .big-mobile-main-text {
-                font-size: 20vw;
-                -webkit-text-stroke: 1vw;
+            .mobile-main-text {
+                margin-left: 5%;
+                width: 100%;
+                font-family: 'RFDewi';
+                font-size: 40px;
+                -webkit-text-stroke: 1px;
+                gap: 30px;
             }
 
-            .mobile-main-text {
-                font-family: 'GolosUIWebBold';
-                -webkit-text-stroke: 1vw;
-                gap: 0.6ch;
+            .mobile-main-text .upper-part {
+                align-items: start;
+                display: inherit;
+                flex-direction: column;
+                gap: 15px;
+                line-height: 1ch;
+            }
+
+            .mobile-main-text .bottom-part {
+                font-size: 25px;
+                line-height: 1ch;
+                text-align: left;
+                -webkit-text-stroke: 0px;
+                width: 95%;
+                letter-spacing: .3px;
+                font-family: 'RFDewi Bold';
+            }
+
+            .mobile-main-text .mobile-text-contrasted {
+                color: var(--toxic-green-color);
+                -webkit-text-stroke: 0px;
             }
 
             @media (aspect-ratio < 12 / 9) {
@@ -58,6 +79,10 @@
                     font-weight: 900;
                     -webkit-text-stroke: .5vw;
                 }
+
+                .main-text-primary-part {
+                    display: none;
+                }
             }
         {% endif %}
     </style>
@@ -69,7 +94,7 @@
             <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
             <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
         </div>
-        <div>
+        <div class="main-text-primary-part">
             <span class="main-text">L</span><img
                 src="{% static 'img/circle.png' %}"
                 style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
@@ -100,6 +125,20 @@
                     <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
                     <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
                 </div>
+
+            </div>
+        </div>
+        <div class="mobile-main-text">
+            <div class="upper-part">
+                <span>РАЗРАБОТКА</span>
+                <span style="font-size: 60px;">САЙТОВ</span>
+                <span class="mobile-text-contrasted">ОТ 4990₽</span>
+            </div>
+            <div class="bottom-part">
+                <span style="line-height: 25px;">Мы <span style="color: var(--toxic-green-color)">помогаем бизнесу</span>
+                    развиваться в интернете с помощью <span style="color: var(--toxic-green-color)">передовых
+                        инструментов</span>
+                </span>
             </div>
         </div>
     </section>

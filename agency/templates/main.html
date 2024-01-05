@@ -54,12 +54,17 @@
                 .contact-button-top {
                     font-family: 'GolosUIWebBold';
                     font-weight: 900;
-                    font-size: 3.8vw;
                 }
 
                 .long-arrow {
                     max-width: 17ch;
                     padding-left: 3ch;
+                }
+
+                @media (aspect-ratio >= 12 / 9) {
+                    .contact-button-top {
+                        font-size: 3.8vw;
+                    }
                 }
 
                 @media (aspect-ratio < 12 / 9) {
@@ -75,6 +80,10 @@
                     .mobile-menu-list a {
                         line-height: 1.4ch;
                          font-size: 15.4vw;
+                    }
+
+                    .contact-button-top {
+                        font-family: 'RFDewi';
                     }
                 }
             {% endif %}

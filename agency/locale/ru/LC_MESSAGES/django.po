@@ -73,7 +73,7 @@ msgstr "КОНТАКТЫ"
 
 #: .\templates\sections\main.html:50
 msgid "GetConsultation"
-msgstr "КОНСУЛЬТАЦИЯ"
+msgstr "ЗАКАЗАТЬ"
 
 #: .\templates\sections\main.html:60
 msgid "LandingTitle"
@@ -131,7 +131,7 @@ msgstr "ЛЕНДИНГ"
 
 #: .\templates\sections\prices.html:23
 msgid "LadingMinPrice"
-msgstr "5000₽"
+msgstr "4990₽"
 
 #: .\templates\sections\prices.html:24 .\templates\sections\prices.html:41
 #: .\templates\sections\prices.html:58
