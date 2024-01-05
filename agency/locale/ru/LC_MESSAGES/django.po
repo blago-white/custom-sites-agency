@@ -119,7 +119,7 @@ msgstr "ОТ 4990₽"
 msgid "MainAbout"
 msgstr ""
 "Мы <span style=\"color: var(--toxic-green-color)\">помогаем бизнесу</"
-"span>развиваться в интернете с помощью<span style=\"color: var(--toxic-green-"
+"span> развиваться в интернете с помощью <span style=\"color: var(--toxic-green-"
 "color)\">передовых инструментов</span>"
 
 #: .\templates\sections\prices.html:34 .\templates\sections\prices.html:52

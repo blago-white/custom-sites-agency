@@ -325,8 +325,7 @@
 }
 
 .contact-button-top:hover {
-    background: var(--toxic-green-color);
-    color: var(--bg-color);
+    background: var(--light-color);
 }
 
 @media(aspect-ratio < 12/9) {
@@ -369,6 +368,12 @@
     .long-arrow {
         display: none;
     }
+
+    .contact-button-top:hover {
+        background: var(--toxic-green-color);
+        color: var(--bg-color);
+    }
+
 
     #main-text-circle {
         display: none;
