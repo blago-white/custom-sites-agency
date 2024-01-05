@@ -12,6 +12,42 @@
                 position: initial;
                 top: 0px;
             }
+
+            .main-text-primary-part {
+                display: none;
+            }
+        }
+
+        .mobile-main-text {
+            margin-left: 0.5ch;;
+            width: 100%;
+            font-family: 'RFDewi';
+            font-size: 40px;
+            -webkit-text-stroke: 1px;
+            gap: 30px;
+        }
+
+        .mobile-main-text .upper-part {
+            align-items: start;
+            display: inherit;
+            flex-direction: column;
+            gap: 15px;
+            line-height: 1ch;
+        }
+
+        .mobile-main-text .bottom-part {
+            font-size: 25px;
+            line-height: 1ch;
+            text-align: left;
+            -webkit-text-stroke: 0px;
+            width: 95%;
+            letter-spacing: .3px;
+            font-family: 'RFDewi Bold';
+        }
+
+        .mobile-main-text .mobile-text-contrasted {
+            color: var(--toxic-green-color);
+            -webkit-text-stroke: 0px;
         }
 
         {% if LANGUAGE_CODE == "ru" %}
@@ -23,38 +59,6 @@
 
             .currency-container {
                 left: -2.5ch;
-            }
-
-            .mobile-main-text {
-                margin-left: 0.5ch;;
-                width: 100%;
-                font-family: 'RFDewi';
-                font-size: 40px;
-                -webkit-text-stroke: 1px;
-                gap: 30px;
-            }
-
-            .mobile-main-text .upper-part {
-                align-items: start;
-                display: inherit;
-                flex-direction: column;
-                gap: 15px;
-                line-height: 1ch;
-            }
-
-            .mobile-main-text .bottom-part {
-                font-size: 25px;
-                line-height: 1ch;
-                text-align: left;
-                -webkit-text-stroke: 0px;
-                width: 95%;
-                letter-spacing: .3px;
-                font-family: 'RFDewi Bold';
-            }
-
-            .mobile-main-text .mobile-text-contrasted {
-                color: var(--toxic-green-color);
-                -webkit-text-stroke: 0px;
             }
 
             @media (aspect-ratio < 12 / 9) {
@@ -71,10 +75,6 @@
                     text-shadow: none;
                     -webkit-text-stroke: 1vw;
                     top: -5.7vh;
-                }
-
-                .main-text-primary-part {
-                    display: none;
                 }
             }
         {% endif %}
@@ -118,15 +118,13 @@
         </div>
         <div class="mobile-main-text">
             <div class="upper-part">
-                <span>РАЗРАБОТКА</span>
-                <span style="font-size: 60px;">САЙТОВ</span>
-                <span class="mobile-text-contrasted">ОТ 4990₽</span>
+                <span style="{% if LANGUAGE_CODE == 'en' %}font-size: 35px;{% endif %}">{% trans 'Development' %}</span>
+                <span style="font-size: 60px;">{% trans 'Sites' %}</span>
+                <span class="mobile-text-contrasted">{% trans 'MainMinPrice' %}</span>
             </div>
             <div class="bottom-part">
-                <span style="line-height: 25px;">Мы
-                    <span style="color: var(--toxic-green-color)">помогаем бизнесу</span>
-                    развиваться в интернете с помощью
-                    <span style="color: var(--toxic-green-color)">передовых инструментов</span>
+                <span style="line-height: 25px;">
+                    {% trans 'MainAbout' %}
                 </span>
             </div>
         </div>
