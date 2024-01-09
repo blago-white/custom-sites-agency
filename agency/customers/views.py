@@ -4,7 +4,7 @@ from django.db import transaction
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework import generics
 
-from .services import emails, ip
+from .utils import emails, ip
 from . import serializers
 from .serializers import utils
 

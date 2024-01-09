@@ -2,17 +2,7 @@
 {% load i18n %}
 
 <style>
-        .min-price-from-word {
-            position: relative;
-            top: -0.7ch;
-        }
-
         @media (aspect-ratio < 12 / 9) {
-            .min-price-from-word {
-                position: initial;
-                top: 0px;
-            }
-
             .main-text-primary-part {
                 display: none;
             }
@@ -78,40 +68,40 @@
                 }
             }
         {% endif %}
+        @media(aspect-ratio < 12/9) {
+            .secondary-text, .main-text {
+               font-family: inherit;
+            }
+        }
 </style>
 
 <main class="main-content-wrapper" id="main">
-    <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
-        <img src="{% static 'img/sphere.png' %}" class="globe">
-    </div>
     <div class="mobile-bg"
          style="background: url({% static 'img/proger.png' %});background-size: cover;"></div>
     <div class="color-circle upper-color-circle" style="background: url({% static 'img/top-circle.png' %});background-size: cover;"></div>
     <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
     <section class="main-content">
-        <div class="main-text-secondary-part">
-            <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
-            <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
-        </div>
         <div class="main-text-primary-part">
-            <span class="main-text">LOGINOV</span>
-            <div class="bottom-main-text">
-                <div class="bottom-vertical-list">
-                    <article>{% trans 'LandingTitle' %}</article>
-                    <article>{% trans 'BusinessCardTitle' %}</article>
-                    <article>{% trans 'CommerceTitle' %}</article>
-                    <article style="width: max-content;">{% trans 'OtherTitle' %}</article>
-                </div>
-                <img src="{% static 'img/long-arrow.png' %}"
-                     class="long-arrow">
-                <div class="min-price-label">
-                    <span class="min-price-from-word">
-                        {% trans 'PriceFromWord' %}
-                    </span>
-                    <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
-                    <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
-                </div>
-            </div>
+            <h1 class="main-text-parts">
+                <span class="secondary-text">РАЗРАБОТКА</span>
+                <span class="main-text">САЙТОВ</span>
+            </h1>
+            {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
+            <ul class="benefits-list">
+                <li>ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - ОТ 4 990 ₽</li>
+                <li>МИНИМАЛЬНЫЕ СРОКИ - ОТ 3х ДНЕЙ</li>
+                <li>ЛЮБАЯ СЛОЖНОСТЬ, ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
+                <li>БЕЗОПАСНАЯ ОПЛАТА СДЕЛКИ, ВОЗВРАТ СРЕДСТВ И ГАРАНТИИ КАЧЕСТВА</li>
+            </ul>
+<!--            <div class="bottom-main-text">-->
+<!--                <div class="min-price-label">-->
+<!--                    <span class="min-price-from-word">-->
+<!--                        {% trans 'PriceFromWord' %}-->
+<!--                    </span>-->
+<!--                    <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>-->
+<!--                    <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
         <div class="mobile-main-text">
             <div class="upper-part">
@@ -124,6 +114,7 @@
                     {% trans 'MainAbout' %}
                 </span>
             </div>
+            {% include 'main-order-button.html' %}
         </div>
     </section>
 </main>

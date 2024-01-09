@@ -56,3 +56,8 @@
     font-family: 'RFDewi Semibold';
     src: url('../fonts/RFDewiExtended-Semibold.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'RFDewi Expanded Bold Italic';
+    src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
