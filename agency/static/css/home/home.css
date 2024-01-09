@@ -51,11 +51,16 @@ li {
     display: flex;
     margin-bottom: 1.1vh;
     text-indent: 0.1ch;
+    gap: .25ch;
 }
 
 li:before {
     content: url("/uploads/img/ul-elipse.svg");
     padding-right: 5px;
+}
+
+li span {
+    color: var(--toxic-green-color);
 }
 
 .main-text-secondary-part span {
@@ -123,7 +128,7 @@ li:before {
     display: none;
     top: 0ch;
     width: 100%;
-    font-size: 20vw;
+    font-size: 16vw;
     left: 0px;
     color: var(--light-color);
     text-align: left;
@@ -138,6 +143,7 @@ li:before {
     gap: .1ch;
     flex-direction: column;
     opacity: 0;
+    font-family: 'RFDewi Bold';
     transition: all .5s ease;
 }
 

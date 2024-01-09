@@ -70,7 +70,8 @@
         {% endif %}
         @media(aspect-ratio < 12/9) {
             .secondary-text, .main-text {
-               font-family: inherit;
+               font-family: 'RFDewi Bold';
+               
             }
         }
 </style>
@@ -88,10 +89,11 @@
             </h1>
             {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
             <ul class="benefits-list">
-                <li>ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - ОТ 4 990 ₽</li>
-                <li>МИНИМАЛЬНЫЕ СРОКИ - ОТ 3х ДНЕЙ</li>
-                <li>ЛЮБАЯ СЛОЖНОСТЬ, ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
-                <li>БЕЗОПАСНАЯ ОПЛАТА СДЕЛКИ, ВОЗВРАТ СРЕДСТВ И ГАРАНТИИ КАЧЕСТВА</li>
+                <li>ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>
+                <li>МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>
+                <li><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
+                <li><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>
+                    КАЧЕСТВА</li>
             </ul>
 <!--            <div class="bottom-main-text">-->
 <!--                <div class="min-price-label">-->
