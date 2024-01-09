@@ -300,7 +300,7 @@
     border: 0px;
     font-size: 3.3vw;
     color: var(--bg-color);
-    border-radius: 0.1ch;
+    border-radius: 1ch;
     z-index: 100;
 }
 
