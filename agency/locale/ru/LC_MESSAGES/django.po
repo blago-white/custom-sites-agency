@@ -73,7 +73,7 @@ msgstr "КОНТАКТЫ"
 
 #: .\templates\sections\main.html:93
 msgid "GetConsultation"
-msgstr "ЗАКАЗАТЬ"
+msgstr "РАССЧИТАТЬ СТОИМОСТЬ"
 
 #: .\templates\sections\main.html:103
 msgid "LandingTitle"

@@ -32,17 +32,17 @@ msgstr "ABOUT"
 
 #: .\templates\main.html:9
 msgid "Title"
-msgstr "Get website for you from $50 | Loginov Digital Agency"
+msgstr "Get website for you from $49 | Loginov Digital Agency"
 
 #: .\templates\main.html:10 .\templates\main.html:15
 msgid "MetaDescription"
 msgstr ""
 "Get a turnkey website, we take responsibility for all stages of development, "
-"from the idea to SEO promotion and advertising, prices start from only $ 50"
+"from the idea to SEO promotion and advertising, prices start from only $ 49"
 
 #: .\templates\main.html:12
 msgid "SiteName"
-msgstr "A custom-made website just for you from $50!"
+msgstr "A custom-made website just for you from $49!"
 
 #: .\templates\mobile-menu.html:7
 msgid "MainPageMobileSelector"
@@ -70,7 +70,7 @@ msgstr "CONTACTS"
 
 #: .\templates\sections\main.html:93
 msgid "GetConsultation"
-msgstr "ORDER"
+msgstr "CALCULATE PRICE"
 
 #: .\templates\sections\main.html:103
 msgid "LandingTitle"
@@ -94,7 +94,7 @@ msgstr "FROM"
 
 #: .\templates\sections\main.html:114
 msgid "MinPriceNumber"
-msgstr "50"
+msgstr "49"
 
 #: .\templates\sections\main.html:115
 msgid "MinPriceCurrency"
@@ -110,7 +110,7 @@ msgstr "SITES"
 
 #: .\templates\sections\main.html:123
 msgid "MainMinPrice"
-msgstr "FROM $50"
+msgstr "FROM $49"
 
 #: .\templates\sections\main.html:127
 msgid "MainAbout"
@@ -135,7 +135,7 @@ msgstr "LANDING"
 
 #: .\templates\sections\prices.html:40
 msgid "LadingMinPrice"
-msgstr "$50"
+msgstr "$49"
 
 #: .\templates\sections\prices.html:41 .\templates\sections\prices.html:59
 #: .\templates\sections\prices.html:77

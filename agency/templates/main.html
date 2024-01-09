@@ -46,7 +46,6 @@
         <script src="{% url 'javascript-catalog' %}" type="text/javascript"></script>
         <style>
             {% if LANGUAGE_CODE == "ru" %}
-
                 .header {
                     gap: 0ch;
                     font-size: 4.75vh;
@@ -82,12 +81,15 @@
                         line-height: 1.4ch;
                          font-size: 15.4vw;
                     }
-
-                    .contact-button-top {
-                        font-family: 'RFDewi';
-                    }
                 }
             {% endif %}
+            @media (aspect-ratio < 12 / 9) {
+                .contact-button-top {
+                    font-family: 'RFDewi';
+                    text-align: left;
+                    padding-left: 1ch;
+                }
+            }
         </style>
     </head>
     <body>

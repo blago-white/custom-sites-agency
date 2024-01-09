@@ -475,7 +475,7 @@
         backdrop-filter: blur(.5em);
         -webkit-backdrop-filter: blur(.5em);
         background: transparent;
-        font-size: 11.4vw;
+        font-size: 8.4vw;
         color: var(--toxic-green-color);
         border: 1px solid var(--toxic-green-color);
     }
