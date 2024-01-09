@@ -55,7 +55,7 @@ li {
 }
 
 li:before {
-    content: url("/uploads/img/ul-elipse.svg");
+    content: url("/uploads/img/ul-ellipse.svg");
     padding-right: 5px;
 }
 
