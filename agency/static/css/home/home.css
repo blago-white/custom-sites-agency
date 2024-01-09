@@ -77,7 +77,7 @@
 
 .main-text {
     font-size: min(33vh, 24vw);
-    line-height: min(11vh, 9vw);
+    line-height: 1ch;
     font-weight: bold;
     filter: brightness(1);
 }

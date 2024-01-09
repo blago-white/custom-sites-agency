@@ -61,7 +61,7 @@ function onInputEmail(element, event) {
 }
 
 function onSendOrderRequestSuccess(emailAddres) {
-    yaCounter95683576.reachGoal("pushEmail");
+    ym(95683576,'reachGoal','email');
     toggleToxicDialogTheme();
     setDialogHTML("THANK<span style='color: var(--bg-color);padding-left: 0px;'>YOU</span>", "<h3>" + emailAddres + "</h3>We will contact you in the next fewminutes, check your mailbox");
 }

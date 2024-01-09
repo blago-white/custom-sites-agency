@@ -38,6 +38,21 @@
 }
 
 @font-face {
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Expanded Bold';
     src: url('../fonts/RFDewiExpanded-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Black';
+    src: url('../fonts/RFDewiExtended-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Bold';
+    src: url('../fonts/RFDewiExtended-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Semibold';
+    src: url('../fonts/RFDewiExtended-Semibold.woff') format('woff');
 }
