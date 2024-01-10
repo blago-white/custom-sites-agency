@@ -33,6 +33,7 @@
 
 .list-item img {
     width: 58.3%;
+    height: 26vh;
     transition: opacity .5s ease, display 0s ease .5s;
 }
 
@@ -107,10 +108,9 @@
 
 .min-type-price-label {
     padding-inline: .5ch;
-    padding-bottom: .2ch;
     background: var(--toxic-green-color);
     line-height: 2ch;
-    font-size: .9ch;
+    font-size: .7ch;
     border-radius: 1ch;
 }
 
@@ -158,7 +158,7 @@
     .list-item:hover .site-order-button {
         display: flex;
         border: .05ch solid var(--light-color-darkened);
-        height: 11.4ch;
+        height: 26vh;
     }
 }
 

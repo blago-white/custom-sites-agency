@@ -25,7 +25,7 @@
 .section-details {
     text-align: left;
     font-size: calc(min(10vh, 10vw) * .4);
-    font-weight: 100;
+    font-weight: normal;
     color: var(--light-color-darkened);
     width: calc(50% - 17%);
     padding-right: 17%;

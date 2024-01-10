@@ -43,7 +43,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 1.57vw;
+    font-size: 1.3vw;
     color: var(--light-color-darkened);
 }
 
@@ -65,7 +65,6 @@ li span {
 
 .main-text-secondary-part span {
     font-family: 'RFDewi Semibold';
-    padding-left: 2.8%;
     font-size: 1.57vw;
 }
 
@@ -178,6 +177,8 @@ li span {
 .contact-button-top {
     height: 9.8vh;
     font-weight: 900;
+    width: 100vw;
+    text-align: left;
     font-family: 'RFDewi Bold';
     cursor: pointer;
     padding-inline: .5ch;
@@ -211,6 +212,7 @@ li span {
 
 .secondary-text, .main-text {
     font-family: 'RFDewi Expanded Bold Italic';
+    mix-blend-mode: hue;
 }
 
 .main-text-parts {
@@ -219,6 +221,39 @@ li span {
     align-items: flex-start;
     margin: 0px;
 }
+
+.mobile-main-text {
+    margin-left: 0.5ch;;
+    width: 100%;
+    font-family: 'RFDewi';
+    font-size: 40px;
+    -webkit-text-stroke: 1px;
+    gap: 30px;
+}
+
+.mobile-main-text .upper-part {
+    align-items: start;
+    display: inherit;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1ch;
+}
+
+.mobile-main-text .bottom-part {
+    font-size: 25px;
+    line-height: 1ch;
+    text-align: left;
+    -webkit-text-stroke: 0px;
+    width: 95%;
+    letter-spacing: .3px;
+    font-family: 'RFDewi Expanded Bold';
+}
+
+.mobile-main-text .mobile-text-contrasted {
+    color: var(--toxic-green-color);
+    -webkit-text-stroke: 0px;
+}
+
 
 @media(aspect-ratio < 12/9) {
     .min-price-from-word {
@@ -243,7 +278,11 @@ li span {
         display: flex;
     }
 
-    .text-line, .currency-name, .main-text, .long-arrow {
+    .secondary-text, .main-text {
+        font-family: 'RFDewi Bold';
+    }
+
+    .text-line, .main-text-primary-part, .currency-name, .main-text, .long-arrow {
         display: none;
     }
 
@@ -309,6 +348,9 @@ li span {
         border-radius: 35px;
         aspect-ratio: 4/1;
         z-index: 1;
+        font-family: 'RFDewi';
+        text-align: left;
+        padding-left: 1ch;
         backdrop-filter: blur(.5em);
         -webkit-backdrop-filter: blur(.5em);
         background: transparent;

@@ -1,16 +1,5 @@
 @import "colorscheme.css";
-
-@font-face {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "SF Pro Display";
-    font-weight: 500;
-    src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
-}
+@import "fonts.css";
 
 .dialog-window-bg {
     position: fixed;

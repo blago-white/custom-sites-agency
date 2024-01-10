@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
+    font-family: "SF Pro Display";
+    font-weight: bolder;
+    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: normal;
+    src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
+}
+
+@font-face {
 	font-family: 'GolosUIWebBold';
 	src:
 		url('../fonts/golos-ui_bold.woff') format('woff');
@@ -60,4 +78,19 @@
 @font-face {
     font-family: 'RFDewi Expanded Bold Italic';
     src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Regular';
+    src: url('../fonts/RFDewi-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Black Italic';
+    src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Italic';
+    src: url('../fonts/RFDewiExtended-Italic.woff') format("woff");
 }

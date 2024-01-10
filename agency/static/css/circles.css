@@ -19,13 +19,14 @@
 
 @media(aspect-ratio >= 12/9) {
     .bottom-color-circle {
-        bottom: -40%;
-        left: -18%;
+        bottom: 1%;
+        left: -7%;
+        scale: 2;
     }
 
     .upper-color-circle {
-        right: -27%;
-        scale: 2;
+        right: 14%;
+        scale: 3;
         left: auto;
     }
 }

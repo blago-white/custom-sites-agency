@@ -9,21 +9,40 @@
     z-index: 1000;
 }
 
+.header-wrapper:hover {
+
+}
+
+.header-logo {
+    margin: 0px;
+    font-size: inherit;
+    font-family: 'RFDewi Black Italic';
+    color: var(--light-color);
+    line-height: 1ch;
+}
+
+.header-logo:hover {
+    color: var(--toxic-green-color);
+}
+
 .header {
     display: flex;
     font-size: 5vh;
     color: var(--bg-color);
     height: 7vh;
-    justify-content: space-between;
     gap: 3ch;
     font-weight: bold;
     cursor: pointer;
-    padding-inline: 33.3%;
+    padding-left: 12.5vw;
+    padding-top: 1vh;
 }
 
 .header a {
+    font-size: 2.4vh;
     color: var(--light-color);
     text-decoration: none;
+    font-family: 'RFDewi Italic';
+    margin-left: 1ch;
 }
 
 .header a:hover {
