@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 00:25+0300\n"
+"POT-Creation-Date: 2024-01-13 18:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,15 +50,33 @@ msgstr "GET"
 msgid "GetEventObject"
 msgstr "CONSULTATION"
 
-#: .\static\js\order.js:14
+#: .\static\js\order.js:15
+msgid "OrderFormDesscription"
+msgstr ""
+"Our manager will help you determine the content and design of the site for "
+"free, and as a result you will find out the final cost and terms"
+
+#: .\static\js\order.js:20
 msgid "EmailPlaceholder"
-msgstr "enter email"
+msgstr "email"
+
+#: .\static\js\order.js:24
+msgid "OrderFormButton"
+msgstr "CALCULATE COST"
+
+#: .\static\js\order.js:48
+msgid "Thanks"
+msgstr "THANK YOU!"
+
+#: .\static\js\order.js:48
+msgid "ThanksInfo"
+msgstr "We will contact you in the next fewminutes, check your mailbox"
 
 #: .\static\js\tariffDetails.js:4
 msgid "LandingDetails"
 msgstr ""
 "A landing page is a simple one-page website that represents something, a "
-"product or service, or in general specifically you <h2>DEADLINES</h2> From 3 "
+"product or service, or in general specifically you <h3>DEADLINES</h3> From 3 "
 "to 14 days"
 
 #: .\static\js\tariffDetails.js:5
@@ -67,10 +85,10 @@ msgstr ""
 "If your desires do not fit into the framework, you have come to the right "
 "place, just tell us your desires and we will immediately proceed to the "
 "realization of your dream, the price may vary greatly, we will tell you the "
-"final cost when we agree on the site <h2>DEADLINES</h2> From 3 to 31 days"
+"final cost when we agree on the site <h3>DEADLINES</h3> From 3 to 31 days"
 
 #: .\static\js\tariffDetails.js:6
 msgid "CommerceDetails"
 msgstr ""
 "Nowadays, all the money is on the Internet, I will help you set up a revenue "
-"stream in your hands <h2>DEADLINES</h2> From 7 to 25 days"
+"stream in your hands <h3>DEADLINES</h3> From 7 to 25 days"

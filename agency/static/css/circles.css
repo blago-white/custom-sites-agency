@@ -14,7 +14,7 @@
 .bottom-color-circle {
     bottom: -42%;
     left: -102%;
-    opacity: .3;
+    opacity: .1;
 }
 
 @media(aspect-ratio >= 12/9) {

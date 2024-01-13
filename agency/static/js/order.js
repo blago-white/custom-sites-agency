@@ -5,16 +5,23 @@ import { setDialogTextHTML,
          toggleDarkDialogTheme,
          toggleToxicDialogTheme } from "./dialog.js";
 
-const HTMLOrderForm = `<form>
-    <span id='order-form-text'>
-        <span>${gettext('GetEvent')}<img src='/uploads/img/filled-arrow.png' id='submit-order'>
-        </span>${gettext('GetEventObject')}</span>
-        <div><img src='/uploads/img/arrow.png'>
-            <div style='width: auto' contenteditable='true' id='mailform' oninput='onInputEmail(this, event)'>
-                ${gettext("EmailPlaceholder")}
+const HTMLOrderForm = `<form id='order-form' onsubmit='return false;'>
+        <span id='order-form-text'>
+            <span>${gettext('GetEvent')}
+            </span>${gettext('GetEventObject')}
+        </span>
+
+        <span class='form-description'>
+            ${gettext('OrderFormDesscription')}
+        </span>
+
+        <div style='height: 1.75em;'>
+            <div class='form-field' id='mailform'>
+                <label>${gettext("EmailPlaceholder")}</label>
+                <input id='email-input' type="email" name="email"/>
             </div>
-            <img src='/uploads/img/arrow.png' style='transform: rotate(180deg)'>
         </div>
+        <button id='submit-order'>${gettext('OrderFormButton')}</button>
     </form>`;
 
 let tariffId;
@@ -27,48 +34,22 @@ function orderSite(id) {
 
     tariffId = id;
     document.getElementById('submit-order').addEventListener('click', (event) => {onOrderSiteSubmit(event)})
-}
-
-function mailaddresIsValid(addres) {
-    if ((!addres.includes("@")) || (!addres.split(".")[addres.split(".").length-1])) {
-        return false;
-    }
-
-    var re = /^\S+@\S+\.\S+$/;
-
-    return re.test(addres);
-}
-
-function onInputEmail(element, event) {
-    element.style.width = "auto";
-    document.getElementById('mailform').style.color = "";
-
-    if (element.innerHTML.length > 29) {
-        element.innerHTML = element.innerHTML.slice(1, 30);
-    }
-
-    if (mailaddresIsValid(element.innerHTML)) {
-        document.getElementById('submit-order').style.opacity = 1;
-        document.getElementById('order-form-text').style = 'color: #242424!important';
-    } else {
-        document.getElementById('submit-order').style.opacity = 0;
-        document.getElementById('order-form-text').style = '';
-    }
-
-    if (event.data == " ") {
-        element.innerHTML = element.innerHTML.replace(/&nbsp;/g, "");
-    }
+    document.getElementById('submit-order').addEventListener('mouseover', (event) => {
+        document.getElementsByClassName('dialog-container')[0].style.border = '5px solid var(--toxic-green-color)'
+    })
+    document.getElementById('submit-order').addEventListener('mouseout', (event) => {
+        document.getElementsByClassName('dialog-container')[0].style.border = '0px'
+    })
 }
 
 function onSendOrderRequestSuccess(emailAddres) {
     ym(95683576,'reachGoal','email');
     toggleToxicDialogTheme();
-    setDialogHTML("THANK<span style='color: var(--bg-color);padding-left: 0px;'>YOU</span>", "<h3>" + emailAddres + "</h3>We will contact you in the next fewminutes, check your mailbox");
+    setDialogHTML(gettext('Thanks'), `${gettext('ThanksInfo')}`);
 }
 
 async function onOrderSiteSubmit(event, tariffIdFromElement) {
-    var formdata = new FormData();
-    formdata.append("email", document.getElementById('mailform').innerHTML);
+    var formdata = new FormData(document.getElementById('order-form'));
     formdata.append("tariff", tariffId || tariffIdFromElement);
 
     var requestOptions = {
@@ -96,8 +77,8 @@ async function onOrderSiteSubmit(event, tariffIdFromElement) {
 }
 
 function setErrorMessage(message) {
-    document.getElementById('mailform').style.color = "crimson";
-    document.getElementById('mailform').innerHTML = message;
+    document.getElementById('email-input').style.color = "crimson";
+    document.getElementById('email-input').value = message;
 }
 
 window.orderSite = orderSite;

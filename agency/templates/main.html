@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{% static 'css/dialog.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/mobile.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/animations.css' %}" type="text/css">
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -58,12 +59,12 @@
 
                 @media (aspect-ratio < 12 / 9) {
                     #order-form-text span {
-                        font-size: 9vh;
+                        font-size: 15vw;
                         overflow-wrap: normal;
                     }
 
                     form span {
-                        font-size: 10vw;
+                        font-size: 7vw;
                     }
 
                     .mobile-menu-list a {
@@ -94,6 +95,7 @@
     <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
+    <script src="{% static 'js/cursor.js' %}"></script>
     <script>
         const sectionsYCords = {
             "main": 0,

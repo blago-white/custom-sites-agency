@@ -179,19 +179,21 @@ li span {
     font-weight: 900;
     width: 100vw;
     text-align: left;
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Expanded Bold';
     cursor: pointer;
     padding-inline: .5ch;
-    background: var(--toxic-green-color);
+    background: transparent;
     border: 0px;
     font-size: 3.14vw;
-    color: var(--bg-color);
+    color: var(--toxic-green-color);
     border-radius: .75ch;
+    border: 1px solid var(--toxic-green-color);
     z-index: 100;
 }
 
 .contact-button-top:hover {
-    background: var(--light-color);
+    background: linear-gradient(90deg, rgba(210,255,2,0.7) 0%, rgba(255,239,0,1) 100%);
+    color: var(--bg-color);
 }
 
 .min-price-from-word {
@@ -353,9 +355,6 @@ li span {
         padding-left: 1ch;
         backdrop-filter: blur(.5em);
         -webkit-backdrop-filter: blur(.5em);
-        background: transparent;
         font-size: 8.4vw;
-        color: var(--toxic-green-color);
-        border: 1px solid var(--toxic-green-color);
     }
 }

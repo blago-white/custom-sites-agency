@@ -94,3 +94,8 @@
     font-family: 'RFDewi Italic';
     src: url('../fonts/RFDewiExtended-Italic.woff') format("woff");
 }
+
+@font-face {
+    font-family: 'RFDewi Extended Black Italic';
+    src: url('../fonts/RFDewiExtended-BlackItalic.woff') format("woff");
+}

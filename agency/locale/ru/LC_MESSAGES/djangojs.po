@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 00:25+0300\n"
+"POT-Creation-Date: 2024-01-13 18:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,15 +54,33 @@ msgstr "ПОЛУЧИ"
 msgid "GetEventObject"
 msgstr "КОНСУЛЬТАЦИЮ"
 
-#: .\static\js\order.js:14
+#: .\static\js\order.js:15
+msgid "OrderFormDesscription"
+msgstr ""
+"Наш менеджер бесплатно поможет определится с наполнением, оформлением сайта, "
+"и по итогам вы узнаете финальную стоимость и сроки"
+
+#: .\static\js\order.js:20
 msgid "EmailPlaceholder"
-msgstr "введите почту"
+msgstr "почта"
+
+#: .\static\js\order.js:24
+msgid "OrderFormButton"
+msgstr "РАСЧИТАТЬ СТОИМОСТЬ"
+
+#: .\static\js\order.js:48
+msgid "Thanks"
+msgstr "СПАСИБО!"
+
+#: .\static\js\order.js:48
+msgid "ThanksInfo"
+msgstr "Менеджер свяжется с вами в течении 5-ти минут, проверяйте свой почтовый ящик"
 
 #: .\static\js\tariffDetails.js:4
 msgid "LandingDetails"
 msgstr ""
 "Лендинг отлично подходит для презентации какой либо идеи, продукта, услуг и "
-"так далее<h2>СРОКИ</h2> От 3 до 14 дней и сайт у вас"
+"так далее<h3>СРОКИ</h3> От 3 до 14 дней и сайт у вас"
 
 #: .\static\js\tariffDetails.js:5
 msgid "CustomDetails"
@@ -70,10 +88,10 @@ msgstr ""
 "Если ваши идеи не умещаются в рамки, вы попали в правильное место, просто "
 "сообщите нам свои желания, и мы немедленно приступим к воплощению вашей "
 "мечты, цена может сильно варьироваться, окончательную стоимость мы сообщим "
-"вам, когда договоримся на сайте <h2>СРОКИ</h2> От 3 до 31 дня"
+"вам, когда договоримся на сайте <h3>СРОКИ</h3> От 3 до 31 дня"
 
 #: .\static\js\tariffDetails.js:6
 msgid "CommerceDetails"
 msgstr ""
 "Сегодня весь поток денег идет через интернет, и мы поможем настроить этот "
-"поток прямо к вам в бизнес<h2>СРОКИ</h2> От 7 до 25 дней"
+"поток прямо к вам в бизнес<h3>СРОКИ</h3> От 7 до 25 дней"

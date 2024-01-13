@@ -1,0 +1,104 @@
+@keyframes bganimation-bottom {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-20vh) translateX(40vw);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+@keyframes bganimation-upper {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    25% {
+        transform: translateY(20vh) translateX(-10vw);
+    }
+
+    75% {
+        transform: translateY(5vh) translateX(-10vw);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+@keyframes order-button {
+    0% {
+        transform: translateX(-10vh);
+    }
+
+    100% {
+        transform: translateX(0vh);
+    }
+}
+
+@keyframes second-text-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes benefits-list-anim {
+    0% {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.bottom-color-circle {
+    animation: bganimation-bottom 12s ease-in-out infinite;
+}
+
+.upper-color-circle {
+    animation: bganimation-upper 12s ease-in-out infinite;
+}
+
+.upper-color-circle.floated {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: initial;
+    right: initial;
+    scale: 1;
+    animation: none;
+    cursor: none;
+    transition: 2s ease-out;
+}
+
+.main-text-parts {
+    animation: second-text-anim .5s ease;
+}
+
+.contact-button-top {
+    transition: .2s ease all;
+}
+
+.benefits-list {
+    animation: benefits-list-anim 1s ease;
+}
+
+@media(aspect-ratio > 12/9) {
+    .contact-button-top {
+        animation: order-button .5s ease;
+    }
+    .contact-button-top:hover {
+        transform: translateX(-10vh);
+    }
+}
