@@ -17,8 +17,10 @@ function expandMenu(event) {
     expandingNow = true;
 
     if (!expanded) {
-        mobileMenu.style.background = '#242424';
+        mobileMenu.style.background = 'rgb(36, 36, 36, .8)';
         mobileMenu.style.mixBlendMode = 'normal';
+        mobileMenu.style.backdropFilter = "blur(.4em)";
+        mobileMenu.style['-webkit-backdrop-filter'] = 'blur(.4em)';
         document.getElementById('mobile-menu-list').style.display = 'flex';
         setTimeout(
             () => {
@@ -32,6 +34,8 @@ function expandMenu(event) {
             () => {
                 mobileMenu.style.background = 'transparent';
                 mobileMenu.style.mixBlendMode = 'exclusion';
+                mobileMenu.style.backdropFilter = "blur(0px)";
+                mobileMenu.style['-webkit-backdrop-filter'] = 'blur(0px)';
                 document.getElementById('mobile-menu-list').style.display = 'none';
             }, '500'
         )
