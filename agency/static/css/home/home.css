@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    mix-blend-mode: difference;
     font-family: 'RFDewi Bold';
 }
 
@@ -338,6 +339,7 @@ li span {
         margin-inline: auto;
         justify-content: center;
         width: initial;
+        mix-blend-mode: normal;
     }
 
     .contact-button-top {

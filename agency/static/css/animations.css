@@ -79,7 +79,7 @@
     scale: 1;
     animation: none;
     cursor: none;
-    transition: 2s ease-out;
+    transition: .2s ease-out;
 }
 
 .main-text-parts {
@@ -100,5 +100,11 @@
     }
     .contact-button-top:hover {
         transform: translateX(-10vh);
+    }
+}
+
+@media(aspect-ratio < 12/9) {
+    #circle {
+        display: none;
     }
 }
