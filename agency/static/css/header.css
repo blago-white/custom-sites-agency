@@ -5,12 +5,7 @@
     top: 0px;
     width: 100%;
     height: 0em;
-    mix-blend-mode: exclusion;
     z-index: 1000;
-}
-
-.header-wrapper:hover {
-
 }
 
 .header-logo {
@@ -34,7 +29,9 @@
     font-weight: bold;
     cursor: pointer;
     padding-left: 12.5vw;
-    padding-top: 1vh;
+    padding-block: 1vh;
+    background: rgb(36, 36, 36, .775);
+    height: min-content;
 }
 
 .header a {
