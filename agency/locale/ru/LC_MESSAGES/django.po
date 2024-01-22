@@ -138,7 +138,7 @@ msgstr "ЛЕНДИНГ"
 
 #: .\templates\sections\prices.html:40
 msgid "LadingMinPrice"
-msgstr "4990₽"
+msgstr "+4990₽"
 
 #: .\templates\sections\prices.html:41 .\templates\sections\prices.html:59
 #: .\templates\sections\prices.html:77
@@ -160,7 +160,7 @@ msgstr "МАГАЗИН"
 
 #: .\templates\sections\prices.html:58
 msgid "CommerceMinPrice"
-msgstr "7500₽"
+msgstr "+7500₽"
 
 #: .\templates\sections\prices.html:63
 msgid "CommerceDesc"

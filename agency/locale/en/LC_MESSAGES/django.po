@@ -135,7 +135,7 @@ msgstr "LANDING"
 
 #: .\templates\sections\prices.html:40
 msgid "LadingMinPrice"
-msgstr "$49"
+msgstr "$49+"
 
 #: .\templates\sections\prices.html:41 .\templates\sections\prices.html:59
 #: .\templates\sections\prices.html:77
@@ -157,7 +157,7 @@ msgstr "COMMERCE"
 
 #: .\templates\sections\prices.html:58
 msgid "CommerceMinPrice"
-msgstr "$150"
+msgstr "$150+"
 
 #: .\templates\sections\prices.html:63
 msgid "CommerceDesc"

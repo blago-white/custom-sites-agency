@@ -21,7 +21,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    mix-blend-mode: difference;
     font-family: 'RFDewi Bold';
 }
 
@@ -215,7 +214,6 @@ li span {
 
 .secondary-text, .main-text {
     font-family: 'RFDewi Expanded Bold Italic';
-    mix-blend-mode: hue;
 }
 
 .main-text-parts {
