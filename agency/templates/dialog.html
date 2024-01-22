@@ -1,11 +1,15 @@
 {% load static %}
 
 <div class="dialog-window-bg hidden" id="dialog">
-    <h1 id="dialog-window-header"></h1>
-    <span id="dialog-window-text">
-    </span>
-    <img src="{% static 'img/cross.png' %}"
-         style="height: 7ch;width: 7ch;position: absolute;top: 0px;right: 0px;"
-         id="close-dialog"
-         onclick="changeDialogDisplay()">
+    <div class="dialog-window">
+        <div class="dialog-container">
+            <h2 id="dialog-window-header"></h2>
+            <div id="dialog-window-text"></div>
+        </div>
+        <button class="close" onclick="changeDialogDisplay()">
+            <img src="{% static 'img/cross.png' %}"
+             style="height: 3.5ch;width: 3.5ch;filter: invert(1);"
+             id="close-dialog">
+        </button>
+    </div>
 </div>

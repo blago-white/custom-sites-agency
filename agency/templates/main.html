@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{% static 'css/dialog.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/mobile.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/animations.css' %}" type="text/css">
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -46,15 +47,9 @@
         <script src="{% url 'javascript-catalog' %}" type="text/javascript"></script>
         <style>
             {% if LANGUAGE_CODE == "ru" %}
-
                 .header {
                     gap: 0ch;
                     font-size: 4.75vh;
-                }
-
-                .contact-button-top {
-                    font-family: 'GolosUIWebBold';
-                    font-weight: 900;
                 }
 
                 .long-arrow {
@@ -62,32 +57,29 @@
                     padding-left: 3ch;
                 }
 
-                @media (aspect-ratio >= 12 / 9) {
-                    .contact-button-top {
-                        font-size: 3.8vw;
-                    }
-                }
-
                 @media (aspect-ratio < 12 / 9) {
                     #order-form-text span {
-                        font-size: 9vh;
+                        font-size: 15vw;
                         overflow-wrap: normal;
                     }
 
                     form span {
-                        font-size: 10vw;
+                        font-size: 7vw;
                     }
 
                     .mobile-menu-list a {
-                        line-height: 1.4ch;
-                         font-size: 15.4vw;
-                    }
-
-                    .contact-button-top {
-                        font-family: 'RFDewi';
+                        line-height: 1ch;
+                        font-size: 15.4vw;
                     }
                 }
             {% endif %}
+            @media (aspect-ratio < 12 / 9) {
+                .contact-button-top {
+                    font-family: 'RFDewi';
+                    text-align: left;
+                    padding-left: 1ch;
+                }
+            }
         </style>
     </head>
     <body>
@@ -103,6 +95,7 @@
     <script type="module" src="{% static 'js/tariffDetails.js' %}"></script>
     <script type="module" src="{% static 'js/order.js' %}"></script>
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
+    <script src="{% static 'js/cursor.js' %}"></script>
     <script>
         const sectionsYCords = {
             "main": 0,

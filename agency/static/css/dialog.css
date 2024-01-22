@@ -1,16 +1,5 @@
 @import "colorscheme.css";
-
-@font-face {
-    font-family: "SF Pro Display";
-    font-weight: bold;
-    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "SF Pro Display";
-    font-weight: 500;
-    src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
-}
+@import "fonts.css";
 
 .dialog-window-bg {
     position: fixed;
@@ -20,7 +9,7 @@
     font-weight: 500;
     font-size: 2vw;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: .5ch;
     justify-content: center;
     width: 100vw;
@@ -29,6 +18,26 @@
     z-index: 1000;
     text-align: left;
     overflow: hidden;
+}
+
+.dialog-window {
+    display: flex;
+    align-items: flex-start;
+}
+
+.close {
+    width: min-content;
+    aspect-ratio: 1/1;
+    border-radius: .75ch;
+    border: 0px;
+    background: var(--bg-color);
+    filter: inverse(1);
+    margin-inline: 1ch;
+    font-size: 2vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dialog-window-bg.hidden {
@@ -43,52 +52,20 @@
     background: var(--toxic-green-color);
 }
 
-.dialog-window-bg * {
-    width: 45%;
-}
-
-.dialog-window-bg span {
-    padding-left: .8ch;
-    color: var(--bg-color);
-}
-
-.dialog-window-bg h1 {
-    font-size: 9vw;
-    font-weight: 900;
-    margin: 0px;
-    line-height: 1ch;
-    text-wrap: nowrap;
-    color: var(--bg-color);
-}
-
 .dialog-window-bg h2 {
-    font-size: 4.5vw;
-    font-weight: 900;
-    margin: 0px;
-    margin-top: calc(1.5ch * 0.444);
-    line-height: 1ch;
+    margin-top: 0px;
     text-wrap: nowrap;
-    color: var(--bg-color);
+    margin-bottom: .25ch;
+    font-size: 2em;
 }
 
-h3 {
-    font-size: 4vw;
-    width: 50vw!important;
-    font-weight: 900;
-    margin-block: calc(1.5ch * 0.444);
-    line-height: 1ch;
-    text-wrap: nowrap;
-    color: var(--bg-color);
-    overflow-x: clip;
-    text-overflow: ellipsis;
-
+.dialog-window-bg h3 {
+    margin-top: .5ch;
+    margin-bottom: .25ch;
+    font-size: 2em;
 }
 
 form {
-    height: 100%;
-    top: 0px;
-    left: 3vw;
-    position: absolute;
     width: fit-content!important;
     border-radius: 2ch;
     display: flex;
@@ -96,8 +73,29 @@ form {
     align-items: flex-start;
     justify-content: center;
     color: var(--bg-color);
-
+    gap: 4vh;
+    font-family: 'RFDewi Extended Black Italic';
     transition: all .2s ease;
+}
+
+.form-field {
+    display: flex;
+    border-radius: .25ch;
+    padding: .125ch;
+}
+
+.form-field label {
+    width: min-content;
+    padding-inline: .5ch;
+    padding-block: .25ch;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+}
+
+.form-field input {
+    width: 100%;
+    background: var(--bg-color);
+    font-family: 'RFDewi Bold';
 }
 
 form img {
@@ -109,20 +107,43 @@ form img {
 }
 
 form span {
-    font-size: 4ch;
     padding-left: 0px!important;
     width: auto!important;
     font-weight: bold;
-    color: var(--toxic-green-color)!important;
-    font-size: 7vw;
+    color: var(--toxic-green-color);
     overflow-wrap: anywhere;
     text-wrap: wrap;
     display: flex;
+    font-size: 2.5vw;
     flex-direction: column;
 }
 
+#submit-order {
+    width: 100%;
+    border-radius: .5ch;
+    font-size: inherit;
+    font-family: 'RFDewi Extended Black Italic';
+    border: 2px solid var(--toxic-green-color);
+    background: transparent;
+    color: var(--toxic-green-color);
+    height: 1.75em;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+#submit-order:hover {
+    color: var(--bg-color);
+    background: linear-gradient(90deg, #D2FF02 0%, #FFB800 100%);
+}
+
+.form-description {
+    color: var(--light-color);
+    font-size: .75em;
+    font-family: 'RFDewi Bold';
+    text-align: justify;
+}
+
 form span span {
-    font-size: 17.5vw;
     overflow-wrap: anywhere;
     text-wrap: wrap;
     line-height: 1ch;
@@ -131,10 +152,6 @@ form span span {
 #close-dialog {
     cursor: pointer;
     filter: contrast(.8);
-}
-
-form div {
-    font-size: 4vw;
 }
 
 form *:focus-visible {
@@ -150,6 +167,15 @@ form input {
     font-size: inherit;
 }
 
+.dialog-container {
+    width: 33.3vw;
+    height: min-content;
+    min-width: 500px;
+    background: var(--bg-color);
+    padding: 1ch;
+    border-radius: .75ch;
+}
+
 @media(aspect-ratio < 12/9) {
     form div div {
         overflow-wrap: anywhere!important;
@@ -159,14 +185,14 @@ form input {
     }
 
     h3 {
-        font-size: 8vw;
+        font-size: 10vw!important;
         width: 90vw!important;
     }
 
     .dialog-window-bg {
         top: 0px;
         bottom: top;
-        backdrop-filter: blur(2ch) contrast(.25) brightness(.8);
+        backdrop-filter: blur(4px) saturate(0.5);
         font-size: 7vw;
     }
 
@@ -181,8 +207,17 @@ form input {
         margin-block: calc(1ch * 0.444);
     }
 
+    .close {
+        width: 100%!important;
+        margin-inline: 0px;
+        margin-top: 2ch;
+        aspect-ratio: auto;
+        font-size: 7vw;
+        padding: 0.5ch;
+    }
+
     .dialog-window-bg * {
-        width: 100%;
+        width: 90%;
         text-wrap: balance;
     }
 
@@ -201,17 +236,32 @@ form input {
     }
 
     form div {
-        font-size: 2.5ch;
+        font-size: 1.25ch;
         width: 100%;
     }
 
-    form {
-        width: 94vw!important;
+    .dialog-window {
+        flex-direction: column;
+        margin-inline: auto;
+    }
+
+    .dialog-container {
+        min-width: auto;
+    }
+
+    #dialog-window-text {
+        width: 100%;
+        max-height: 65vh;
+        overflow: scroll;
     }
 
     form span span {
         font-size: 32vw;
         overflow-wrap: anywhere;
         text-wrap: wrap;
+    }
+
+    #submit-order {
+        height: fit-content;
     }
 }

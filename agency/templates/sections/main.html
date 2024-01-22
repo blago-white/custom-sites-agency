@@ -2,54 +2,6 @@
 {% load i18n %}
 
 <style>
-        .min-price-from-word {
-            position: relative;
-            top: -0.7ch;
-        }
-
-        @media (aspect-ratio < 12 / 9) {
-            .min-price-from-word {
-                position: initial;
-                top: 0px;
-            }
-
-            .main-text-primary-part {
-                display: none;
-            }
-        }
-
-        .mobile-main-text {
-            margin-left: 0.5ch;;
-            width: 100%;
-            font-family: 'RFDewi';
-            font-size: 40px;
-            -webkit-text-stroke: 1px;
-            gap: 30px;
-        }
-
-        .mobile-main-text .upper-part {
-            align-items: start;
-            display: inherit;
-            flex-direction: column;
-            gap: 15px;
-            line-height: 1ch;
-        }
-
-        .mobile-main-text .bottom-part {
-            font-size: 25px;
-            line-height: 1ch;
-            text-align: left;
-            -webkit-text-stroke: 0px;
-            width: 95%;
-            letter-spacing: .3px;
-            font-family: 'RFDewi Bold';
-        }
-
-        .mobile-main-text .mobile-text-contrasted {
-            color: var(--toxic-green-color);
-            -webkit-text-stroke: 0px;
-        }
-
         {% if LANGUAGE_CODE == "ru" %}
             .min-price-label-number {
                 font-family: 'GolosUIWebBold';
@@ -77,48 +29,37 @@
                     top: -5.7vh;
                 }
             }
-        {% else %}
-            .contact-button-top {
-                font-family: 'RFDewi';
-            }
         {% endif %}
+        @media(aspect-ratio < 12/9) {
+            .secondary-text, .main-text {
+               font-family: 'RFDewi Bold';
+
+            }
+        }
 </style>
 
 <main class="main-content-wrapper" id="main">
-    <div style="position: absolute;height: 0vh;top: 13vh;right: -10%;">
-        <img src="{% static 'img/sphere.png' %}" class="globe">
-    </div>
     <div class="mobile-bg"
          style="background: url({% static 'img/proger.png' %});background-size: cover;"></div>
-    <div class="color-circle upper-color-circle" style="background: url({% static 'img/top-circle.png' %});background-size: cover;"></div>
+    <div class="color-circle upper-color-circle floated" id="circle"
+         style="background: url({% static 'img/fcircle.png' %});opacity: 1;background-size: cover;width: 200px;pointer-events: none;height: 200px;mix-blend-mode: difference;z-index: 1000;"></div>
+    <div class="color-circle upper-color-circle"
+         style="background: url({% static 'img/top-circle.png' %});opacity: .5;background-size: cover;"></div>
     <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
     <section class="main-content">
-        <div class="main-text-secondary-part">
-            <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
-            <h1 class="second-text"><span class="filled-second-text">WEB</span>SITES</h1>
-        </div>
         <div class="main-text-primary-part">
-            <span class="main-text">L</span><img
-                src="{% static 'img/circle.png' %}"
-                style="height: calc(min(32vh, 24vw) * .7);filter: grayscale(1) brightness(1.5);"
-                id="main-text-circle"><span class="main-text">GINOV</span>
-            <div class="bottom-main-text">
-                <div class="bottom-vertical-list">
-                    <article>{% trans 'LandingTitle' %}</article>
-                    <article>{% trans 'BusinessCardTitle' %}</article>
-                    <article>{% trans 'CommerceTitle' %}</article>
-                    <article style="width: max-content;">{% trans 'OtherTitle' %}</article>
-                </div>
-                <img src="{% static 'img/long-arrow.png' %}"
-                     class="long-arrow">
-                <div class="min-price-label">
-                    <span class="min-price-from-word">
-                        {% trans 'PriceFromWord' %}
-                    </span>
-                    <div class="min-price-label-number">{% trans 'MinPriceNumber' %}</div>
-                    <div class="currency-container">{% trans 'MinPriceCurrency' %}</div>
-                </div>
-            </div>
+            <h1 class="main-text-parts">
+                <span class="secondary-text">{% trans 'Development' %}</span>
+                <span class="main-text">{% trans 'Sites' %}</span>
+            </h1>
+            {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
+            <ul class="benefits-list">
+                <li>ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>
+                <li>МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>
+                <li><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
+                <li><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>
+                    КАЧЕСТВА</li>
+            </ul>
         </div>
         <div class="mobile-main-text">
             <div class="upper-part">
@@ -131,6 +72,7 @@
                     {% trans 'MainAbout' %}
                 </span>
             </div>
+            {% include 'main-order-button.html' %}
         </div>
     </section>
 </main>

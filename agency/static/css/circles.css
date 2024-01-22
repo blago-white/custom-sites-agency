@@ -1,0 +1,32 @@
+.color-circle {
+    position: absolute;
+    height: 700px;
+    z-index: -1;
+    aspect-ratio: 1/1;
+    opacity: .7;
+}
+
+.upper-color-circle {
+    top: -25%;
+    left: 17%;
+}
+
+.bottom-color-circle {
+    bottom: -42%;
+    left: -102%;
+    opacity: .5;
+}
+
+@media(aspect-ratio >= 12/9) {
+    .bottom-color-circle {
+        bottom: 1%;
+        left: -7%;
+        scale: 2;
+    }
+
+    .upper-color-circle {
+        right: 14%;
+        scale: 3;
+        left: auto;
+    }
+}

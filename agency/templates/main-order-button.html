@@ -1,0 +1,8 @@
+{% load i18n %}
+
+<div class="main-text-secondary-part">
+    <button class="contact-button-top" onclick="orderSite(3)">{% trans 'GetConsultation' %}</button>
+    {% if description %}
+    <span style="color: var(--light-color-darkened)">{{ description }}</span>
+    {% endif %}
+</div>

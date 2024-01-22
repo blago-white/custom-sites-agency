@@ -30,7 +30,8 @@ html {
 body {
     background: var(--bg-color);
     color: var(--light-color);
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
     margin: 0px;
     text-align: center;
     height: auto;
