@@ -42,10 +42,12 @@
 
 @keyframes second-text-anim {
     0% {
+        transform: translateY(-5vh);
         opacity: 0;
     }
 
     100% {
+        transform: translateY(0vh);
         opacity: 1;
     }
 }
@@ -82,7 +84,7 @@
     transition: .2s ease-out;
 }
 
-.main-text-parts {
+.secondary-text {
     animation: second-text-anim .5s ease;
 }
 
@@ -99,7 +101,9 @@
         animation: order-button .5s ease;
     }
     .contact-button-top:hover {
-        transform: translateX(-10vh);
+        transform: translateX(-29vh);
+        width: 110vw;
+        padding-left: 14.3vw;
     }
 }
 
