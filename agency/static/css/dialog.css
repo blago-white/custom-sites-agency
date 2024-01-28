@@ -174,6 +174,8 @@ form input {
     background: var(--bg-color);
     padding: 1ch;
     border-radius: .75ch;
+
+    transition: all .2s ease;
 }
 
 @media(aspect-ratio < 12/9) {

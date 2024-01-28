@@ -35,10 +35,10 @@ function orderSite(id) {
     tariffId = id;
     document.getElementById('submit-order').addEventListener('click', (event) => {onOrderSiteSubmit(event)})
     document.getElementById('submit-order').addEventListener('mouseover', (event) => {
-        document.getElementsByClassName('dialog-container')[0].style.border = '5px solid var(--toxic-green-color)'
+        document.getElementsByClassName('dialog-container')[0].style.boxShadow = '20px 20px 0px var(--toxic-green-color)'
     })
     document.getElementById('submit-order').addEventListener('mouseout', (event) => {
-        document.getElementsByClassName('dialog-container')[0].style.border = '0px'
+        document.getElementsByClassName('dialog-container')[0].style.boxShadow = 'unset'
     })
 }
 

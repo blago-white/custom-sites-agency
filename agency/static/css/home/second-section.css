@@ -158,7 +158,7 @@
     .list-item:hover .site-order-button {
         display: flex;
         border: .05ch solid var(--light-color-darkened);
-        height: 26vh;
+        height: calc(26vh - .05ch);
     }
 }
 
