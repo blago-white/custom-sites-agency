@@ -34,7 +34,7 @@ msgstr "О НАС"
 
 #: .\templates\main.html:9
 msgid "Title"
-msgstr "Создание сайтов от 5000 рублей | Loginov Digital Agency"
+msgstr "Создание и Продвижение сайтов любой сложности | Loginov Digital Agency"
 
 #: .\templates\main.html:10 .\templates\main.html:15
 msgid "MetaDescription"

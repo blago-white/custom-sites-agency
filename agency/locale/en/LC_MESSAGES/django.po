@@ -32,7 +32,7 @@ msgstr "ABOUT"
 
 #: .\templates\main.html:9
 msgid "Title"
-msgstr "Get website for you from $49 | Loginov Digital Agency"
+msgstr "Creation and Promotion of websites of any complexity | Loginov Digital Agency"
 
 #: .\templates\main.html:10 .\templates\main.html:15
 msgid "MetaDescription"

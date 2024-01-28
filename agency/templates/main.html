@@ -8,10 +8,15 @@
         <meta charset="UTF-8">
         <title>{% trans 'Title' %}</title>
         <meta name="description" content="{% trans 'MetaDescription' %}">
-        <meta name="keywords" content="website, turnkey website, custom website, website promotion, site, commerce"/>
+        <meta name="keywords"
+              content="сайт, создание сайтов, создать сайт, сайт недорого, интернет-магазин, вебсайт, разработка сайта, коммерческий сайт, под ключ"/>
         <meta property="og:site_name" content="{% trans 'SiteName' %}">
         <meta property="og:url" content="https://loginov.tech"/>
-        <meta property="og:image" content="{% static 'img/qr.png' %}"/>
+
+        <meta property="og:image" content="{% static 'img/ogprev300.png' %}"/>
+        <meta property="og:image:width" content="300"/>
+        <meta property="og:image:height" content="300"/>
+
         <meta property="og:description" content="{% trans 'MetaDescription' %}"/>
         <link rel="canonical" href="https://loginov.tech">
         <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
@@ -24,7 +29,7 @@
         <link rel="stylesheet" href="{% static 'css/header.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/dialog.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/mobile.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/bg.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/animations.css' %}" type="text/css">
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
@@ -69,7 +74,7 @@
 
                     .mobile-menu-list a {
                         line-height: 1ch;
-                        font-size: 15.4vw;
+                        font-size: min(10vh, 14vw);;
                     }
                 }
             {% endif %}

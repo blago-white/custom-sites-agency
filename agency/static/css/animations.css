@@ -42,16 +42,23 @@
 
 @keyframes second-text-anim {
     0% {
+        transform: translateY(-5vh);
         opacity: 0;
     }
 
     100% {
+        transform: translateY(0vh);
         opacity: 1;
     }
 }
 
 @keyframes benefits-list-anim {
     0% {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+
+    50% {
         transform: translateY(10vh);
         opacity: 0;
     }
@@ -82,24 +89,39 @@
     transition: .2s ease-out;
 }
 
-.main-text-parts {
-    animation: second-text-anim .5s ease;
+.secondary-text {
+    animation: second-text-anim .5s ease-in-out;
 }
 
 .contact-button-top {
-    transition: .2s ease all;
+    transition: .5s ease all;
 }
 
-.benefits-list {
-    animation: benefits-list-anim 1s ease;
+#b1 {
+    animation: benefits-list-anim  .75s ease-in-out;
 }
+
+#b2 {
+    animation: benefits-list-anim  1s ease-in-out;
+}
+
+#b3 {
+    animation: benefits-list-anim  1.25s ease-in-out;
+}
+
+#b4 {
+    animation: benefits-list-anim  1.5s ease-in-out;
+}
+
 
 @media(aspect-ratio > 12/9) {
     .contact-button-top {
         animation: order-button .5s ease;
     }
     .contact-button-top:hover {
-        transform: translateX(-10vh);
+        transform: translateX(-29vh);
+        width: 110vw;
+        padding-left: 14.3vw;
     }
 }
 

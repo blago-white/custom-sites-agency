@@ -39,13 +39,15 @@
 </style>
 
 <main class="main-content-wrapper" id="main">
-    <div class="mobile-bg"
+    <div class="bg mobile-bg"
          style="background: url({% static 'img/proger.png' %});background-size: cover;"></div>
+    <div class="bg desctop-bg"
+         style="background: url({% static 'img/proger_full.png' %});background-size: cover;"></div>
     <div class="color-circle upper-color-circle floated" id="circle"
-         style="background: url({% static 'img/fcircle.png' %});opacity: 1;background-size: cover;width: 200px;pointer-events: none;height: 200px;mix-blend-mode: difference;z-index: 1000;"></div>
-    <div class="color-circle upper-color-circle"
-         style="background: url({% static 'img/top-circle.png' %});opacity: .5;background-size: cover;"></div>
-    <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>
+         style="background: url({% static 'img/fcircle.png' %});opacity: 1;width: 20vh;height: 20vh;background-size: cover;pointer-events: none;mix-blend-mode: difference;z-index: 1000;"></div>
+<!--    <div class="color-circle upper-color-circle"-->
+<!--         style="background: url({% static 'img/top-circle.png' %});opacity: .5;background-size: cover;"></div>-->
+<!--    <div class="color-circle bottom-color-circle" style="background: url({% static 'img/bottom-circle.png' %});background-size: cover;"></div>-->
     <section class="main-content">
         <div class="main-text-primary-part">
             <h1 class="main-text-parts">
@@ -54,10 +56,10 @@
             </h1>
             {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
             <ul class="benefits-list">
-                <li>ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>
-                <li>МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>
-                <li><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
-                <li><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>
+                <li id="b1">ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>
+                <li id="b2">МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>
+                <li id="b3"><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
+                <li id="b4"><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>
                     КАЧЕСТВА</li>
             </ul>
         </div>

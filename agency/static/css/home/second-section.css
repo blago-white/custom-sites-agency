@@ -46,7 +46,7 @@
     border-radius: 1ch;
     z-index: 100;
     display: none;
-    font-size: .7ch;
+    font-size: .6ch;
     font-weight: 100;
     color: var(--light-color);
     cursor: pointer;
@@ -77,7 +77,7 @@
 }
 
 .list-item-description {
-    font-size: .7ch;
+    font-size: .6ch;
     width: 58.3%;
     height: 6.5ch;
     font-weight: 100;
