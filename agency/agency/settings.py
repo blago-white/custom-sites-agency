@@ -187,3 +187,10 @@ ADMIN_MAIL = os.environ.get("ADMIN_MAIL_ADDR", DEFAULT_FROM_EMAIL)
 LOCALE_PATHS = [str(BASE_DIR / "locale")]
 
 DEFAULT_LANGUAGE = "ru"
+
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_BROKER_URL = (f"redis://"
+                     f"{os.environ.get('REDIS_USER')}:"
+                     f"{os.environ.get('REDIS_PASSWORD')}@localhost:6379")
+
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
