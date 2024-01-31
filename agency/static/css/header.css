@@ -42,6 +42,16 @@
     margin-left: 1ch;
 }
 
+.copyright-mark {
+    font-size: .75vw;
+    color: var(--light-color-darkened);
+    position: absolute;
+    font-family: 'RFDewi Regular';
+    font-weight: 100;
+    right: 5ch;
+    -webkit-text-stroke: 0px;
+}
+
 .header a:hover {
     color: var(--toxic-green-color);
 }
