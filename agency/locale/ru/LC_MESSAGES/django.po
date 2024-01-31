@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 20:56+0300\n"
+"POT-Creation-Date: 2024-01-29 14:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,30 +20,34 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\templates\header.html:5
+#: .\templates\header.html:6
 msgid "MainSecLink"
 msgstr "ГЛАВНАЯ"
 
-#: .\templates\header.html:6
+#: .\templates\header.html:7
 msgid "PricesSecLink"
 msgstr "ТАРИФЫ"
 
-#: .\templates\header.html:7
+#: .\templates\header.html:8
 msgid "AboutSecLink"
 msgstr "О НАС"
+
+#: .\templates\main-order-button.html:4
+msgid "GetConsultation"
+msgstr "РАССЧИТАТЬ СТОИМОСТЬ"
 
 #: .\templates\main.html:9
 msgid "Title"
 msgstr "Создание и Продвижение сайтов любой сложности | Loginov Digital Agency"
 
-#: .\templates\main.html:10 .\templates\main.html:15
+#: .\templates\main.html:10 .\templates\main.html:20
 msgid "MetaDescription"
 msgstr ""
 "Создание сайтов под ключ любой сложности, продвижение, цены всего от 5000 "
 "рублей, берем на себя ответственность за все этапы разработки, а если не "
 "понравится - вернем деньги"
 
-#: .\templates\main.html:12
+#: .\templates\main.html:13
 msgid "SiteName"
 msgstr "Создадим и раскрутим сайт твоей мечты за 5000₽!"
 
@@ -71,55 +75,30 @@ msgstr "О НАС"
 msgid "Contacts"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\sections\main.html:93
-msgid "GetConsultation"
-msgstr "РАССЧИТАТЬ СТОИМОСТЬ"
-
-#: .\templates\sections\main.html:103
-msgid "LandingTitle"
-msgstr "ЛЕНДИНГ"
-
-#: .\templates\sections\main.html:104
-msgid "BusinessCardTitle"
-msgstr "САЙТ ДЛЯ БИЗНЕСА"
-
-#: .\templates\sections\main.html:105
-msgid "CommerceTitle"
-msgstr "ИНТЕРНЕТ МАГАЗИН"
-
-#: .\templates\sections\main.html:106
-msgid "OtherTitle"
-msgstr "И МНОГОЕ ДРУГОЕ"
-
-#: .\templates\sections\main.html:112
-msgid "PriceFromWord"
-msgstr "ОТ"
-
-#: .\templates\sections\main.html:114
-msgid "MinPriceNumber"
-msgstr "5К"
-
-#: .\templates\sections\main.html:115
-msgid "MinPriceCurrency"
-msgstr "₽"
-
-#: .\templates\sections\main.html:121
+#: .\templates\sections\main.html:54 .\templates\sections\main.html:64
 msgid "Development"
 msgstr "РАЗРАБОТКА"
 
-#: .\templates\sections\main.html:122
+#: .\templates\sections\main.html:55 .\templates\sections\main.html:65
 msgid "Sites"
 msgstr "САЙТОВ"
 
-#: .\templates\sections\main.html:123
+#: .\templates\sections\main.html:59
+msgid "BenefitsList"
+msgstr "<li id=\"b1\">ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>"
+       "<li id=\"b2\">МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>"
+       "<li id=\"b3\"><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>"
+       "<li id=\"b4\"><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>КАЧЕСТВА</li>"
+
+#: .\templates\sections\main.html:66
 msgid "MainMinPrice"
 msgstr "ОТ 4990₽"
 
-#: .\templates\sections\main.html:127
+#: .\templates\sections\main.html:70
 msgid "MainAbout"
 msgstr ""
-"Мы <span style=\"color: var(--toxic-green-color)\">помогаем бизнесу</"
-"span> развиваться в интернете с помощью <span style=\"color: var(--toxic-green-"
+"Мы <span style=\"color: var(--toxic-green-color)\">помогаем бизнесу</span> "
+"развиваться в интернете с помощью <span style=\"color: var(--toxic-green-"
 "color)\">передовых инструментов</span>"
 
 #: .\templates\sections\prices.html:34 .\templates\sections\prices.html:52
@@ -177,3 +156,24 @@ msgstr "+5000₽"
 #: .\templates\sections\prices.html:81
 msgid "CustomDesc"
 msgstr "Сайты любого типа и любой сложности, подойдет для всех"
+
+#~ msgid "LandingTitle"
+#~ msgstr "ЛЕНДИНГ"
+
+#~ msgid "BusinessCardTitle"
+#~ msgstr "САЙТ ДЛЯ БИЗНЕСА"
+
+#~ msgid "CommerceTitle"
+#~ msgstr "ИНТЕРНЕТ МАГАЗИН"
+
+#~ msgid "OtherTitle"
+#~ msgstr "И МНОГОЕ ДРУГОЕ"
+
+#~ msgid "PriceFromWord"
+#~ msgstr "ОТ"
+
+#~ msgid "MinPriceNumber"
+#~ msgstr "5К"
+
+#~ msgid "MinPriceCurrency"
+#~ msgstr "₽"

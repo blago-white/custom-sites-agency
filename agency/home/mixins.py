@@ -10,7 +10,7 @@ class MultilangHomeViewMixin:
     def get_context_data(self, **kwargs) -> dict:
         context = super().get_context_data(**kwargs)
 
-        self._selected_language = self._get_selected_language_or_default()
+        self._selected_language = self._get_language_code()
         self._update_current_language()
 
         context[config.LANG_CODE_TEMPLATE_NAME] = self._selected_language
@@ -21,5 +21,7 @@ class MultilangHomeViewMixin:
         if self._selected_language and self._selected_language != translation.get_language():
             translation.activate(self._selected_language)
 
-    def _get_selected_language_or_default(self) -> str:
-        return self.kwargs.get(config.LANG_CODE_URL_ARG_NAME) or settings.DEFAULT_LANGUAGE
+    def _get_language_code(self) -> str:
+        return (self.kwargs.get(config.LANG_CODE_URL_ARG_NAME)
+                or translation.get_language()
+                or settings.DEFAULT_LANGUAGE)

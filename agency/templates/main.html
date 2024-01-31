@@ -52,11 +52,6 @@
         <script src="{% url 'javascript-catalog' %}" type="text/javascript"></script>
         <style>
             {% if LANGUAGE_CODE == "ru" %}
-                .header {
-                    gap: 0ch;
-                    font-size: 4.75vh;
-                }
-
                 .long-arrow {
                     max-width: 17ch;
                     padding-left: 3ch;
@@ -78,6 +73,12 @@
                     }
                 }
             {% endif %}
+
+            .header {
+                gap: 0ch;
+                font-size: 4.75vh;
+            }
+
             @media (aspect-ratio < 12 / 9) {
                 .contact-button-top {
                     font-family: 'RFDewi';

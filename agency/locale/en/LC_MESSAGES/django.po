@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 20:56+0300\n"
+"POT-Creation-Date: 2024-01-29 14:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\header.html:5
+#: .\templates\header.html:6
 msgid "MainSecLink"
 msgstr "MAIN"
 
-#: .\templates\header.html:6
+#: .\templates\header.html:7
 msgid "PricesSecLink"
 msgstr "PRICES"
 
-#: .\templates\header.html:7
+#: .\templates\header.html:8
 msgid "AboutSecLink"
 msgstr "ABOUT"
 
+#: .\templates\main-order-button.html:4
+msgid "GetConsultation"
+msgstr "CALCULATE PRICE"
+
 #: .\templates\main.html:9
 msgid "Title"
-msgstr "Creation and Promotion of websites of any complexity | Loginov Digital Agency"
+msgstr ""
+"Creation and Promotion of websites of any complexity | Loginov Digital Agency"
 
-#: .\templates\main.html:10 .\templates\main.html:15
+#: .\templates\main.html:10 .\templates\main.html:20
 msgid "MetaDescription"
 msgstr ""
 "Get a turnkey website, we take responsibility for all stages of development, "
 "from the idea to SEO promotion and advertising, prices start from only $ 49"
 
-#: .\templates\main.html:12
+#: .\templates\main.html:13
 msgid "SiteName"
 msgstr "A custom-made website just for you from $49!"
 
@@ -68,51 +73,26 @@ msgstr "ABOUT"
 msgid "Contacts"
 msgstr "CONTACTS"
 
-#: .\templates\sections\main.html:93
-msgid "GetConsultation"
-msgstr "CALCULATE PRICE"
-
-#: .\templates\sections\main.html:103
-msgid "LandingTitle"
-msgstr "LANDING"
-
-#: .\templates\sections\main.html:104
-msgid "BusinessCardTitle"
-msgstr "BUSINESS CARD"
-
-#: .\templates\sections\main.html:105
-msgid "CommerceTitle"
-msgstr "ONLINE MARKET"
-
-#: .\templates\sections\main.html:106
-msgid "OtherTitle"
-msgstr "AND OTHER WEBSITES"
-
-#: .\templates\sections\main.html:112
-msgid "PriceFromWord"
-msgstr "FROM"
-
-#: .\templates\sections\main.html:114
-msgid "MinPriceNumber"
-msgstr "49"
-
-#: .\templates\sections\main.html:115
-msgid "MinPriceCurrency"
-msgstr "$"
-
-#: .\templates\sections\main.html:121
+#: .\templates\sections\main.html:54 .\templates\sections\main.html:64
 msgid "Development"
 msgstr "DEVELOPMENT"
 
-#: .\templates\sections\main.html:122
+#: .\templates\sections\main.html:55 .\templates\sections\main.html:65
 msgid "Sites"
 msgstr "SITES"
 
-#: .\templates\sections\main.html:123
+#: .\templates\sections\main.html:59
+msgid "BenefitsList"
+msgstr "<li id=\"b1\">THE BEST PRICES ON THE MARKET - <span>FROM 49 $</span></li>"
+       "<li id=\"b2\">THE BEST SPEED - <span>FROM 3 DAYS</span></li>"
+       "<li id=\"b3\"><span>ANY COMPLEXITY,</span> FROM BUSINESS CARD WEBSITE TO ONLINE STORE</li>"
+       "<li id=\"b4\"><span>SECURE TRANSACTION PAYMENT </span> <span>MONEY REFUND</span> AND <span>QUALITY</span>ASSURANCE</li>"
+
+#: .\templates\sections\main.html:66
 msgid "MainMinPrice"
 msgstr "FROM $49"
 
-#: .\templates\sections\main.html:127
+#: .\templates\sections\main.html:70
 msgid "MainAbout"
 msgstr ""
 "We <span style=\"color: var(--toxic-green-color)\">help businesses</span> "
@@ -174,3 +154,24 @@ msgstr "$100+"
 #: .\templates\sections\prices.html:81
 msgid "CustomDesc"
 msgstr "Any types of websites, I can implement your wildest ideas"
+
+#~ msgid "LandingTitle"
+#~ msgstr "LANDING"
+
+#~ msgid "BusinessCardTitle"
+#~ msgstr "BUSINESS CARD"
+
+#~ msgid "CommerceTitle"
+#~ msgstr "ONLINE MARKET"
+
+#~ msgid "OtherTitle"
+#~ msgstr "AND OTHER WEBSITES"
+
+#~ msgid "PriceFromWord"
+#~ msgstr "FROM"
+
+#~ msgid "MinPriceNumber"
+#~ msgstr "49"
+
+#~ msgid "MinPriceCurrency"
+#~ msgstr "$"

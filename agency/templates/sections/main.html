@@ -54,13 +54,13 @@
                 <span class="secondary-text">{% trans 'Development' %}</span>
                 <span class="main-text">{% trans 'Sites' %}</span>
             </h1>
-            {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
+            {% if LANGUAGE_CODE == "ru" %}
+                {% include 'main-order-button.html' with description='В течении 5 минут с вами свяжется специалист' %}
+            {% else %}
+                {% include 'main-order-button.html' with description='A specialist will contact you within 5 minutes' %}
+            {% endif %}
             <ul class="benefits-list">
-                <li id="b1">ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>
-                <li id="b2">МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>
-                <li id="b3"><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>
-                <li id="b4"><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>
-                    КАЧЕСТВА</li>
+                {% trans 'BenefitsList' %}
             </ul>
         </div>
         <div class="mobile-main-text">
