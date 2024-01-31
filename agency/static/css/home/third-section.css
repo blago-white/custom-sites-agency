@@ -68,6 +68,14 @@
     padding-right: .9ch;
 }
 
+.disclaimer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-weight: 100;
+    color: var(--light-color-darkened);
+}
+
 @media (aspect-ratio < 12/9) {
     .third-content-wrapper {
         flex-direction: column;
