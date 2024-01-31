@@ -53,6 +53,7 @@
 .about-sections article {
     width: fit-content;
     cursor: pointer;
+    font-family: 'RFDewi Extended Black Italic';
     transition: all .2s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
@@ -64,7 +65,7 @@
 
 .about-sections article:hover {
     color: var(--toxic-green-color);
-    transform: scale(calc(10/7));
+    transform: translateX(1vw);
     padding-right: .9ch;
 }
 
