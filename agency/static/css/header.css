@@ -52,6 +52,14 @@
     -webkit-text-stroke: 0px;
 }
 
+.logo-link {
+    font-size: inherit!important;
+    color: var(--light-color);
+    text-decoration: none;
+    font-family: 'RFDewi Black Italic'!important;
+    margin-left: initial!important;
+}
+
 .header a:hover {
     color: var(--toxic-green-color);
 }
