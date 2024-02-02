@@ -7,7 +7,7 @@ let colorValue = 36;
 
 const aspectRatio = window.outerWidth / window.outerHeight;
 
-const absoluteSecondSectionHeight = window.innerHeight* (aspectRatio > 12/9 ? 1.5 : 2.25)
+const secondSectionBlurDivider = aspectRatio > 12/9 ? 25 : 50;
 
 function onScroll(event) {
     if (expanding()) {
@@ -18,29 +18,33 @@ function onScroll(event) {
     const mainSectionHeight = document.getElementsByClassName('main-content-wrapper')[0].offsetHeight;
     const secondSectionHeight = document.getElementById('prices').parentElement.offsetHeight;
     const thirdSectionHeight = document.getElementById('about').offsetHeight;
-    const processedHeight = aspectRatio > 12/9 ? mainSectionHeight * .6 : 0;
+    const processedHeight = 0;
 
     if (scrollTopHeight > processedHeight) {
-        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(" + (
-                (scrollTopHeight - processedHeight) / 25
-            ) + "px)";
+        if (scrollTopHeight > 0 && scrollTopHeight < mainSectionHeight) {
+            document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(" + (
+                    (scrollTopHeight - processedHeight) / 25
+                ) + "px)";
 
-        secondContentWrapper.style.boxShadow = "0px 0px " + (scrollTopHeight - processedHeight) + "px #dbdbdb";
+            secondContentWrapper.style.boxShadow = "0px 0px " + (scrollTopHeight - processedHeight) + "px #dbdbdb";
+        } else {
+            document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(0px)";
+            secondContentWrapper.style.boxShadow = "0px 0px 0px #dbdbdb";
+        }
 
-        if (scrollTopHeight > thirdSectionHeight) {
+        if (scrollTopHeight > secondSectionHeight) {
+            const thirdSectionScrollDelta = scrollTopHeight - secondSectionHeight;
+
             secondContentWrapper.parentElement.style.filter = "blur(" + ((
-                (scrollTopHeight - thirdSectionHeight) / 50
+                (thirdSectionScrollDelta / secondSectionBlurDivider)
             ) - 1) + "px)";
 
             thirdContentWrapper.style.boxShadow = "0px 0px " + (
-                scrollTopHeight - thirdSectionHeight
-            ) + "px #202020" + ", 0px 0px " + (scrollTopHeight - thirdSectionHeight) + "px #202020";
+                thirdSectionScrollDelta
+            ) + "px #202020" + ", 0px 0px " + (thirdSectionScrollDelta) + "px #202020";
         } else {
             secondContentWrapper.parentElement.style.filter = "";
         }
-    } else {
-        document.getElementsByClassName('main-content-wrapper')[0].style.filter = "blur(0px)";
-        secondContentWrapper.style.boxShadow = "0px 0px 0px #dbdbdb";
     }
 }
 

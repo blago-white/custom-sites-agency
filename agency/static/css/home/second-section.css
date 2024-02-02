@@ -13,9 +13,9 @@
 }
 
 .second-content-wrapper-background {
-    height: 260vh;
+    height: 110vh;
     position: sticky;
-    top: 100vh;
+    top: 0vh;
     background: rgb(219, 219, 219);
 }
 
@@ -169,12 +169,6 @@
 }
 
 @media(aspect-ratio < 12/9) {
-    .second-content-wrapper-background {
-        height: 225vh;
-        position: relative;
-        top: 87vh;
-    }
-
     .second-content-wrapper {
         height: auto;
         flex-direction: column;
