@@ -95,7 +95,7 @@ form {
 .form-field input {
     width: 100%;
     background: var(--bg-color);
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Extended Bold';
 }
 
 form img {
@@ -139,7 +139,7 @@ form span {
 .form-description {
     color: var(--light-color);
     font-size: .75em;
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Extended Bold';
     text-align: justify;
 }
 

@@ -42,12 +42,24 @@
 
 @keyframes second-text-anim {
     0% {
-        transform: translateY(-5vh);
+        transform: translateX(-5vh);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0vh);
+        transform: translateX(0vh);
+        opacity: 1;
+    }
+}
+
+@keyframes main-text-anim {
+    0% {
+        transform: translateX(5vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0vh);
         opacity: 1;
     }
 }
@@ -91,6 +103,10 @@
 
 .secondary-text {
     animation: second-text-anim .5s ease-in-out;
+}
+
+.main-text {
+    animation: main-text-anim .5s ease-in-out;
 }
 
 .contact-button-top {

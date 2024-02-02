@@ -51,9 +51,9 @@
 }
 
 .about-sections article {
-    width: fit-content;
+    width: max-content;
     cursor: pointer;
-    font-family: 'RFDewi Extended Black Italic';
+    font-family: 'RFDewi Black';
     transition: all .2s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
@@ -61,10 +61,12 @@
     color: var(--toxic-green-color);
 }
 
-.about-sections article:hover {
-    color: var(--toxic-green-color);
-    transform: translateX(5vw);
-    padding-right: .9ch;
+@media(hover: hover) {
+    .about-sections article:hover {
+        color: var(--toxic-green-color);
+        transform: translateX(5vw);
+        padding-right: .9ch;
+    }
 }
 
 .disclaimer {

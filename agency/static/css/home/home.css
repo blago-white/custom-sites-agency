@@ -21,14 +21,18 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Extended Bold';
 }
 
 .main-text {
-    font-size: 9.42vw;
+    font-size: 6.42vw;
     line-height: 1ch;
     font-weight: bold;
     filter: brightness(1);
+
+    letter-spacing: 0ch!important;
+
+    transition: all .2s ease
 }
 
 .main-text-secondary-part {
@@ -52,6 +56,8 @@ li {
     margin-bottom: 1.1vh;
     text-indent: 0.1ch;
     gap: .25ch;
+
+    transition: all .2s ease;
 }
 
 li:before {
@@ -59,12 +65,16 @@ li:before {
     padding-right: 5px;
 }
 
+li:hover {
+    transform: translateX(2vw);
+}
+
 li span {
     color: var(--toxic-green-color);
 }
 
 .main-text-secondary-part span {
-    font-family: 'RFDewi Semibold';
+    font-family: 'RFDewi Extended Semibold';
     font-size: 1.57vw;
 }
 
@@ -139,10 +149,9 @@ li span {
     top: -1.2ch;
     display: none;
     padding: 1.155ch;
-    gap: .1ch;
     flex-direction: column;
     opacity: 0;
-    font-family: 'RFDewi Bold';
+    font-family: 'RFDewi Semibold';
     transition: all .5s ease;
 }
 
@@ -188,12 +197,23 @@ li span {
     color: var(--toxic-green-color);
     border-radius: .75ch;
     border: 1px solid var(--toxic-green-color);
+    overflow: hidden;
+
+    background-position: right;
+    background-size: 100vw;
+
+    background-repeat: no-repeat;
+    background-position-x: 100vw;
+
+    transition: all .2s ease-out;
+
     z-index: 100;
 }
 
 .contact-button-top:hover {
-    background: linear-gradient(90deg, rgba(210,255,2,0.7) 0%, rgba(255,239,0,1) 100%);
+    background: var(--toxic-green-color);
     color: var(--bg-color);
+    border-radius: 20px;
 }
 
 .min-price-from-word {
@@ -202,7 +222,8 @@ li span {
 }
 
 .secondary-text {
-    font-size: 6.42vw;
+    font-size: 4.42vw;
+    color: var(--light-color-darkened);
 }
 
 .main-text-primary-part {
@@ -214,6 +235,7 @@ li span {
 
 .secondary-text, .main-text {
     font-family: 'RFDewi Expanded Black Italic';
+    letter-spacing: -0.03ch;
 }
 
 .main-text-parts {
@@ -221,6 +243,7 @@ li span {
     flex-direction: column;
     align-items: flex-start;
     margin: 0px;
+    text-align: left;
 }
 
 .mobile-main-text {
@@ -246,7 +269,6 @@ li span {
     text-align: left;
     -webkit-text-stroke: 0px;
     width: 95%;
-    letter-spacing: .3px;
     font-family: 'RFDewi Expanded Bold';
 }
 
@@ -255,6 +277,13 @@ li span {
     -webkit-text-stroke: 0px;
 }
 
+
+@media(hover: hover) {
+    .main-text:hover {
+        -webkit-text-stroke: 1px var(--toxic-green-color);
+        color: transparent!important;
+    }
+}
 
 @media(aspect-ratio < 12/9) {
     .min-price-from-word {
@@ -280,7 +309,7 @@ li span {
     }
 
     .secondary-text, .main-text {
-        font-family: 'RFDewi Bold';
+        font-family: 'RFDewi Extended Bold';
     }
 
     .text-line, .main-text-primary-part, .currency-name, .main-text, .long-arrow {

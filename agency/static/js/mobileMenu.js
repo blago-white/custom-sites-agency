@@ -26,6 +26,7 @@ function expandMenu(event) {
             () => {
                 document.getElementById('mobile-header-top-text').style.opacity = '.0';
                 document.getElementById('mobile-menu-list').style.opacity = '1';
+                document.getElementsByClassName('copyright-mark')[0].style.opacity = '1';
             },
             '500'
         )
@@ -43,6 +44,7 @@ function expandMenu(event) {
             () => {
                 document.getElementById('mobile-header-top-text').style.opacity = '1';
                 document.getElementById('mobile-menu-list').style.opacity = '0';
+                document.getElementsByClassName('copyright-mark')[0].style.opacity = '0';
             },
             '50'
         )
@@ -51,6 +53,7 @@ function expandMenu(event) {
     setTimeout(
         () => {
             mobileMenu.style.height = expanded ? '1.2ch' : 'calc(100vh + 1px)';
+
             expanded = !expanded;
             expandingNow = false;
         }, '450'

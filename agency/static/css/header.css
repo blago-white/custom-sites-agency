@@ -68,4 +68,12 @@
     .header-wrapper {
         display: none;
     }
+
+    .copyright-mark {
+        bottom: 0vh;
+        position: initial;
+        font-size: 3.5vw;
+        opacity: 0;
+        color: #555555;
+    }
 }
