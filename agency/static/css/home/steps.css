@@ -1,0 +1,8 @@
+@import "../colorscheme.css";
+
+.steps-content-wrapper {
+    height: 110vh;
+    background: var(--bg-color);
+    position: sticky;
+    top: 0vh;
+}
