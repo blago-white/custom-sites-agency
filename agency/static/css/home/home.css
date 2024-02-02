@@ -51,7 +51,7 @@
     color: var(--light-color-darkened);
 }
 
-li {
+.benefits-list li {
     display: flex;
     margin-bottom: 1.1vh;
     text-indent: 0.1ch;
@@ -60,16 +60,16 @@ li {
     transition: all .2s ease;
 }
 
-li:before {
+.benefits-list li:before {
     content: url("/uploads/img/ul-ellipse.svg");
     padding-right: 5px;
 }
 
-li:hover {
+.benefits-list li:hover {
     transform: translateX(2vw);
 }
 
-li span {
+.benefits-list li span {
     color: var(--toxic-green-color);
 }
 

@@ -1,8 +1,58 @@
 @import "../colorscheme.css";
 
 .steps-content-wrapper {
-    height: 110vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     background: var(--bg-color);
     position: sticky;
     top: 0vh;
+    overflow: hidden;
+    padding-bottom: 25vh;
+}
+
+.text-line {
+    font-size: 7vh;
+    font-family: 'RFDewi Expanded Bold Italic';
+    height: min-content;
+    width: max-content;
+}
+
+
+.text-line span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--light-color);
+}
+
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps li::marker {
+    color: var(--toxic-green-color);
+}
+
+
+@media (aspect-ratio < 12/9) {
+    .text-line {
+        font-size: 6vh;
+        display: initial;
+    }
+
+    #text-line-2 {
+        position: absolute;
+        top: calc(10vh + 1ch);
+    }
+
+    .steps-content-wrapper {
+        padding-top: 10vh;
+        height: 90vh;
+        padding-bottom: 10vh;
+    }
 }
