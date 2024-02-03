@@ -108,7 +108,8 @@
     <script>
         const sectionsYCords = {
             "main": 0,
-            "prices": document.getElementById('prices').offsetHeight*.5 + document.getElementById('main').offsetHeight,
+            "steps": document.getElementById('main').offsetHeight,
+            "prices": document.getElementById('steps').offsetHeight + document.getElementById('main').offsetHeight,
             "about": document.body.scrollHeight,
         };
 
@@ -123,16 +124,6 @@
         }
 
         setInitialAboutSection();
-
-        const longMainSectionArrow = document.getElementsByClassName('long-arrow')[0];
-
-        setTimeout(() => {
-            longMainSectionArrow.style.maxWidth = {% if LANGUAGE_CODE == 'ru' %}'17ch'{% else %}'20ch'{% endif %};
-        }, 250);
-
-        setTimeout(() => {
-            scrollToSection(location.hash.slice(1, location.hash.length));
-        }, 50);
     </script>
     </body>
 </html>

@@ -14,7 +14,7 @@
 }
 
 .text-line {
-    font-size: 7vh;
+    font-size: 10vh;
     font-family: 'RFDewi Expanded Bold Italic';
     height: min-content;
     width: max-content;
@@ -29,15 +29,47 @@
 
 .steps {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    font-size: 5vh;
+    margin-block: 0px;
 }
 
-.steps li::marker {
+.steps li {
+    list-style-type: none;
+}
+
+.steps-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    font-size: 5vh;
+
+    width: 14.2vw;
+
+    padding-right: 14.2vw;
+
     color: var(--toxic-green-color);
 }
 
+.steps-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    max-height: 75vh;
+    overflow: scroll;
+    font-family: 'RFDewi Bold', 'SF Pro Display';
+}
+
+.steps-table {
+    padding-block: 35vh;
+    height: min-content;
+    width: 100%;
+    display: flex;
+}
 
 @media (aspect-ratio < 12/9) {
     .text-line {

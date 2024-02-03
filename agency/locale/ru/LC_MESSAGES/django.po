@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 14:06+0300\n"
+"POT-Creation-Date: 2024-02-03 10:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,14 +25,18 @@ msgid "MainSecLink"
 msgstr "ГЛАВНАЯ"
 
 #: .\templates\header.html:7
+msgid "StepsSecLink"
+msgstr "ЭТАПЫ"
+
+#: .\templates\header.html:8
 msgid "PricesSecLink"
 msgstr "ТАРИФЫ"
 
-#: .\templates\header.html:8
+#: .\templates\header.html:9
 msgid "AboutSecLink"
 msgstr "О НАС"
 
-#: .\templates\main-order-button.html:4
+#: .\templates\main-order-button.html:5
 msgid "GetConsultation"
 msgstr "РАССЧИТАТЬ СТОИМОСТЬ"
 
@@ -75,20 +79,22 @@ msgstr "О НАС"
 msgid "Contacts"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\sections\main.html:54 .\templates\sections\main.html:64
+#: .\templates\sections\main.html:59
+msgid "BenefitsList"
+msgstr ""
+"<li id=\"b1\">ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li><li id="
+"\"b2\">МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li><li id="
+"\"b3\"><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ "
+"МАГАЗИНОВ</li><li id=\"b4\"><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, "
+"<span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>КАЧЕСТВА</li>"
+
+#: .\templates\sections\main.html:64
 msgid "Development"
 msgstr "РАЗРАБОТКА"
 
-#: .\templates\sections\main.html:55 .\templates\sections\main.html:65
+#: .\templates\sections\main.html:65
 msgid "Sites"
 msgstr "САЙТОВ"
-
-#: .\templates\sections\main.html:59
-msgid "BenefitsList"
-msgstr "<li id=\"b1\">ЛУЧШИЕ ЦЕНЫ НА РЫНКЕ - <span>ОТ 4 990 ₽</span></li>"
-       "<li id=\"b2\">МИНИМАЛЬНЫЕ СРОКИ - <span>ОТ 3х ДНЕЙ</span></li>"
-       "<li id=\"b3\"><span>ЛЮБАЯ СЛОЖНОСТЬ,</span> ОТ САЙТОВ-ВИЗИТОК ДО ИНТЕРНЕТ МАГАЗИНОВ</li>"
-       "<li id=\"b4\"><span>БЕЗОПАСНАЯ ОПЛАТА </span> СДЕЛКИ, <span>ВОЗВРАТ</span> СРЕДСТВ И <span>ГАРАНТИИ</span>КАЧЕСТВА</li>"
 
 #: .\templates\sections\main.html:66
 msgid "MainMinPrice"

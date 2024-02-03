@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 14:06+0300\n"
+"POT-Creation-Date: 2024-02-03 10:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,14 +23,18 @@ msgid "MainSecLink"
 msgstr "MAIN"
 
 #: .\templates\header.html:7
+msgid "StepsSecLink"
+msgstr "STEPS"
+
+#: .\templates\header.html:8
 msgid "PricesSecLink"
 msgstr "PRICES"
 
-#: .\templates\header.html:8
+#: .\templates\header.html:9
 msgid "AboutSecLink"
 msgstr "ABOUT"
 
-#: .\templates\main-order-button.html:4
+#: .\templates\main-order-button.html:5
 msgid "GetConsultation"
 msgstr "CALCULATE PRICE"
 
@@ -73,20 +77,22 @@ msgstr "ABOUT"
 msgid "Contacts"
 msgstr "CONTACTS"
 
-#: .\templates\sections\main.html:54 .\templates\sections\main.html:64
+#: .\templates\sections\main.html:59
+msgid "BenefitsList"
+msgstr ""
+"<li id=\"b1\">THE BEST PRICES ON THE MARKET - <span>FROM 49 $</span></li><li "
+"id=\"b2\">THE BEST SPEED - <span>FROM 3 DAYS</span></li><li id="
+"\"b3\"><span>ANY COMPLEXITY,</span> FROM BUSINESS CARD WEBSITE TO ONLINE "
+"STORE</li><li id=\"b4\"><span>SECURE TRANSACTION PAYMENT </span> <span>MONEY "
+"REFUND</span> AND <span>QUALITY</span>ASSURANCE</li>"
+
+#: .\templates\sections\main.html:64
 msgid "Development"
 msgstr "DEVELOPMENT"
 
-#: .\templates\sections\main.html:55 .\templates\sections\main.html:65
+#: .\templates\sections\main.html:65
 msgid "Sites"
 msgstr "SITES"
-
-#: .\templates\sections\main.html:59
-msgid "BenefitsList"
-msgstr "<li id=\"b1\">THE BEST PRICES ON THE MARKET - <span>FROM 49 $</span></li>"
-       "<li id=\"b2\">THE BEST SPEED - <span>FROM 3 DAYS</span></li>"
-       "<li id=\"b3\"><span>ANY COMPLEXITY,</span> FROM BUSINESS CARD WEBSITE TO ONLINE STORE</li>"
-       "<li id=\"b4\"><span>SECURE TRANSACTION PAYMENT </span> <span>MONEY REFUND</span> AND <span>QUALITY</span>ASSURANCE</li>"
 
 #: .\templates\sections\main.html:66
 msgid "MainMinPrice"
