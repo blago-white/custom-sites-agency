@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 14:06+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\header.html:6
+msgid "MainSecLink"
+msgstr "MAIN"
+
+#: .\templates\header.html:7
+msgid "PricesSecLink"
+msgstr "PRICES"
+
+#: .\templates\header.html:8
+msgid "AboutSecLink"
+msgstr "ABOUT"
+
+#: .\templates\main-order-button.html:4
+msgid "GetConsultation"
+msgstr "CALCULATE PRICE"
+
+#: .\templates\main.html:9
+msgid "Title"
+msgstr ""
+"Creation and Promotion of websites of any complexity | Loginov Digital Agency"
+
+#: .\templates\main.html:10 .\templates\main.html:20
+msgid "MetaDescription"
+msgstr ""
+"Get a turnkey website, we take responsibility for all stages of development, "
+"from the idea to SEO promotion and advertising, prices start from only $ 49"
+
+#: .\templates\main.html:13
+msgid "SiteName"
+msgstr "A custom-made website just for you from $49!"
+
+#: .\templates\mobile-menu.html:7
+msgid "MainPageMobileSelector"
+msgstr "MAIN"
+
+#: .\templates\mobile-menu.html:8
+msgid "PricesMobileSelector"
+msgstr "PRICES"
+
+#: .\templates\mobile-menu.html:9
+msgid "AboutMobileSelector"
+msgstr "ABOUT"
+
+#: .\templates\sections\about.html:17
+msgid "Payment"
+msgstr "PAYMENT"
+
+#: .\templates\sections\about.html:18
+msgid "About"
+msgstr "ABOUT"
+
+#: .\templates\sections\about.html:19
+msgid "Contacts"
+msgstr "CONTACTS"
+
+#: .\templates\sections\main.html:54 .\templates\sections\main.html:64
+msgid "Development"
+msgstr "DEVELOPMENT"
+
+#: .\templates\sections\main.html:55 .\templates\sections\main.html:65
+msgid "Sites"
+msgstr "SITES"
+
+#: .\templates\sections\main.html:59
+msgid "BenefitsList"
+msgstr "<li id=\"b1\">THE BEST PRICES ON THE MARKET - <span>FROM 49 $</span></li>"
+       "<li id=\"b2\">THE BEST SPEED - <span>FROM 3 DAYS</span></li>"
+       "<li id=\"b3\"><span>ANY COMPLEXITY,</span> FROM BUSINESS CARD WEBSITE TO ONLINE STORE</li>"
+       "<li id=\"b4\"><span>SECURE TRANSACTION PAYMENT </span> <span>MONEY REFUND</span> AND <span>QUALITY</span>ASSURANCE</li>"
+
+#: .\templates\sections\main.html:66
+msgid "MainMinPrice"
+msgstr "FROM $49"
+
+#: .\templates\sections\main.html:70
+msgid "MainAbout"
+msgstr ""
+"We <span style=\"color: var(--toxic-green-color)\">help businesses</span> "
+"develop on the Internet with the help of <span style=\"color: var(--toxic-"
+"green-color)\">advanced tools, </span>you can get your website within 3 days"
+
+#: .\templates\sections\prices.html:34 .\templates\sections\prices.html:52
+#: .\templates\sections\prices.html:70
+msgid "Order"
+msgstr "order"
+
+#: .\templates\sections\prices.html:35 .\templates\sections\prices.html:53
+#: .\templates\sections\prices.html:71
+msgid "LearnMore"
+msgstr "learn more"
+
+#: .\templates\sections\prices.html:38
+msgid "Landing"
+msgstr "LANDING"
+
+#: .\templates\sections\prices.html:40
+msgid "LadingMinPrice"
+msgstr "$49+"
+
+#: .\templates\sections\prices.html:41 .\templates\sections\prices.html:59
+#: .\templates\sections\prices.html:77
+msgid "LearnMoreMobile"
+msgstr "learn more"
+
+#: .\templates\sections\prices.html:42 .\templates\sections\prices.html:60
+#: .\templates\sections\prices.html:78
+msgid "OrderMobile"
+msgstr "order"
+
+#: .\templates\sections\prices.html:45
+msgid "LandingDesc"
+msgstr "I will create wonderful site special for you"
+
+#: .\templates\sections\prices.html:56
+msgid "Commerce"
+msgstr "COMMERCE"
+
+#: .\templates\sections\prices.html:58
+msgid "CommerceMinPrice"
+msgstr "$150+"
+
+#: .\templates\sections\prices.html:63
+msgid "CommerceDesc"
+msgstr "You will be able to earn on your ideas, I will help"
+
+#: .\templates\sections\prices.html:74
+msgid "Custom"
+msgstr "CUSTOM"
+
+#: .\templates\sections\prices.html:76
+msgid "CustomMinPrice"
+msgstr "$100+"
+
+#: .\templates\sections\prices.html:81
+msgid "CustomDesc"
+msgstr "Any types of websites, I can implement your wildest ideas"
+
+#~ msgid "LandingTitle"
+#~ msgstr "LANDING"
+
+#~ msgid "BusinessCardTitle"
+#~ msgstr "BUSINESS CARD"
+
+#~ msgid "CommerceTitle"
+#~ msgstr "ONLINE MARKET"
+
+#~ msgid "OtherTitle"
+#~ msgstr "AND OTHER WEBSITES"
+
+#~ msgid "PriceFromWord"
+#~ msgstr "FROM"
+
+#~ msgid "MinPriceNumber"
+#~ msgstr "49"
+
+#~ msgid "MinPriceCurrency"
+#~ msgstr "$"

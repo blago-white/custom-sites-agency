@@ -1,7 +1,11 @@
+{% load i18n %}
+
 <header class="header-wrapper">
     <nav class="header">
-        <a onclick="scrollToSection('main');">MAIN</a>
-        <a onclick="scrollToSection('prices');">PRICES</a>
-        <a onclick="scrollToSection('about');">ABOUT</a>
+        <h2 class="header-logo"><a onclick="scrollToSection('main');" class="logo-link">LOGINOV</a></h2>
+        <a onclick="scrollToSection('main');">{% trans 'MainSecLink' %}</a>
+        <a onclick="scrollToSection('prices');">{% trans 'PricesSecLink' %}</a>
+        <a onclick="scrollToSection('about');">{% trans 'AboutSecLink' %}</a>
+        <span class="copyright-mark">© ИП Логинов Богдан Николаевич</span>
     </nav>
 </header>

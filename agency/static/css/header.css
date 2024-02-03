@@ -5,8 +5,19 @@
     top: 0px;
     width: 100%;
     height: 0em;
-    mix-blend-mode: exclusion;
     z-index: 1000;
+}
+
+.header-logo {
+    margin: 0px;
+    font-size: inherit;
+    font-family: 'RFDewi Black Italic';
+    color: var(--light-color);
+    line-height: 1ch;
+}
+
+.header-logo:hover {
+    color: var(--toxic-green-color);
 }
 
 .header {
@@ -14,16 +25,39 @@
     font-size: 5vh;
     color: var(--bg-color);
     height: 7vh;
-    justify-content: space-between;
     gap: 3ch;
     font-weight: bold;
     cursor: pointer;
-    padding-inline: 33.3%;
+    padding-left: 12.5vw;
+    padding-block: 1vh;
+    background: rgb(36, 36, 36, .775);
+    height: min-content;
 }
 
 .header a {
+    font-size: 2.4vh;
     color: var(--light-color);
     text-decoration: none;
+    font-family: 'RFDewi Italic';
+    margin-left: 1ch;
+}
+
+.copyright-mark {
+    font-size: .75vw;
+    color: var(--light-color-darkened);
+    position: absolute;
+    font-family: 'RFDewi Regular';
+    font-weight: 100;
+    right: 5ch;
+    -webkit-text-stroke: 0px;
+}
+
+.logo-link {
+    font-size: inherit!important;
+    color: var(--light-color);
+    text-decoration: none;
+    font-family: 'RFDewi Black Italic'!important;
+    margin-left: initial!important;
 }
 
 .header a:hover {
@@ -33,5 +67,13 @@
 @media(aspect-ratio < 12/9) {
     .header-wrapper {
         display: none;
+    }
+
+    .copyright-mark {
+        bottom: 0vh;
+        position: initial;
+        font-size: 3.5vw;
+        opacity: 0;
+        color: #555555;
     }
 }

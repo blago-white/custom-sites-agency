@@ -33,6 +33,7 @@
 
 .list-item img {
     width: 58.3%;
+    height: 26vh;
     transition: opacity .5s ease, display 0s ease .5s;
 }
 
@@ -45,7 +46,7 @@
     border-radius: 1ch;
     z-index: 100;
     display: none;
-    font-size: .7ch;
+    font-size: .6ch;
     font-weight: 100;
     color: var(--light-color);
     cursor: pointer;
@@ -65,18 +66,18 @@
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     height: 30%!important;
-    border-top: 1px solid var(--light-color);
+    border-top: 1px solid var(--light-color-darkened);
 }
 
 .order-button-part-top {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    border-bottom: 1px solid var(--light-color);
+    border-bottom: 1px solid var(--light-color-darkened);
     color: var(--toxic-green-color);
 }
 
 .list-item-description {
-    font-size: .7ch;
+    font-size: .6ch;
     width: 58.3%;
     height: 6.5ch;
     font-weight: 100;
@@ -107,10 +108,9 @@
 
 .min-type-price-label {
     padding-inline: .5ch;
-    padding-bottom: .2ch;
     background: var(--toxic-green-color);
     line-height: 2ch;
-    font-size: .9ch;
+    font-size: .7ch;
     border-radius: 1ch;
 }
 
@@ -157,8 +157,8 @@
 
     .list-item:hover .site-order-button {
         display: flex;
-        border: .05ch solid var(--light-color);
-        height: 11.4ch;
+        border: .05ch solid var(--light-color-darkened);
+        height: 26vh;
     }
 }
 
@@ -228,7 +228,7 @@
 
     .min-type-price-label, .mobile-learn-button {
         background: var(--bg-color);
-        color: var(--light-color);
+        color: var(--light-color-darkened);
     }
 
     .list-item-description {

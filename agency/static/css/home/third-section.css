@@ -25,7 +25,7 @@
 .section-details {
     text-align: left;
     font-size: calc(min(10vh, 10vw) * .4);
-    font-weight: 100;
+    font-weight: normal;
     color: var(--light-color-darkened);
     width: calc(50% - 17%);
     padding-right: 17%;
@@ -51,21 +51,30 @@
 }
 
 .about-sections article {
-    width: fit-content;
+    width: max-content;
     cursor: pointer;
+    font-family: 'RFDewi Black';
     transition: all .2s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 .active-about-section {
     color: var(--toxic-green-color);
-    transform: scale(calc(10/7));
-    padding-right: .9ch;
 }
 
-.about-sections article:hover {
-    color: var(--toxic-green-color);
-    transform: scale(calc(10/7));
-    padding-right: .9ch;
+@media(hover: hover) {
+    .about-sections article:hover {
+        color: var(--toxic-green-color);
+        transform: translateX(5vw);
+        padding-right: .9ch;
+    }
+}
+
+.disclaimer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-weight: 100;
+    color: var(--light-color-darkened);
 }
 
 @media (aspect-ratio < 12/9) {
@@ -88,7 +97,7 @@
         width: 90%;
         text-align: center;
         height: 60%;
-        font-size: calc(min(10vh, 10vw) * .75);
+        font-size: calc(min(10vh, 10vw) * .65);
     }
 
     .active-about-section, .about-sections article:hover {

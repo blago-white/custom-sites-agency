@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: bolder;
+    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: normal;
+    src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: 'GolosUIWebBold';
+	src:
+		url('../fonts/golos-ui_bold.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebMedium';
+	src:
+		url('../fonts/golos-ui_medium.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebRegular';
+	src:
+		url('../fonts/golos-ui_regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIWebVF';
+	src:
+		url('../fonts/golos-ui_vf.woff') format('woff');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'RFDewi';
+    src: url('../fonts/RFDewiExpanded-Ultrabold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Expanded Bold';
+    src: url('../fonts/RFDewiExpanded-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Black';
+    src: url('../fonts/RFDewiExtended-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Extended Bold';
+    src: url('../fonts/RFDewiExtended-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Semibold';
+    src: url('../fonts/RFDewi-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Extended Semibold';
+    src: url('../fonts/RFDewiExtended-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RFDewi Expanded Bold Italic';
+    src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Regular';
+    src: url('../fonts/RFDewi-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Black Italic';
+    src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Italic';
+    src: url('../fonts/RFDewiExtended-Italic.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'RFDewi Extended Black Italic';
+    src: url('../fonts/RFDewiExtended-BlackItalic.woff') format("woff");
+}
+
+
+@font-face {
+    font-family: 'RFDewi Expanded Black Italic';
+    src: url('../fonts/RFDewiExpanded-BlackItalic.woff') format("woff");
+}
