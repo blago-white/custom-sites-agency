@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="{% static 'css/order-form.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/bg.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/animations.css' %}" type="text/css">
+
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -105,6 +106,8 @@
     <script type="module" src="{% static 'js/dialog.js' %}"></script>
     <script type="module" src="{% static 'js/textLine.js' %}"></script>
     <script src="{% static 'js/cursor.js' %}"></script>
+    <script src="{% static 'js/stepsScroll.js' %}"></script>
+
     <script>
         const sectionsYCords = {
             "main": 0,
@@ -124,6 +127,18 @@
         }
 
         setInitialAboutSection();
+    </script>
+    <script type="text/javascript">
+        var _testScroll2 = new jsCustomScroll(elem, {
+            at: 80,
+            at_Fn: function (scrollbar, el) {
+            },
+            scrollUp: function (scrollbar, el) {
+            },
+            scrollDown: function (scrollbar, el) {
+            }
+        });
+        console.log(_testScroll2);
     </script>
     </body>
 </html>

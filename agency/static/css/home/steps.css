@@ -32,8 +32,11 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
+    gap: 4.2vh;
     font-size: 5vh;
     margin-block: 0px;
+
+	scroll-snap-type: y mandatory;
 }
 
 .steps li {
@@ -45,14 +48,51 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    gap: 4.2vh;
 
     font-size: 5vh;
-
     width: 14.2vw;
 
     padding-right: 14.2vw;
 
     color: var(--toxic-green-color);
+}
+
+.active-item-line {
+    height: 8vh;
+    position: absolute;
+    top: 46vh;
+    width: 80vw;
+    border: 5px solid var(--toxic-green-color);
+    margin-inline: 20vh;
+    border-radius: 30vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+.line-about-button {
+    margin: .5vh;
+    height: 90%;
+    border: 0px;
+    background: var(--toxic-green-color);
+    border-radius: inherit;
+    font-size: 3vh;
+    padding-inline: 2ch;
+    font-family: "RFDewi Bold";
+    color: var(--bg-color);
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transition: all .2s ease-out;
+}
+
+.line-about-button:hover {
+    background: var(--light-color);
 }
 
 .steps-wrapper {
