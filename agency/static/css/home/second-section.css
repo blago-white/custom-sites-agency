@@ -25,10 +25,14 @@
     flex-direction: column;
     align-items: center;
     width: 33.3%;
-    height: 70%;
-    padding-block: 2.5%;
-    border-radius: 2ch;
-    transition: all .5s ease;
+    height: 70vh;
+    padding-block: 15vh;
+    transition: all .2s ease;
+}
+
+.list-item-hovered {
+    background: var(--bg-color);
+    color: var(--light-color);
 }
 
 .list-item img {
@@ -97,21 +101,14 @@
     align-items: center;
 }
 
-.list-item-canvas-filter {
-    position: absolute;
-    height: 100%;
-    width: 33.333%;
-    top: 0px;
-
-    transition: all .5s ease;
-}
-
 .min-type-price-label {
     padding-inline: .5ch;
     background: var(--toxic-green-color);
     line-height: 2ch;
     font-size: .7ch;
     border-radius: 1ch;
+
+    color: var(--bg-color)!important;
 }
 
 .site-order-details {
@@ -149,10 +146,6 @@
 
     .second-content-wrapper:hover .list-items-border {
         opacity: 0;
-    }
-
-    .list-item:hover .list-item-canvas-filter {
-        backdrop-filter: invert(1);
     }
 
     .list-item:hover .site-order-button {
@@ -208,11 +201,6 @@
         grid-row-end: 3;
         grid-column-start: 2;
         grid-column-end: 2;
-    }
-
-    .list-item-canvas-filter {
-        display: none;
-        z-index: -1;
     }
 
     .list-item-title {

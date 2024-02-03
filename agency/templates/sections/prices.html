@@ -28,7 +28,7 @@
         {% endif %}
     </style>
     <div class="main-content-wrapper second-content-wrapper" id="prices">
-        <article class="list-item">
+        <article class="list-item" id="landing">
             <img src="{% static 'img/portfolio.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(1)">{% trans 'Order' %}</div>
@@ -43,10 +43,9 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'LandingDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
-        <article class="list-item">
+        <article class="list-item" id="commerce">
             <img src="{% static 'img/commerce.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(2)">{% trans 'Order' %}</div>
@@ -61,10 +60,9 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'CommerceDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
-        <article class="list-item">
+        <article class="list-item" id="custom">
             <img src="{% static 'img/custom.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(3)">{% trans 'Order' %}</div>
@@ -79,7 +77,6 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'CustomDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
     </div>
 </section>
