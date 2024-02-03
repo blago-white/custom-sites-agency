@@ -19,34 +19,10 @@
 }
 
 @font-face {
-	font-family: 'GolosUIWebBold';
-	src:
-		url('../fonts/golos-ui_bold.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GolosUIWebMedium';
-	src:
-		url('../fonts/golos-ui_medium.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'GolosUIWebRegular';
 	src:
 		url('../fonts/golos-ui_regular.woff') format('woff');
 	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GolosUIWebVF';
-	src:
-		url('../fonts/golos-ui_vf.woff') format('woff');
-	font-weight: lighter;
 	font-style: normal;
 }
 
