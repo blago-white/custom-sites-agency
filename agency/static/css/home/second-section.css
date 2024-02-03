@@ -88,10 +88,9 @@
 }
 
 .list-items-border {
-    width: .1ch;
-    background: black;
-    height: 50%;
-    border-radius: .1ch;
+    width: 3px;
+    background: var(--bg-color);
+    height: 100%;
     transition: all .1s ease;
 }
 
@@ -144,14 +143,10 @@
         color: var(--bg-color);
     }
 
-    .second-content-wrapper:hover .list-items-border {
-        opacity: 0;
-    }
-
     .list-item:hover .site-order-button {
         display: flex;
         border: .05ch solid var(--light-color-darkened);
-        height: 26vh;
+        height: calc(26vh - .05ch);
     }
 }
 
