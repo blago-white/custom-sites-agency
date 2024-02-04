@@ -213,7 +213,7 @@ form input {
         margin-top: 2ch;
         aspect-ratio: auto;
         font-size: 7vw;
-        padding: 0.5ch;
+        padding: 3vw;
     }
 
     .dialog-window-bg * {
@@ -227,8 +227,8 @@ form input {
     }
 
     .dialog-window-bg #close-dialog {
-        width: 20vw!important;
-        height: 20vw!important;
+        width: 10vw!important;
+        height: 10vw!important;
     }
 
     form span {

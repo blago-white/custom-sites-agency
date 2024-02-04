@@ -53,7 +53,7 @@
 .about-sections article {
     width: max-content;
     cursor: pointer;
-    font-family: 'RFDewi Black';
+    font-family: 'RFDewi Black Italic';
     transition: all .2s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
@@ -98,6 +98,10 @@
         text-align: center;
         height: 60%;
         font-size: calc(min(10vh, 10vw) * .65);
+    }
+
+    .about-sections article {
+        font-family: 'RFDewi Black';
     }
 
     .active-about-section, .about-sections article:hover {

@@ -238,9 +238,9 @@
     }
 
     .list-item {
-        width: calc(100% - 0.5ch);
+        width: calc(100% - 3vw);
         align-items: flex-start;
-        padding-left: 0.5ch;
+        padding-left: 3vw;
         text-align: left;
         font-size: min(15vh, 15vw);
         padding-block: 0px;
