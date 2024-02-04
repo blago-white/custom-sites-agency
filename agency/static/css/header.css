@@ -71,9 +71,11 @@
 
     .copyright-mark {
         bottom: 0vh;
-        position: initial;
+        position: absolute;
+        left: 12vw;
+        top: 90vh;
         font-size: 3.5vw;
         opacity: 0;
-        color: #555555;
+        color: var(--light-color);
     }
 }

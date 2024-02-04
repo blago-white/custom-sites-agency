@@ -2,28 +2,32 @@
 
 @font-face {
     font-family: "SF Pro Display";
-    font-weight: bolder;
+    font-weight: 800;
     src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    font-weight: normal;
+    font-weight: 900;
+    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: 600;
+    src: url("../fonts/SF-Pro-Display-Semibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-weight: 500;
     src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
 }
 
 @font-face {
     font-family: "SF Pro Display";
-    font-weight: bold;
+    font-weight: 700;
     src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
-}
-
-@font-face {
-	font-family: 'GolosUIWebRegular';
-	src:
-		url('../fonts/golos-ui_regular.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
 }
 
 @font-face {

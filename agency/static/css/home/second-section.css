@@ -8,6 +8,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     font-weight: bold;
+    overflow: visible;
 
     transition: opacity .5s ease;
 }
@@ -217,6 +218,9 @@
     .min-type-price-label {
         grid-row-start: 1;
         grid-row-end: 1;
+        max-width: unset;
+        width: -webkit-fill-available;
+        color: var(--light-color)!important;
     }
 
     .min-type-price-label, .mobile-learn-button {
@@ -226,6 +230,7 @@
 
     .list-item-description {
         width: 100%;
+        font-weight: 500;
     }
 
     .list-items-border {
@@ -235,8 +240,10 @@
     .list-item {
         width: calc(100% - 0.5ch);
         align-items: flex-start;
-        padding-left: .5ch;
+        padding-left: 0.5ch;
         text-align: left;
         font-size: min(15vh, 15vw);
+        padding-block: 0px;
+        height: fit-content;
     }
 }
