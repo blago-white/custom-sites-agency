@@ -8,6 +8,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     font-weight: bold;
+    overflow: visible;
 
     transition: opacity .5s ease;
 }
@@ -25,10 +26,20 @@
     flex-direction: column;
     align-items: center;
     width: 33.3%;
-    height: 70%;
-    padding-block: 2.5%;
-    border-radius: 2ch;
-    transition: all .5s ease;
+    height: 70vh;
+    padding-block: 15vh;
+    transition: all .2s ease;
+}
+
+.list-item-hovered {
+    background: var(--bg-color);
+    color: var(--light-color);
+
+    transform: perspective(10vw) translateZ(1vh);
+}
+
+.list-item-hovered .min-type-price-label {
+    max-width: 20vw;
 }
 
 .list-item img {
@@ -84,10 +95,9 @@
 }
 
 .list-items-border {
-    width: .1ch;
-    background: black;
-    height: 50%;
-    border-radius: .1ch;
+    width: 3px;
+    background: var(--bg-color);
+    height: 100%;
     transition: all .1s ease;
 }
 
@@ -97,21 +107,18 @@
     align-items: center;
 }
 
-.list-item-canvas-filter {
-    position: absolute;
-    height: 100%;
-    width: 33.333%;
-    top: 0px;
-
-    transition: all .5s ease;
-}
-
 .min-type-price-label {
     padding-inline: .5ch;
     background: var(--toxic-green-color);
     line-height: 2ch;
     font-size: .7ch;
     border-radius: 1ch;
+    max-width: 10vw;
+    width: 100vw;
+
+    color: var(--bg-color)!important;
+
+    transition: all .2s ease-out;
 }
 
 .site-order-details {
@@ -147,18 +154,10 @@
         color: var(--bg-color);
     }
 
-    .second-content-wrapper:hover .list-items-border {
-        opacity: 0;
-    }
-
-    .list-item:hover .list-item-canvas-filter {
-        backdrop-filter: invert(1);
-    }
-
     .list-item:hover .site-order-button {
         display: flex;
         border: .05ch solid var(--light-color-darkened);
-        height: 26vh;
+        height: calc(26vh - .05ch);
     }
 }
 
@@ -210,11 +209,6 @@
         grid-column-end: 2;
     }
 
-    .list-item-canvas-filter {
-        display: none;
-        z-index: -1;
-    }
-
     .list-item-title {
         flex-direction: column;
         align-items: flex-start;
@@ -224,6 +218,9 @@
     .min-type-price-label {
         grid-row-start: 1;
         grid-row-end: 1;
+        max-width: unset;
+        width: -webkit-fill-available;
+        color: var(--light-color)!important;
     }
 
     .min-type-price-label, .mobile-learn-button {
@@ -233,6 +230,7 @@
 
     .list-item-description {
         width: 100%;
+        font-weight: 500;
     }
 
     .list-items-border {
@@ -240,10 +238,12 @@
     }
 
     .list-item {
-        width: calc(100% - 0.5ch);
+        width: calc(100% - 3vw);
         align-items: flex-start;
-        padding-left: .5ch;
+        padding-left: 3vw;
         text-align: left;
         font-size: min(15vh, 15vw);
+        padding-block: 0px;
+        height: fit-content;
     }
 }

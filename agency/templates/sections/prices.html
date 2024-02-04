@@ -7,13 +7,13 @@
         @media (aspect-ratio < 12 / 9) {
             .list-item-description, .min-type-price-label, .mobile-learn-button, .mobile-order-button {
                 font-weight: 600;
-                font-size: .8ch;
+                font-size: .7ch;
                 padding-top: 0.3ch;
                 padding-bottom: 0.4ch;
             }
 
             .list-item {
-                font-family: 'GolosUIWebRegular', sans-serif;
+                font-family: 'SF Pro Display', sans-serif;
             }
 
             .site-order-details div {
@@ -21,14 +21,13 @@
             }
 
             .list-item-title span {
-                font-family: 'GolosUIWebBold', sans-serif;
                 font-weight: 900;
             }
         }
         {% endif %}
     </style>
     <div class="main-content-wrapper second-content-wrapper" id="prices">
-        <article class="list-item">
+        <article class="list-item" id="landing">
             <img src="{% static 'img/portfolio.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(1)">{% trans 'Order' %}</div>
@@ -43,10 +42,9 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'LandingDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
-        <article class="list-item">
+        <article class="list-item" id="commerce">
             <img src="{% static 'img/commerce.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(2)">{% trans 'Order' %}</div>
@@ -61,10 +59,9 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'CommerceDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
         <div class="list-items-border"></div>
-        <article class="list-item">
+        <article class="list-item" id="custom">
             <img src="{% static 'img/custom.png' %}">
             <div class="site-order-button">
                 <div class="order-button-part-top" onclick="orderSite(3)">{% trans 'Order' %}</div>
@@ -79,7 +76,6 @@
                 </div>
             </div>
             <div class="list-item-description">{% trans 'CustomDesc' %}</div>
-            <div class="list-item-canvas-filter"></div>
         </article>
     </div>
 </section>
